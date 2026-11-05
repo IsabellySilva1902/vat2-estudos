@@ -491,7 +491,9 @@ function responder(letra) {
     b.disabled = true;
   });
   const ult = SIM.i === SIM.qs.length - 1;
-  $('#pos').innerHTML = `${q.clinicalPointers ? `<div class="pointer">🎯 ${h(q.clinicalPointers)}</div>` : ''}
+  const ctx = q.bookContext && q.bookContext.text ? `<details class="livro"><summary>📖 Aprofundamento (livros de referência)</summary>
+      <p>${h(q.bookContext.text)}</p>${q.bookContext.fonte ? `<small>Fonte indicada pelo NotebookLM: ${h(q.bookContext.fonte)}</small>` : ''}</details>` : '';
+  $('#pos').innerHTML = `${q.clinicalPointers ? `<div class="pointer">🎯 ${h(q.clinicalPointers)}</div>` : ''}${ctx}
     <div class="actions"><button class="btn primary" id="prox">${ult ? 'Ver resultado' : 'Próxima →'}</button></div>`;
   $('#prox').addEventListener('click', () => { if (ult) resultado(); else { SIM.i++; desenharQuestao(); } });
   $('#prox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
