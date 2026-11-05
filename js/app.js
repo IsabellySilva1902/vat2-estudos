@@ -14,6 +14,7 @@ const MAT = {};      // id -> matéria
 const ASS = {};      // id -> assunto
 const BANCOS = {};   // matéria -> array de questões | null (sem banco)
 let S = null;        // progresso
+let PARTEQ = {};     // código da questão -> parte do assunto (1, 2, ...), classificado no NotebookLM
 
 /* ---------- datas (sempre no fuso local) ---------- */
 function hojeISO() {
@@ -127,7 +128,7 @@ function registrarRevisao(assId, hoje, nota, acerto) {
 function notaPorAcerto(p) { return p >= 0.8 ? 'facil' : p >= 0.6 ? 'medio' : 'dificil'; }
 function devidos(materia, hoje) {
   return PLANO.assuntos.filter(a => a.materia === materia).filter(a => {
-    const e = estAss(a.id); return e.estudado && e.proxima && e.proxima <= hoje;
+    const e = estAss(a.id); return e.estudado && ((e.proxima && e.proxima <= hoje) || assuntoFraco(a.id));
   });
 }
 function tarefaFeita(chave) { return !!(S.tarefas[chave] && S.tarefas[chave].ok); }
@@ -210,6 +211,106 @@ function acertoAssunto(materia, assId) {
   for (const q of qs) { const s = qStatus(q); if (s !== 'nova') { feitas++; if (s === 'certa') certas++; } }
   return { total: qs.length, feitas, certas };
 }
+/* ---------- integração com o simulado completo ----------
+   O simulado (vat2-simulados) fica no mesmo endereço, então o localStorage é o mesmo. Ele grava
+   simfc_<storage>_answers = { código: [{ ts, ok }] }. Aqui essas respostas entram no progresso
+   (e vão para o Gist), e cada simulado com 3+ questões de um assunto já estudado conta como revisão. */
+function chaveSim(m) { return 'simfc_vat2-' + m.pasta + '_'; }
+function lerLS(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
+function importarSimulados(hoje) {
+  let mudou = false; const lotes = {};
+  for (const m of PLANO.materias) {
+    const qs = BANCOS[m.id]; if (!Array.isArray(qs)) continue;
+    const assDe = Object.fromEntries(qs.map(q => [q.code, q.assunto]));
+    const log = lerLS(chaveSim(m) + 'answers') || {};
+    for (const [code, arr] of Object.entries(log)) {
+      const e = S.questoes[code] || { tent: [] };
+      const ja = new Set(e.tent.map(t => t.ts).filter(Boolean));
+      let novo = false;
+      for (const r of arr || []) {
+        if (!r || !r.ts || ja.has(r.ts)) continue;
+        const d = iso(new Date(r.ts));
+        e.tent.push({ d, ok: !!r.ok, ts: r.ts, sim: 1 }); novo = true;
+        const a = assDe[code];
+        if (a) { const k = r.ts + '|' + a; lotes[k] = lotes[k] || { a, d, c: 0, t: 0 }; lotes[k].t++; if (r.ok) lotes[k].c++; }
+      }
+      if (novo) { e.tent.sort((x, y) => (x.ts || parse(x.d).getTime()) - (y.ts || parse(y.d).getTime())); e.t = Date.now(); S.questoes[code] = e; mudou = true; }
+    }
+    // erros de antes deste registro existir: a fila de revisão do simulado guarda as que você errou
+    const srs = lerLS(chaveSim(m) + 'srs');
+    for (const [code, it] of Object.entries((srs && srs.items) || {})) {
+      if (it && it.box === 0 && !it.slow && assDe[code] && !S.questoes[code]) { S.questoes[code] = { tent: [{ d: hoje, ok: false, sim: 1, antigo: 1 }], t: Date.now() }; mudou = true; }
+    }
+  }
+  for (const x of Object.values(lotes)) {
+    if (x.t >= 3 && ASS[x.a] && estAss(x.a).estudado) { registrarRevisao(x.a, x.d, notaPorAcerto(x.c / x.t), Math.round(100 * x.c / x.t)); mudou = true; }
+  }
+  if (mudou) salvar();
+}
+
+/* ---------- pontos fracos ----------
+   Conta o último resultado de cada questão já respondida (na plataforma ou no simulado completo).
+   Ponto fraco = parte do assunto (ou o assunto, se não houver partes) com acerto abaixo de 60%. */
+function parteDaQuestao(q) {
+  const m = S.mapas[q.assunto]; if (m && m.lista && m.lista.length) return null; // você usa outra divisão
+  return PARTEQ[q.code] || null;
+}
+function desempenho(materia) {
+  const out = {};
+  for (const q of BANCOS[materia] || []) {
+    const st = qStatus(q); if (st === 'nova') continue;
+    const o = out[q.assunto] = out[q.assunto] || { c: 0, t: 0, partes: {}, erradas: [] };
+    o.t++; if (st === 'certa') o.c++; else o.erradas.push(q);
+    const p = parteDaQuestao(q);
+    if (p) { const x = o.partes[p] = o.partes[p] || { c: 0, t: 0, erradas: [] }; x.t++; if (st === 'certa') x.c++; else x.erradas.push(q); }
+  }
+  return out;
+}
+function pontosFracos(materia) {
+  const lista = [];
+  for (const [assId, o] of Object.entries(desempenho(materia))) {
+    if (!ASS[assId]) continue;
+    const ps = Object.entries(o.partes).filter(([, x]) => x.t >= 2 && x.c / x.t < 0.6);
+    if (ps.length) ps.forEach(([p, x]) => lista.push({ materia, assId, parte: +p, c: x.c, t: x.t, erradas: x.erradas }));
+    else if (o.t >= 3 && o.c / o.t < 0.6) lista.push({ materia, assId, parte: null, c: o.c, t: o.t, erradas: o.erradas });
+  }
+  return lista.sort((a, b) => (b.t - b.c) - (a.t - a.c) || a.c / a.t - b.c / b.t);
+}
+function assuntoFraco(assId) {
+  const o = desempenho(ASS[assId].materia)[assId];
+  return !!o && o.t >= 3 && o.c / o.t < 0.6;
+}
+function nomeFraco(x) {
+  const p = x.parte ? partesDe(x.assId)[x.parte - 1] : null;
+  return h(ASS[x.assId].nome) + (p ? ` · <b>Parte ${x.parte}</b>: ${h(p.t)}` : '');
+}
+function promptFraco(assId, parte) {
+  const a = ASS[assId], m = MAT[a.materia];
+  const o = desempenho(a.materia)[assId] || { erradas: [], partes: {} };
+  const erradas = parte ? ((o.partes[parte] || {}).erradas || []) : o.erradas;
+  const p = parte ? partesDe(assId)[parte - 1] : null;
+  const slide = a.fontes && a.fontes.length ? a.fontes.map(f => '"' + f + '"').join(' e ') : 'sobre ' + a.nome;
+  return `Fontes: o slide do professor ${slide} define o conteúdo da prova de ${m.nome} (${fmt(m.prova)}); os livros de referência servem para aprofundar.
+
+Estou errando questões ${p ? `da Parte ${parte} da aula (${p.t}${p.top && p.top.length ? ': ' + p.top.join('; ') : ''})` : `de ${a.nome}`}. Os temas das questões que errei foram:
+${erradas.slice(0, 12).map(q => '- ' + q.subcategory).join('\n')}
+
+1. 📘 Re-explique esses pontos com profundidade de livro-texto, do jeito mais claro possível, sem resumir.
+2. ⚠️ Mostre onde costuma estar a confusão: as pegadinhas e os erros de raciocínio mais comuns nesses temas.
+3. 🧠 Monte uma tabela ou esquema para memorizar o essencial.
+4. ❓ Me teste com 3 perguntas novas no estilo da prova (ENAMED/residência). NÃO dê a resposta. Espere eu responder e corrija meu raciocínio.`;
+}
+function cartaoFraco(x, compacto) {
+  const m = MAT[x.materia];
+  return `<div class="fraco" style="--c:${m.cor}">
+    <div><span class="pill">${m.emoji}</span>${nomeFraco(x)}</div>
+    <div class="muted">acertou ${x.c} de ${x.t} (${Math.round(100 * x.c / x.t)}%)</div>
+    ${compacto ? '' : `<div class="actions" style="margin-top:.35rem">
+      <a class="btn" href="${linkSimulado(x.materia, { a: x.assId, p: x.parte || '', n: 10, modo: 'treino' })}">✍️ Treinar ${x.parte ? 'esta parte' : 'este assunto'}</a>
+      <button class="btn" data-prompt-fraco="${x.assId}|${x.parte || ''}">📋 Prompt de revisão</button></div>`}
+  </div>`;
+}
+
 function embaralhar(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
 /* ---------- utilidades de interface ---------- */
@@ -336,6 +437,7 @@ function cartaoRevisao(materia, hoje, chave) {
     }
   }
   const temBanco = Array.isArray(BANCOS[materia]) && BANCOS[materia].length;
+  const fracos = temBanco ? pontosFracos(materia) : [];
   return `<div class="card ${feita ? 'done' : ''}" style="--c:${m.cor}">
     <div class="row">
       <button class="check ${feita ? 'on' : ''}" data-tarefa="${chave}" aria-label="Marcar revisão como feita">${feita ? '✓' : ''}</button>
@@ -343,7 +445,9 @@ function cartaoRevisao(materia, hoje, chave) {
         <div class="tag">${m.emoji} ${h(m.curto)} · revisão</div>
         <h3>Revisar ${h(m.curto)}</h3>
         <div class="muted">${texto}</div>
+        ${fracos.length ? `<div class="muted" style="margin-top:.3rem">🎯 Você tem errado: ${fracos.slice(0, 3).map(x => nomeFraco(x) + ` (${x.c}/${x.t})`).join('; ')}</div>` : ''}
         <div class="actions">
+          ${fracos.length ? `<a class="btn" href="${linkSimulado(materia, { a: fracos[0].assId, p: fracos[0].parte || '', n: 10, modo: 'treino' })}">🎯 Treinar o ponto mais fraco</a>` : ''}
           ${temBanco && alvo.length ? `<a class="btn primary" href="${linkSimulado(materia, { a: alvo.map(a => a.id), n: 15, modo: 'revisao', tarefa: chave })}">✍️ Revisar com 15 questões</a>` : ''}
           ${!temBanco ? `<span class="muted">Simulado desta matéria em preparação: revise pelo notebook.</span>` : ''}
           <a class="btn" href="${m.notebook}" target="_blank" rel="noopener">📓 Notebook</a>
@@ -428,6 +532,13 @@ async function telaHoje() {
   for (const mt of dia.vespera || []) cards += cartaoSimulado(mt, hoje + '|vesp|' + mt, true);
   main += `<section class="blk"><h2>Para hoje</h2>${cards || '<div class="empty">Nada planejado para hoje. Descanse 😊</div>'}</section>`;
 
+  // pontos fracos (das matérias cuja prova ainda não passou)
+  const fracos = PLANO.materias.filter(m => m.prova > hoje).sort((a, b) => a.prova.localeCompare(b.prova)).flatMap(m => pontosFracos(m.id));
+  if (fracos.length) {
+    main += `<section class="blk"><h2>🎯 Seus pontos fracos</h2><p class="muted">Vem das questões que você respondeu aqui e no simulado completo. Some quando você passa a acertar.</p>
+      <div class="card">${fracos.slice(0, 4).map(x => cartaoFraco(x)).join('')}${fracos.length > 4 ? `<a class="btn ghost" href="#/materias">Ver todos (${fracos.length}) em Matérias →</a>` : ''}</div></section>`;
+  }
+
   // revisões vencidas de matérias que não estão no plano de hoje
   const planejadas = new Set(dia.revisar || []);
   const extras = PLANO.materias.filter(m => m.prova > hoje && !planejadas.has(m.id) && devidos(m.id, hoje).length);
@@ -494,6 +605,7 @@ async function telaMaterias() {
   for (const m of PLANO.materias.slice().sort((a, b) => a.prova.localeCompare(b.prova))) {
     const d = diff(hoje, m.prova);
     const temBanco = Array.isArray(BANCOS[m.id]) && BANCOS[m.id].length;
+    const fracosM = temBanco ? pontosFracos(m.id) : [];
     html += `<div class="card" style="--c:${m.cor}">
       <div class="tag">${m.emoji} prova ${fmtLongo(m.prova)} · ${d > 0 ? 'faltam ' + d + ' dias' : d === 0 ? 'HOJE' : 'feita'}</div>
       <h3>${h(m.nome)}</h3>
@@ -511,7 +623,8 @@ async function telaMaterias() {
       const pct = ac && ac.feitas ? Math.round(100 * ac.certas / ac.feitas) : null;
       html += `<div class="topic"><button class="check ${e.estudado ? 'on' : ''}" style="--c:${m.cor};width:24px;height:24px;flex-basis:24px;font-size:.8rem" data-estudo="${a.id}">${e.estudado ? '✓' : ''}</button>
         <div class="grow"><div>${h(a.nome)}</div><div class="st">${st}${pct != null ? ` · acerto ${pct}% (${ac.feitas}/${ac.total})` : ac && ac.total ? ` · ${ac.total} questões` : ''}</div>
-        ${pct != null ? `<div class="bar"><i style="width:${pct}%;--c:${pct >= 80 ? 'var(--correct)' : pct >= 60 ? '#C8962E' : 'var(--incorrect)'}"></i></div>` : ''}</div></div>`;
+        ${pct != null ? `<div class="bar"><i style="width:${pct}%;--c:${pct >= 80 ? 'var(--correct)' : pct >= 60 ? '#C8962E' : 'var(--incorrect)'}"></i></div>` : ''}
+        ${fracosM.filter(x => x.assId === a.id).map(x => `<div class="st fraco-st">🎯 ${x.parte ? 'Parte ' + x.parte + ': ' + h(partesDe(a.id)[x.parte - 1].t) : 'assunto todo'} · ${x.c}/${x.t} · <a href="${linkSimulado(m.id, { a: a.id, p: x.parte || '', n: 10, modo: 'treino' })}">treinar</a> · <a href="#" data-prompt-fraco="${a.id}|${x.parte || ''}">prompt</a></div>`).join('')}</div></div>`;
     }
     html += '</div>';
   }
@@ -551,7 +664,9 @@ async function telaSimulado(materia, q) {
   const assuntos = (q.get('a') || '').split(',').filter(Boolean);
   const modo = q.get('modo') || 'treino';
   const n = parseInt(q.get('n') || '0', 10);
+  const parte = parseInt(q.get('p') || '0', 10);
   let pool = todas.filter(x => !assuntos.length || assuntos.includes(x.assunto));
+  if (parte) pool = pool.filter(x => parteDaQuestao(x) === parte);
   const hoje = hojeISO();
   pool = pool.filter(x => { const a = ASS[x.assunto]; return !a || !a.aula || a.aula <= hoje; });
   if (modo === 'erros') pool = pool.filter(x => qStatus(x) === 'errada');
@@ -786,6 +901,8 @@ const Sync = {
 
 /* ---------- roteamento e eventos ---------- */
 async function render() {
+  await Promise.all(PLANO.materias.map(m => banco(m.id)));
+  importarSimulados(hojeISO());
   const { partes, q } = rota();
   const [tela, arg] = partes;
   if (tela === 'calendario') telaCalendario();
@@ -817,6 +934,13 @@ document.addEventListener('click', e => {
   const pro = e.target.closest('[data-prompt]');
   if (pro) {
     const txt = promptEstudo(pro.dataset.prompt);
+    navigator.clipboard.writeText(txt).then(() => toast('Prompt copiado: cole no chat do notebook'), () => prompt('Copie o prompt:', txt));
+    return;
+  }
+  const pf = e.target.closest('[data-prompt-fraco]');
+  if (pf) {
+    e.preventDefault();
+    const [id, p] = pf.dataset.promptFraco.split('|'); const txt = promptFraco(id, p ? +p : null);
     navigator.clipboard.writeText(txt).then(() => toast('Prompt copiado: cole no chat do notebook'), () => prompt('Copie o prompt:', txt));
     return;
   }
@@ -854,6 +978,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
   PLANO = await (await fetch('data/plano.json', { cache: 'no-cache' })).json();
   PLANO.materias.forEach(m => { MAT[m.id] = m; });
   PLANO.assuntos.forEach(a => { ASS[a.id] = a; });
+  try { PARTEQ = await (await fetch('data/partes-questoes.json', { cache: 'no-cache' })).json(); } catch (e) { PARTEQ = {}; }
   $('#titulo-sub').textContent = PLANO.titulo;
   await render();
   if (Sync.cfg().token) { await Sync.agora(false); render(); }

@@ -145,3 +145,10 @@ textarea.f{min-height:110px;font-family:'IBM Plex Mono',monospace;font-size:.78r
 .parte.ok .grow{color:var(--ink-soft)}
 .parte details summary{cursor:pointer;font-size:.78rem}
 .parte ul{margin:.25rem 0 0;padding-left:1.1rem;font-size:.82rem;color:var(--ink-soft)}
+
+/* pontos fracos */
+.fraco{padding:.55rem 0;border-top:1px solid var(--line);font-size:.9rem}
+.fraco:first-child{border-top:0;padding-top:0}
+.fraco .pill{margin-right:.35rem}
+.fraco-st{white-space:normal !important;color:var(--incorrect) !important;margin-top:.2rem}
+.fraco-st a{color:inherit}
