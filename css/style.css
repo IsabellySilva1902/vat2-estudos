@@ -136,3 +136,12 @@ textarea.f{min-height:110px;font-family:'IBM Plex Mono',monospace;font-size:.78r
 .livro summary{cursor:pointer;font-weight:600}
 .livro p{margin:.5rem 0 .3rem;line-height:1.5}
 .livro small{opacity:.7}
+
+/* partes de um assunto */
+.partes{margin:.55rem 0 .2rem}
+.parte{display:flex;align-items:flex-start;gap:.55rem;padding:.4rem 0;border-top:1px solid var(--line);font-size:.88rem}
+.parte:first-child{border-top:0}
+.parte .check{width:24px;height:24px;flex-basis:24px;font-size:.8rem}
+.parte.ok .grow{color:var(--ink-soft)}
+.parte details summary{cursor:pointer;font-size:.78rem}
+.parte ul{margin:.25rem 0 0;padding-left:1.1rem;font-size:.82rem;color:var(--ink-soft)}

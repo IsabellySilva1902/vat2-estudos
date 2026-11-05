@@ -32,8 +32,8 @@ function fmt(s) { const d = parse(s); return String(d.getDate()).padStart(2, '0'
 function fmtLongo(s) { const d = parse(s); return DIAS_SEMANA[d.getDay()] + ', ' + fmt(s); }
 
 /* ---------- progresso ---------- */
-const CHAVES = ['assuntos', 'tarefas', 'questoes', 'pulados'];
-function novoEstado() { return { v: 1, assuntos: {}, tarefas: {}, questoes: {}, pulados: {}, t: 0 }; }
+const CHAVES = ['assuntos', 'tarefas', 'questoes', 'pulados', 'mapas'];
+function novoEstado() { return { v: 1, assuntos: {}, tarefas: {}, questoes: {}, pulados: {}, mapas: {}, t: 0 }; }
 function carregar() {
   try { S = JSON.parse(localStorage.getItem(LS_KEY)) || novoEstado(); } catch (e) { S = novoEstado(); }
   for (const k of CHAVES) S[k] = S[k] || {};
@@ -67,15 +67,52 @@ function limitar(assId, data, hoje) {
 }
 function marcarEstudado(assId, hoje, valor = true) {
   const e = estAss(assId);
+  const n = partesDe(assId).length;
   if (valor) {
     e.estudado = e.estudado || hoje;
     e.proxima = limitar(assId, addDias(hoje, 1), hoje);
+    if (n) { e.partes = e.partes || {}; for (let i = 0; i < n; i++) e.partes[i] = e.partes[i] || hoje; }
   } else {
-    e.estudado = null; e.proxima = null; e.revisoes = [];
+    e.estudado = null; e.proxima = null; e.revisoes = []; e.partes = {}; e.adiado = null;
   }
   e.t = Date.now();
   S.assuntos[assId] = e;
 }
+/* ---------- partes de um assunto ----------
+   As partes vêm do mapa que o NotebookLM fez a partir do slide (plano.json) ou, se você
+   colar a divisão do seu chat, da sua versão (S.mapas). Cada parte guarda o dia em que foi
+   estudada. Quando todas estão feitas, o assunto conta como estudado. Se você parar no meio,
+   as partes que faltam são remarcadas para outro dia, como um assunto atrasado. */
+function partesDe(assId) {
+  const m = S.mapas[assId];
+  if (m && m.lista && m.lista.length) return m.lista.map(t => ({ t, top: [] }));
+  return ASS[assId].partes || [];
+}
+function partesFeitas(assId) {
+  const e = estAss(assId), n = partesDe(assId).length;
+  return Array.from({ length: n }, (_, i) => i).filter(i => e.partes && e.partes[i]);
+}
+function faixa(nums) { // [3,4,5] -> "3–5"; [1,3] -> "1 e 3"
+  const g = []; for (const n of nums) { const u = g[g.length - 1]; if (u && n === u[1] + 1) u[1] = n; else g.push([n, n]); }
+  const t = g.flatMap(([a, b]) => a === b ? [String(a)] : b === a + 1 ? [String(a), String(b)] : [a + '–' + b]);
+  return t.length > 1 ? t.slice(0, -1).join(', ') + ' e ' + t[t.length - 1] : t[0] || '';
+}
+function partesFaltando(assId) {
+  const n = partesDe(assId).length, f = new Set(partesFeitas(assId));
+  return Array.from({ length: n }, (_, i) => i).filter(i => !f.has(i));
+}
+function marcarParte(assId, i, hoje) {
+  const e = estAss(assId); e.partes = e.partes || {};
+  if (e.partes[i]) { delete e.partes[i]; e.estudado = null; e.proxima = null; }
+  else e.partes[i] = hoje;
+  e.t = Date.now(); S.assuntos[assId] = e;
+  if (!partesFaltando(assId).length) { e.adiado = null; marcarEstudado(assId, hoje, true); return 'todas'; }
+  return e.partes[i] ? 'marcou' : 'desmarcou';
+}
+function adiarResto(assId, hoje, valor) {
+  const e = estAss(assId); e.adiado = valor ? hoje : null; e.t = Date.now(); S.assuntos[assId] = e;
+}
+
 const INTERVALOS = { facil: [3, 5, 8], medio: [2, 3, 5], dificil: [1, 1, 2] };
 function registrarRevisao(assId, hoje, nota, acerto) {
   const e = estAss(assId);
@@ -112,8 +149,9 @@ function planoEfetivo(hoje) {
   const atrasados = [];
   for (const d of PLANO.dias) for (const id of d.estudar || []) {
     const e = estAss(id);
-    const vencido = d.data < hoje || (d.data === hoje && pulado(hoje));
-    if (vencido && !e.estudado) atrasados.push({ id, de: d.data });
+    const parou = e.adiado === hoje && !e.estudado; // estudou parte hoje e deixou o resto para outro dia
+    const vencido = d.data < hoje || (d.data === hoje && (pulado(hoje) || parou));
+    if (vencido && !e.estudado) atrasados.push({ id, de: d.data, parou });
     else dias[d.data].estudar.push({ id });
   }
   const carga = dt => dias[dt].estudar.filter(x => { const e = estAss(x.id); return !e.estudado || e.estudado === dt; }).length;
@@ -124,7 +162,8 @@ function planoEfetivo(hoje) {
     const prova = provaDe(x.id);
     if (prova <= hoje) continue; // a prova já passou (ou é hoje): não adianta remarcar
     const a = ASS[x.id];
-    const lib = a.aula && a.aula > inicio ? a.aula : inicio;
+    const ini = x.parou ? addDias(hoje, 1) : inicio;
+    const lib = a.aula && a.aula > ini ? a.aula : ini;
     let posto = null;
     for (const [ate, base] of [[addDias(prova, -2), 2], [addDias(prova, -2), 3], [addDias(prova, -1), 3]]) {
       for (let dt = lib; dt <= ate && !posto; dt = addDias(dt, 1)) {
@@ -135,6 +174,7 @@ function planoEfetivo(hoje) {
     const urgente = !posto;
     if (!posto) posto = dias[lib] && lib < prova ? lib : null;
     if (posto) dias[posto].estudar.push({ id: x.id, de: x.de, urgente });
+    if (x.parou && dias[hoje]) (dias[hoje].parciais = dias[hoje].parciais || []).push({ id: x.id, para: posto });
   }
   // dentro do dia, a prova mais próxima vem primeiro
   for (const d of Object.values(dias)) d.estudar.sort((a, b) => provaDe(a.id).localeCompare(provaDe(b.id)));
@@ -200,24 +240,82 @@ function chipsContagem(hoje) {
   }).join('') + '</div>';
 }
 
-function cartaoEstudo(assId, hoje, item = {}) {
+function promptEstudo(assId) {
+  const a = ASS[assId], m = MAT[a.materia], ps = partesDe(assId);
+  const falta = partesFaltando(assId), prox = (falta[0] ?? 0) + 1;
+  const slide = a.fontes && a.fontes.length ? a.fontes.map(f => '"' + f + '"').join(' e ') : 'sobre ' + a.nome;
+  const mapa = ps.map((p, k) => `Parte ${k + 1}${p.e ? ' ⭐' : ''}: ${p.t}${p.top && p.top.length ? ' (' + p.top.join('; ') + ')' : ''}`).join('\n');
+  return `Fontes: o slide do professor ${slide} define o conteúdo da prova; os livros de referência selecionados servem para aprofundar. Tenho prova de ${m.nome} em ${fmt(m.prova)}, no estilo ENAMED/residência.
+
+1. O MAPA da aula já está definido. Use exatamente estas partes, nesta ordem, sem refazer a divisão:
+${mapa}
+
+2. Explique UMA parte por vez, começando pela Parte ${prox}, sempre neste formato:
+
+🎯 Ideia central: em uma ou duas frases, do que trata esta parte.
+
+📘 Explicação completa: explique cada tópico da parte com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes). Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Não resuma e não limite o tamanho: prefiro uma explicação longa e completa.
+
+🩺 Na prática: um ou dois casos clínicos mostrando como isso aparece no consultório e na prova.
+
+⚠️ Pegadinhas: os erros e confusões mais comuns de estudante sobre esta parte.
+
+🧠 Para memorizar: tabela, esquema ou mnemônico com o essencial da parte.
+
+❓ Me teste: 2 perguntas (uma de conceito e uma aplicada, no estilo da prova). NÃO dê a resposta. Espere eu responder, corrija meu raciocínio explicando o que acertei e o que errei, e só então pergunte se sigo para a próxima parte.`;
+}
+
+function blocoPartes(assId, hoje, parcial) {
+  const a = ASS[assId], m = MAT[a.materia], e = estAss(assId), ps = partesDe(assId);
+  const proprio = !!(S.mapas[assId] && S.mapas[assId].lista && S.mapas[assId].lista.length);
+  const editor = `<details class="livro"><summary>✏️ ${ps.length ? 'Meu chat dividiu diferente' : 'Colar as partes do meu chat'}</summary>
+      <p class="muted">Cole os títulos das partes que o NotebookLM te deu, uma por linha.${ps.length ? ' Para voltar ao mapa original, apague tudo e salve.' : ''}</p>
+      <textarea class="f" data-mapa-txt="${assId}" placeholder="Parte 1: ...&#10;Parte 2: ...">${proprio ? h(S.mapas[assId].lista.join('\n')) : ''}</textarea>
+      <div class="actions"><button class="btn" data-mapa-salvar="${assId}">Salvar partes</button></div></details>`;
+  if (!ps.length) return `<div class="muted" style="margin-top:.4rem">${a.aula && a.aula > hoje ? 'As partes aparecem quando o slide da aula estiver no notebook.' : 'Este assunto ainda não tem divisão em partes.'}</div>${editor}`;
+  const feitas = partesFeitas(assId);
+  const linhas = ps.map((p, k) => {
+    const d = e.partes && e.partes[k];
+    return `<div class="parte ${d ? 'ok' : ''}">
+      <button class="check ${d ? 'on' : ''}" style="--c:${m.cor}" data-parte="${assId}|${k}" aria-label="Marcar parte ${k + 1}">${d ? '✓' : ''}</button>
+      <div class="grow"><b>Parte ${k + 1}${p.e ? ' ⭐' : ''}</b> · ${h(p.t)}${d && d !== hoje ? ` <span class="muted">(estudada ${fmt(d)})</span>` : ''}
+      ${p.top && p.top.length ? `<details><summary class="muted">tópicos</summary><ul>${p.top.map(t => '<li>' + h(t) + '</li>').join('')}</ul></details>` : ''}</div></div>`;
+  }).join('');
+  const falta = partesFaltando(assId);
+  const hojeFeitas = feitas.filter(k => e.partes[k] === hoje);
+  let rodape = '';
+  if (parcial) {
+    rodape = `<div class="note">✅ Hoje você estudou ${hojeFeitas.length ? 'a' + (hojeFeitas.length > 1 ? 's partes ' : ' parte ') + faixa(hojeFeitas.map(k => k + 1)) : 'parte do assunto'}. ${falta.length > 1 ? 'As partes' : 'A parte'} ${faixa(falta.map(k => k + 1))} ${parcial.para ? (falta.length > 1 ? 'foram' : 'foi') + ' para ' + fmtLongo(parcial.para) : 'não couberam antes da prova'}.
+      <button class="btn" data-adiar="${assId}|0" style="margin-left:.3rem">Desfazer</button></div>`;
+  } else if (!e.estudado && falta.length && hojeFeitas.length) {
+    rodape = `<div class="actions"><button class="btn" data-adiar="${assId}|1">⏭️ Parar por hoje: ${falta.length > 1 ? 'partes' : 'parte'} ${faixa(falta.map(k => k + 1))} para outro dia</button></div>`;
+  }
+  return `<div class="partes">${linhas}</div>${rodape}${parcial ? '' : editor}`;
+}
+
+function cartaoEstudo(assId, hoje, item = {}, parcial = null) {
   const a = ASS[assId], m = MAT[a.materia], e = estAss(assId);
   const bloqueado = a.aula && a.aula > hoje;
   const temBanco = Array.isArray(BANCOS[a.materia]) && BANCOS[a.materia].some(q => q.assunto === assId);
-  const origem = item.de ? (item.urgente ? 'URGENTE · era de ' + fmt(item.de) : 'remarcado de ' + fmt(item.de)) : '';
-  return `<div class="card ${e.estudado ? 'done' : ''}" style="--c:${m.cor}">
+  const n = partesDe(assId).length, feitas = partesFeitas(assId).length;
+  let origem = item.de ? (item.urgente ? 'URGENTE · era de ' + fmt(item.de) : 'remarcado de ' + fmt(item.de)) : '';
+  const feito = e.estudado || parcial;
+  return `<div class="card ${feito ? 'done' : ''}" style="--c:${m.cor}">
     <div class="row">
-      <button class="check ${e.estudado ? 'on' : ''}" data-estudo="${assId}" aria-label="Marcar como estudado">${e.estudado ? '✓' : ''}</button>
+      <button class="check ${e.estudado ? 'on' : ''}" data-estudo="${assId}" aria-label="Marcar assunto inteiro como estudado">${e.estudado ? '✓' : ''}</button>
       <div class="grow">
-        <div class="tag">${m.emoji} ${h(m.curto)}${origem ? ' · ' + origem : ''}</div>
+        <div class="tag">${m.emoji} ${h(m.curto)}${origem ? ' · ' + origem : ''}${n ? ' · ' + feitas + '/' + n + ' partes' : ''}</div>
         <h3>${h(a.nome)}</h3>
         ${item.urgente ? `<div class="note">Não coube antes da prova (${fmtLongo(provaDe(assId))}). Faça uma passada rápida pelos pontos principais.</div>` : ''}
         ${bloqueado ? `<div class="note">A aula é em ${fmtLongo(a.aula)}. Estude depois dela.</div>` : ''}
         ${a.aviso ? `<div class="note">${h(a.aviso)}</div>` : ''}
-        <div class="actions">
+        ${a.fontes && a.fontes.length && !parcial ? `<div class="muted">No notebook, marque: ${a.fontes.map(f => '<b>' + h(f) + '</b>').join(' + ')} + os livros que quiser.</div>` : ''}
+        ${blocoPartes(assId, hoje, parcial)}
+        ${parcial ? '' : `<div class="actions">
           <a class="btn" href="${m.notebook}" target="_blank" rel="noopener">📓 Abrir notebook</a>
+          ${n && !e.estudado ? `<button class="btn" data-prompt="${assId}">📋 Copiar prompt (Parte ${(partesFaltando(assId)[0] ?? 0) + 1})</button>` : ''}
           ${temBanco ? `<a class="btn" href="${linkSimulado(a.materia, { a: assId, n: 10, modo: 'treino' })}">✍️ 10 questões</a>` : ''}
-        </div>
+        </div>`}
       </div>
     </div>
   </div>`;
@@ -324,6 +422,7 @@ async function telaHoje() {
 
   let cards = '';
   if (!pulado(hoje)) for (const x of dia.estudar || []) cards += cartaoEstudo(x.id, hoje, x);
+  for (const x of dia.parciais || []) cards += cartaoEstudo(x.id, hoje, {}, x);
   for (const mt of dia.revisar || []) cards += cartaoRevisao(mt, hoje, hoje + '|rev|' + mt);
   for (const mt of dia.simulado || []) cards += cartaoSimulado(mt, hoje + '|sim|' + mt, false);
   for (const mt of dia.vespera || []) cards += cartaoSimulado(mt, hoje + '|vesp|' + mt, true);
@@ -352,7 +451,13 @@ function tarefasDoDia(d) {
   for (const p of d.provas || []) it.push({ txt: 'PROVA de ' + MAT[p].curto, m: p, ok: false, prova: true });
   for (const x of d.estudar || []) {
     const id = typeof x === 'string' ? x : x.id;
-    it.push({ txt: ASS[id].nome, m: ASS[id].materia, ok: !!estAss(id).estudado, de: x.de, urgente: x.urgente });
+    const e = estAss(id), n = partesDe(id).length, ant = partesFeitas(id).filter(k => e.partes[k] < d.data);
+    const resto = !e.estudado && n && ant.length ? ' (partes ' + faixa(partesFaltando(id).map(k => k + 1)) + ')' : '';
+    it.push({ txt: ASS[id].nome + resto, m: ASS[id].materia, ok: !!e.estudado, de: x.de, urgente: x.urgente });
+  }
+  for (const x of d.parciais || []) {
+    const e = estAss(x.id), hj = partesFeitas(x.id).filter(k => e.partes[k] === d.data);
+    it.push({ txt: ASS[x.id].nome + (hj.length ? ' (partes ' + faixa(hj.map(k => k + 1)) + ')' : ' (parte)'), m: ASS[x.id].materia, ok: true });
   }
   for (const mt of d.revisar || []) it.push({ txt: 'Revisar ' + MAT[mt].curto, m: mt, ok: tarefaFeita(d.data + '|rev|' + mt) });
   for (const mt of d.simulado || []) it.push({ txt: 'Simulado de ' + MAT[mt].curto, m: mt, ok: tarefaFeita(d.data + '|sim|' + mt) });
@@ -400,7 +505,7 @@ async function telaMaterias() {
       const e = estAss(a.id);
       let st;
       if (a.aula && a.aula > hoje) st = '📅 aula ' + fmt(a.aula);
-      else if (!e.estudado) st = 'não estudado';
+      else if (!e.estudado) st = partesFeitas(a.id).length ? partesFeitas(a.id).length + '/' + partesDe(a.id).length + ' partes' : 'não estudado';
       else st = 'estudado ' + fmt(e.estudado) + (e.revisoes && e.revisoes.length ? ' · ' + e.revisoes.length + ' rev.' : '') + (e.proxima ? ' · próx. ' + fmt(e.proxima) : '');
       const ac = temBanco ? acertoAssunto(m.id, a.id) : null;
       const pct = ac && ac.feitas ? Math.round(100 * ac.certas / ac.feitas) : null;
@@ -698,6 +803,29 @@ document.addEventListener('click', e => {
     const id = est.dataset.estudo, ja = !!estAss(id).estudado;
     marcarEstudado(id, hojeISO(), !ja); salvar();
     toast(ja ? 'Desmarcado' : 'Estudado! Primeira revisão amanhã.'); render(); return;
+  }
+  const par = e.target.closest('[data-parte]');
+  if (par) {
+    const [id, k] = par.dataset.parte.split('|'); const r = marcarParte(id, +k, hojeISO()); salvar();
+    toast(r === 'todas' ? 'Assunto completo! Primeira revisão amanhã.' : r === 'marcou' ? 'Parte ' + (+k + 1) + ' estudada' : 'Desmarcada'); render(); return;
+  }
+  const adi = e.target.closest('[data-adiar]');
+  if (adi) {
+    const [id, v] = adi.dataset.adiar.split('|'); adiarResto(id, hojeISO(), v === '1'); salvar();
+    toast(v === '1' ? 'Combinado! O resto foi remarcado.' : 'Desfeito'); render(); return;
+  }
+  const pro = e.target.closest('[data-prompt]');
+  if (pro) {
+    const txt = promptEstudo(pro.dataset.prompt);
+    navigator.clipboard.writeText(txt).then(() => toast('Prompt copiado: cole no chat do notebook'), () => prompt('Copie o prompt:', txt));
+    return;
+  }
+  const map = e.target.closest('[data-mapa-salvar]');
+  if (map) {
+    const id = map.dataset.mapaSalvar, ta = document.querySelector(`[data-mapa-txt="${id}"]`);
+    const lista = ta.value.split('\n').map(l => l.replace(/^\s*(parte\s*)?\d+\s*[-–—:.)]*\s*/i, '').trim()).filter(Boolean);
+    S.mapas[id] = { lista, t: Date.now() }; salvar();
+    toast(lista.length ? lista.length + ' partes salvas' : 'Voltou ao mapa original'); render(); return;
   }
   const cop = e.target.closest('[data-copiar]');
   if (cop) {
