@@ -7,6 +7,7 @@ const LS_KEY = 'vat2-progresso';
 const LS_SYNC = 'vat2-sync';
 const GIST_FILE = 'vat2-progresso.json';
 const DIAS_SEMANA = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
 let PLANO = null;
 const MAT = {};      // id -> matéria
@@ -141,12 +142,14 @@ function planoEfetivo(hoje) {
 }
 
 /* ---------- questões ---------- */
+function local() { return location.hostname === 'localhost' || location.hostname === '127.0.0.1'; }
+function urlSimulados() { return local() ? '/vat2-simulados/' : (PLANO.simulados || ''); }
+function urlPublicaSimulado(m) { return (PLANO.simulados || '') + m.pasta + '/'; }
 async function banco(materia) {
   if (materia in BANCOS) return BANCOS[materia];
   try {
     // as questões moram no repositório vat2-simulados (fonte única, compartilhada com a turma)
-    const base = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-      ? '/vat2-simulados/data/' : (PLANO.questoes || 'data/questoes/');
+    const base = local() ? '/vat2-simulados/data/' : (PLANO.questoes || 'data/questoes/');
     const r = await fetch(base + materia + '.json', { cache: 'no-cache' });
     BANCOS[materia] = r.ok ? await r.json() : null;
   } catch (e) { BANCOS[materia] = null; }
@@ -366,7 +369,7 @@ function telaCalendario() {
     const prova = (d.provas || []).length > 0;
     const it = tarefasDoDia(d);
     html += `<div class="day ${d.data === hoje ? 'today' : ''} ${prova ? 'exam' : ''} ${d.data < hoje ? 'past' : ''}" ${d.data === hoje ? 'id="hoje"' : ''}>
-      <div class="date"><b>${parse(d.data).getDate()}</b><span>${DIAS_SEMANA[parse(d.data).getDay()]} ${String(parse(d.data).getMonth() + 1).padStart(2, '0')}</span></div>
+      <div class="date"><b>${parse(d.data).getDate()}</b><span>${DIAS_SEMANA[parse(d.data).getDay()]} · ${MESES[parse(d.data).getMonth()]}</span></div>
       <ul>${pulado(d.data) ? '<li class="muted">😴 dia de folga</li>' : ''}${it.map(i => `<li class="${i.ok ? 'ok' : ''}"><span class="pill" style="--c:${MAT[i.m].cor}">${MAT[i.m].emoji}</span>${i.prova ? '<b>' + h(i.txt) + '</b>' : h(i.txt)}${i.de ? ` <span class="muted">(${i.urgente ? 'urgente, ' : ''}era ${fmt(i.de)})</span>` : ''}</li>`).join('')}
       ${d.nota ? `<li class="muted">${h(d.nota)}</li>` : ''}</ul></div>`;
   }
@@ -514,6 +517,44 @@ function resultado() {
     <div class="actions">${tot - cer > 0 ? `<a class="btn primary" href="${linkSimulado(SIM.materia, { modo: 'erros', a: Object.keys(porAss) })}">↺ Refazer os erros</a>` : ''}<a class="btn" href="#/hoje">Voltar para Hoje</a></div></section>`;
 }
 
+
+/* ---------- tela: Simulados (o mesmo da turma, dentro da plataforma) ---------- */
+async function telaSimulados() {
+  marcarAba('simulados');
+  await Promise.all(PLANO.materias.map(m => banco(m.id)));
+  let html = `<section class="blk"><h2>Simulados</h2>
+    <p class="muted">São os mesmos simulados do site da turma, com modos Exame e Tutor, código de sessão e revisão dos erros. O link que você manda para os colegas abre só o simulado, sem a sua plataforma.</p>
+    <div class="actions" style="margin-bottom:1rem"><button class="btn" data-copiar="${h(PLANO.simulados || '')}">📤 Copiar link da página de simulados</button></div>
+    <div class="mat-grid">`;
+  for (const m of PLANO.materias.slice().sort((a, b) => a.prova.localeCompare(b.prova))) {
+    const qs = BANCOS[m.id];
+    const pronto = Array.isArray(qs) && qs.length;
+    const nAss = pronto ? new Set(qs.map(q => q.assunto)).size : 0;
+    html += `<div class="card" style="--c:${m.cor}">
+      <div class="tag">${m.emoji} prova ${fmtLongo(m.prova)}</div>
+      <h3>${h(m.nome)}</h3>
+      <div class="muted">${pronto ? qs.length + ' questões · ' + nAss + ' assuntos' : 'Em preparação'}</div>
+      ${pronto ? `<div class="actions">
+        <a class="btn primary" href="#/simulado-completo/${m.id}">✍️ Abrir simulado</a>
+        <button class="btn" data-copiar="${h(urlPublicaSimulado(m))}">📤 Copiar link para a turma</button>
+      </div>` : ''}
+    </div>`;
+  }
+  html += '</div></section>';
+  $('#app').innerHTML = html;
+}
+function telaSimuladoCompleto(materia) {
+  marcarAba('simulados');
+  const m = MAT[materia];
+  if (!m) { location.hash = '#/simulados'; return; }
+  const src = urlSimulados() + m.pasta + '/';
+  $('#app').innerHTML = `<div class="sim-topo"><a class="btn ghost" href="#/simulados">← Simulados</a>
+    <b>${m.emoji} ${h(m.curto)}</b>
+    <span><button class="btn" data-copiar="${h(urlPublicaSimulado(m))}">📤 Link da turma</button>
+    <a class="btn ghost" href="${src}" target="_blank" rel="noopener">⤢ Tela cheia</a></span></div>
+    <iframe class="sim-frame" src="${src}" title="Simulado de ${h(m.nome)}"></iframe>`;
+}
+
 /* ---------- tela: Ajustes ---------- */
 function telaAjustes() {
   marcarAba('ajustes');
@@ -643,6 +684,8 @@ async function render() {
   if (tela === 'calendario') telaCalendario();
   else if (tela === 'materias') await telaMaterias();
   else if (tela === 'ajustes') telaAjustes();
+  else if (tela === 'simulados') await telaSimulados();
+  else if (tela === 'simulado-completo' && arg) telaSimuladoCompleto(arg);
   else if (tela === 'simulado' && arg) await telaSimulado(arg, q);
   else if (tela === 'pontos' && arg) await telaPontos(arg);
   else await telaHoje();
@@ -653,6 +696,13 @@ document.addEventListener('click', e => {
     const id = est.dataset.estudo, ja = !!estAss(id).estudado;
     marcarEstudado(id, hojeISO(), !ja); salvar();
     toast(ja ? 'Desmarcado' : 'Estudado! Primeira revisão amanhã.'); render(); return;
+  }
+  const cop = e.target.closest('[data-copiar]');
+  if (cop) {
+    const url = cop.dataset.copiar;
+    if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) navigator.share({ title: 'Simulados VAT2', url }).catch(() => {});
+    else navigator.clipboard.writeText(url).then(() => toast('Link copiado: é só colar no grupo'), () => prompt('Copie o link:', url));
+    return;
   }
   const pul = e.target.closest('[data-pular]');
   if (pul) {

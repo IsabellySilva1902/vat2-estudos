@@ -125,3 +125,9 @@ textarea.f{min-height:110px;font-family:'IBM Plex Mono',monospace;font-size:.78r
 
 /* matérias em duas colunas no computador */
 @media(min-width:900px){.mat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;align-items:start}.mat-grid .card{margin:0}}
+
+/* simulado completo dentro da plataforma */
+.sim-topo{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem}
+.sim-topo span{display:flex;gap:.4rem}
+.sim-frame{width:100%;height:calc(100vh - 210px);min-height:520px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+@media(min-width:900px){.sim-frame{height:calc(100vh - 150px)}}
