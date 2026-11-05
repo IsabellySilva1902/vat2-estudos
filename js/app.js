@@ -31,10 +31,11 @@ function fmt(s) { const d = parse(s); return String(d.getDate()).padStart(2, '0'
 function fmtLongo(s) { const d = parse(s); return DIAS_SEMANA[d.getDay()] + ', ' + fmt(s); }
 
 /* ---------- progresso ---------- */
-function novoEstado() { return { v: 1, assuntos: {}, tarefas: {}, questoes: {}, t: 0 }; }
+const CHAVES = ['assuntos', 'tarefas', 'questoes', 'pulados'];
+function novoEstado() { return { v: 1, assuntos: {}, tarefas: {}, questoes: {}, pulados: {}, t: 0 }; }
 function carregar() {
   try { S = JSON.parse(localStorage.getItem(LS_KEY)) || novoEstado(); } catch (e) { S = novoEstado(); }
-  for (const k of ['assuntos', 'tarefas', 'questoes']) S[k] = S[k] || {};
+  for (const k of CHAVES) S[k] = S[k] || {};
 }
 function salvar() {
   S.t = Date.now();
@@ -43,7 +44,7 @@ function salvar() {
 }
 function merge(a, b) {
   const out = novoEstado();
-  for (const k of ['assuntos', 'tarefas', 'questoes']) {
+  for (const k of CHAVES) {
     const A = (a && a[k]) || {}, B = (b && b[k]) || {};
     for (const id of new Set([...Object.keys(A), ...Object.keys(B)])) {
       const x = A[id], y = B[id];
@@ -93,6 +94,51 @@ function devidos(materia, hoje) {
 }
 function tarefaFeita(chave) { return !!(S.tarefas[chave] && S.tarefas[chave].ok); }
 function marcarTarefa(chave, ok) { S.tarefas[chave] = { ok, t: Date.now() }; }
+function pulado(dt) { return !!(S.pulados[dt] && S.pulados[dt].ok); }
+
+/* ---------- remarcação automática ----------
+   O plano original fica intacto. A cada abertura, o site monta o "plano efetivo":
+   - assuntos de dias que já passaram (ou de hoje, se você marcou que não vai estudar)
+     e que não foram marcados como estudados viram "atrasados";
+   - os atrasados são encaixados do mais urgente (prova mais próxima) para o menos urgente,
+     no primeiro dia livre a partir de hoje, respeitando a data da aula;
+   - limite normal: 2 assuntos novos por dia (1 em dia de prova). Se não couber até
+     2 dias antes da prova, aceita 3 por dia; em último caso usa a véspera;
+   - nunca passa da véspera da prova. Se não houver mais dia, ele fica para hoje, marcado como urgente. */
+function planoEfetivo(hoje) {
+  const dias = {};
+  for (const d of PLANO.dias) dias[d.data] = Object.assign({}, d, { estudar: [] });
+  const atrasados = [];
+  for (const d of PLANO.dias) for (const id of d.estudar || []) {
+    const e = estAss(id);
+    const vencido = d.data < hoje || (d.data === hoje && pulado(hoje));
+    if (vencido && !e.estudado) atrasados.push({ id, de: d.data });
+    else dias[d.data].estudar.push({ id });
+  }
+  const carga = dt => dias[dt].estudar.filter(x => { const e = estAss(x.id); return !e.estudado || e.estudado === dt; }).length;
+  const limite = (dt, base) => pulado(dt) ? 0 : ((dias[dt].provas || []).length ? base - 1 : base);
+  atrasados.sort((a, b) => provaDe(a.id).localeCompare(provaDe(b.id)) || a.de.localeCompare(b.de));
+  const inicio = pulado(hoje) ? addDias(hoje, 1) : hoje;
+  for (const x of atrasados) {
+    const prova = provaDe(x.id);
+    if (prova <= hoje) continue; // a prova já passou (ou é hoje): não adianta remarcar
+    const a = ASS[x.id];
+    const lib = a.aula && a.aula > inicio ? a.aula : inicio;
+    let posto = null;
+    for (const [ate, base] of [[addDias(prova, -2), 2], [addDias(prova, -2), 3], [addDias(prova, -1), 3]]) {
+      for (let dt = lib; dt <= ate && !posto; dt = addDias(dt, 1)) {
+        if (dias[dt] && carga(dt) < limite(dt, base)) posto = dt;
+      }
+      if (posto) break;
+    }
+    const urgente = !posto;
+    if (!posto) posto = dias[lib] && lib < prova ? lib : null;
+    if (posto) dias[posto].estudar.push({ id: x.id, de: x.de, urgente });
+  }
+  // dentro do dia, a prova mais próxima vem primeiro
+  for (const d of Object.values(dias)) d.estudar.sort((a, b) => provaDe(a.id).localeCompare(provaDe(b.id)));
+  return dias;
+}
 
 /* ---------- questões ---------- */
 async function banco(materia) {
@@ -148,16 +194,18 @@ function chipsContagem(hoje) {
   }).join('') + '</div>';
 }
 
-function cartaoEstudo(assId, hoje, origem) {
+function cartaoEstudo(assId, hoje, item = {}) {
   const a = ASS[assId], m = MAT[a.materia], e = estAss(assId);
   const bloqueado = a.aula && a.aula > hoje;
   const temBanco = Array.isArray(BANCOS[a.materia]) && BANCOS[a.materia].some(q => q.assunto === assId);
+  const origem = item.de ? (item.urgente ? 'URGENTE · era de ' + fmt(item.de) : 'remarcado de ' + fmt(item.de)) : '';
   return `<div class="card ${e.estudado ? 'done' : ''}" style="--c:${m.cor}">
     <div class="row">
       <button class="check ${e.estudado ? 'on' : ''}" data-estudo="${assId}" aria-label="Marcar como estudado">${e.estudado ? '✓' : ''}</button>
       <div class="grow">
         <div class="tag">${m.emoji} ${h(m.curto)}${origem ? ' · ' + origem : ''}</div>
         <h3>${h(a.nome)}</h3>
+        ${item.urgente ? `<div class="note">Não coube antes da prova (${fmtLongo(provaDe(assId))}). Faça uma passada rápida pelos pontos principais.</div>` : ''}
         ${bloqueado ? `<div class="note">A aula é em ${fmtLongo(a.aula)}. Estude depois dela.</div>` : ''}
         ${a.aviso ? `<div class="note">${h(a.aviso)}</div>` : ''}
         <div class="actions">
@@ -226,54 +274,80 @@ function cartaoSimulado(materia, chave, vespera) {
   </div>`;
 }
 
+function painelLateral(hoje, ef) {
+  // próximos dias
+  let prox = '';
+  for (let i = 1; i <= 5; i++) {
+    const dt = addDias(hoje, i); const d = ef[dt]; if (!d) continue;
+    const it = tarefasDoDia(d);
+    prox += `<div class="mini"><b>${fmtLongo(dt)}</b>${it.length ? it.map(x => `<div class="${x.ok ? 'ok' : ''}"><span class="pill" style="--c:${MAT[x.m].cor}">${MAT[x.m].emoji}</span>${x.prova ? '<b>' + h(x.txt) + '</b>' : h(x.txt)}${x.de ? ' <span class="muted">(remarcado)</span>' : ''}</div>`).join('') : '<div class="muted">livre</div>'}</div>`;
+  }
+  // progresso por matéria
+  let prog = '';
+  for (const m of PLANO.materias) {
+    const ass = PLANO.assuntos.filter(a => a.materia === m.id);
+    const feitos = ass.filter(a => estAss(a.id).estudado).length;
+    const pct = Math.round(100 * feitos / ass.length);
+    prog += `<div class="prog-row"><span>${m.emoji} ${h(m.curto)}</span><span class="muted">${feitos}/${ass.length}</span></div><div class="bar"><i style="width:${pct}%;--c:${m.cor}"></i></div>`;
+  }
+  const total = PLANO.assuntos.length, feitos = PLANO.assuntos.filter(a => estAss(a.id).estudado).length;
+  return `<aside class="side">
+    <div class="card"><h3>Próximos dias</h3>${prox}<a class="btn ghost" href="#/calendario" style="margin-top:.5rem">Ver calendário completo →</a></div>
+    <div class="card"><h3>Seu progresso · ${feitos}/${total} assuntos</h3>${prog}</div>
+  </aside>`;
+}
+
 async function telaHoje() {
   marcarAba('hoje');
   const hoje = hojeISO();
   await Promise.all(PLANO.materias.map(m => banco(m.id)));
-  const dia = PLANO.dias.find(d => d.data === hoje) || {};
-  let html = `<section class="blk"><h2>${fmtLongo(hoje)}</h2>${chipsContagem(hoje)}</section>`;
+  const ef = planoEfetivo(hoje);
+  const dia = ef[hoje] || { estudar: [] };
+  let main = '';
 
   for (const p of dia.provas || []) {
     const m = MAT[p];
-    html += `<div class="banner" style="--c:${m.cor}"><h2>${m.emoji} Hoje é prova de ${h(m.curto)}</h2><div>Boa prova! Respira, lê o enunciado com calma.</div></div>`;
+    main += `<div class="banner" style="--c:${m.cor}"><h2>${m.emoji} Hoje é prova de ${h(m.curto)}</h2><div>Boa prova! Respira, lê o enunciado com calma.</div></div>`;
   }
-  if (dia.nota) html += `<div class="note">💡 ${h(dia.nota)}</div>`;
+  if (pulado(hoje)) {
+    main += `<div class="note">😴 Você marcou que hoje não vai estudar. Os assuntos de hoje foram remarcados para os próximos dias. <button class="btn" data-pular="0" style="margin-left:.3rem">Desfazer</button></div>`;
+  }
+  if (dia.nota) main += `<div class="note">💡 ${h(dia.nota)}</div>`;
+  const remarcados = (dia.estudar || []).filter(x => x.de).length;
+  if (remarcados) main += `<div class="note">🔁 ${remarcados === 1 ? '1 assunto foi remarcado' : remarcados + ' assuntos foram remarcados'} para hoje porque ficaram para trás. Tudo bem, o plano já se ajustou.</div>`;
 
   let cards = '';
-  for (const id of dia.estudar || []) cards += cartaoEstudo(id, hoje);
+  if (!pulado(hoje)) for (const x of dia.estudar || []) cards += cartaoEstudo(x.id, hoje, x);
   for (const mt of dia.revisar || []) cards += cartaoRevisao(mt, hoje, hoje + '|rev|' + mt);
   for (const mt of dia.simulado || []) cards += cartaoSimulado(mt, hoje + '|sim|' + mt, false);
   for (const mt of dia.vespera || []) cards += cartaoSimulado(mt, hoje + '|vesp|' + mt, true);
-  html += `<section class="blk"><h2>Para hoje</h2>${cards || '<div class="empty">Nada planejado para hoje. Descanse 😊</div>'}</section>`;
-
-  // atrasados: assuntos de dias anteriores ainda não estudados, com prova ainda por vir
-  const atrasados = [];
-  for (const d of PLANO.dias) {
-    if (d.data >= hoje) break;
-    for (const id of d.estudar || []) if (!estAss(id).estudado && provaDe(id) >= hoje) atrasados.push(id);
-  }
-  if (atrasados.length) {
-    html += `<section class="blk"><h2>Ficou para trás</h2><p class="muted">Sem culpa: encaixe quando der, começando pela prova mais próxima.</p>`;
-    html += atrasados.sort((a, b) => provaDe(a).localeCompare(provaDe(b))).map(id => cartaoEstudo(id, hoje, 'atrasado')).join('');
-    html += '</section>';
-  }
+  main += `<section class="blk"><h2>Para hoje</h2>${cards || '<div class="empty">Nada planejado para hoje. Descanse 😊</div>'}</section>`;
 
   // revisões vencidas de matérias que não estão no plano de hoje
   const planejadas = new Set(dia.revisar || []);
-  const extras = PLANO.materias.filter(m => m.prova >= hoje && !planejadas.has(m.id) && devidos(m.id, hoje).length);
+  const extras = PLANO.materias.filter(m => m.prova > hoje && !planejadas.has(m.id) && devidos(m.id, hoje).length);
   if (extras.length) {
-    html += `<section class="blk"><h2>Revisões vencidas</h2><p class="muted">Opcional: só se sobrar tempo.</p>`;
-    html += extras.map(m => cartaoRevisao(m.id, hoje, hoje + '|rev|' + m.id)).join('');
-    html += '</section>';
+    main += `<section class="blk"><h2>Revisões vencidas</h2><p class="muted">Opcional: só se sobrar tempo.</p>`;
+    main += extras.map(m => cartaoRevisao(m.id, hoje, hoje + '|rev|' + m.id)).join('');
+    main += '</section>';
   }
-  $('#app').innerHTML = html;
+  if (!pulado(hoje) && (dia.estudar || []).some(x => !estAss(x.id).estudado)) {
+    main += `<div class="actions" style="margin-top:.4rem"><button class="btn ghost" data-pular="1">😴 Hoje não vou conseguir estudar</button></div>
+      <p class="muted">Os assuntos de hoje vão para os próximos dias, sem passar da véspera de cada prova.</p>`;
+  }
+
+  $('#app').innerHTML = `<section class="blk"><h2>${fmtLongo(hoje)}</h2>${chipsContagem(hoje)}</section>
+    <div class="cols"><div class="main-col">${main}</div>${painelLateral(hoje, ef)}</div>`;
 }
 
 /* ---------- tela: Calendário ---------- */
 function tarefasDoDia(d) {
   const it = [];
   for (const p of d.provas || []) it.push({ txt: 'PROVA de ' + MAT[p].curto, m: p, ok: false, prova: true });
-  for (const id of d.estudar || []) it.push({ txt: ASS[id].nome, m: ASS[id].materia, ok: !!estAss(id).estudado });
+  for (const x of d.estudar || []) {
+    const id = typeof x === 'string' ? x : x.id;
+    it.push({ txt: ASS[id].nome, m: ASS[id].materia, ok: !!estAss(id).estudado, de: x.de, urgente: x.urgente });
+  }
   for (const mt of d.revisar || []) it.push({ txt: 'Revisar ' + MAT[mt].curto, m: mt, ok: tarefaFeita(d.data + '|rev|' + mt) });
   for (const mt of d.simulado || []) it.push({ txt: 'Simulado de ' + MAT[mt].curto, m: mt, ok: tarefaFeita(d.data + '|sim|' + mt) });
   for (const mt of d.vespera || []) it.push({ txt: 'Véspera: pontos-chave e erros de ' + MAT[mt].curto, m: mt, ok: tarefaFeita(d.data + '|vesp|' + mt) });
@@ -282,15 +356,18 @@ function tarefasDoDia(d) {
 function telaCalendario() {
   marcarAba('calendario');
   const hoje = hojeISO();
-  let html = `<section class="blk"><h2>Calendário da VAT2</h2><p class="muted">Toque em “Hoje” para ver as tarefas com botões. <a href="#" id="baixar-ics">Baixar para o Google Agenda (.ics)</a></p>`;
-  for (const d of PLANO.dias) {
+  const ef = planoEfetivo(hoje);
+  let html = `<section class="blk"><h2>Calendário da VAT2</h2><p class="muted">O calendário se ajusta sozinho quando algo fica para trás. <a href="#" id="baixar-ics">Baixar para o Google Agenda (.ics)</a></p><div class="cal">`;
+  for (const d0 of PLANO.dias) {
+    const d = ef[d0.data];
     const prova = (d.provas || []).length > 0;
     const it = tarefasDoDia(d);
-    html += `<div class="day ${d.data === hoje ? 'today' : ''} ${prova ? 'exam' : ''}" ${d.data === hoje ? 'id="hoje"' : ''}>
+    html += `<div class="day ${d.data === hoje ? 'today' : ''} ${prova ? 'exam' : ''} ${d.data < hoje ? 'past' : ''}" ${d.data === hoje ? 'id="hoje"' : ''}>
       <div class="date"><b>${parse(d.data).getDate()}</b><span>${DIAS_SEMANA[parse(d.data).getDay()]} ${String(parse(d.data).getMonth() + 1).padStart(2, '0')}</span></div>
-      <ul>${it.map(i => `<li class="${i.ok ? 'ok' : ''}"><span class="pill" style="--c:${MAT[i.m].cor}">${MAT[i.m].emoji}</span>${i.prova ? '<b>' + h(i.txt) + '</b>' : h(i.txt)}</li>`).join('')}
+      <ul>${pulado(d.data) ? '<li class="muted">😴 dia de folga</li>' : ''}${it.map(i => `<li class="${i.ok ? 'ok' : ''}"><span class="pill" style="--c:${MAT[i.m].cor}">${MAT[i.m].emoji}</span>${i.prova ? '<b>' + h(i.txt) + '</b>' : h(i.txt)}${i.de ? ` <span class="muted">(${i.urgente ? 'urgente, ' : ''}era ${fmt(i.de)})</span>` : ''}</li>`).join('')}
       ${d.nota ? `<li class="muted">${h(d.nota)}</li>` : ''}</ul></div>`;
   }
+  html += '</div>';
   html += '</section>';
   $('#app').innerHTML = html;
   $('#baixar-ics').addEventListener('click', e => { e.preventDefault(); baixarICS(); });
@@ -302,7 +379,7 @@ async function telaMaterias() {
   marcarAba('materias');
   const hoje = hojeISO();
   await Promise.all(PLANO.materias.map(m => banco(m.id)));
-  let html = '<section class="blk"><h2>Matérias</h2>';
+  let html = '<section class="blk"><h2>Matérias</h2><div class="mat-grid">';
   for (const m of PLANO.materias.slice().sort((a, b) => a.prova.localeCompare(b.prova))) {
     const d = diff(hoje, m.prova);
     const temBanco = Array.isArray(BANCOS[m.id]) && BANCOS[m.id].length;
@@ -327,7 +404,7 @@ async function telaMaterias() {
     }
     html += '</div>';
   }
-  html += '</section>';
+  html += '</div></section>';
   $('#app').innerHTML = html;
 }
 
@@ -485,7 +562,9 @@ function baixarICS() {
   const esc = s => s.replace(/[,;\\]/g, m => '\\' + m);
   const linhas = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//vat2-estudos//PT-BR', 'CALSCALE:GREGORIAN', 'X-WR-CALNAME:VAT2 estudos'];
   const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
-  for (const d of PLANO.dias) {
+  const ef = planoEfetivo(hojeISO());
+  for (const d0 of PLANO.dias) {
+    const d = ef[d0.data];
     const it = tarefasDoDia(d).map(i => (i.prova ? '🔴 ' : MAT[i.m].emoji + ' ') + i.txt);
     const ini = d.data.replace(/-/g, ''), fim = addDias(d.data, 1).replace(/-/g, '');
     const prova = (d.provas || []).map(p => MAT[p].curto).join(' + ');
@@ -571,6 +650,15 @@ document.addEventListener('click', e => {
     const id = est.dataset.estudo, ja = !!estAss(id).estudado;
     marcarEstudado(id, hojeISO(), !ja); salvar();
     toast(ja ? 'Desmarcado' : 'Estudado! Primeira revisão amanhã.'); render(); return;
+  }
+  const pul = e.target.closest('[data-pular]');
+  if (pul) {
+    const hoje = hojeISO();
+    if (pul.dataset.pular === '1') {
+      if (!confirm('Marcar hoje como dia sem estudo? Os assuntos de hoje serão remarcados para os próximos dias.')) return;
+      S.pulados[hoje] = { ok: true, t: Date.now() }; toast('Tudo bem! O plano foi reorganizado.');
+    } else { S.pulados[hoje] = { ok: false, t: Date.now() }; toast('Desfeito'); }
+    salvar(); render(); return;
   }
   const tar = e.target.closest('[data-tarefa]');
   if (tar) { const k = tar.dataset.tarefa; marcarTarefa(k, !tarefaFeita(k)); salvar(); render(); }
