@@ -144,7 +144,10 @@ function planoEfetivo(hoje) {
 async function banco(materia) {
   if (materia in BANCOS) return BANCOS[materia];
   try {
-    const r = await fetch('data/questoes/' + materia + '.json', { cache: 'no-cache' });
+    // as questões moram no repositório vat2-simulados (fonte única, compartilhada com a turma)
+    const base = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+      ? '/vat2-simulados/data/' : (PLANO.questoes || 'data/questoes/');
+    const r = await fetch(base + materia + '.json', { cache: 'no-cache' });
     BANCOS[materia] = r.ok ? await r.json() : null;
   } catch (e) { BANCOS[materia] = null; }
   return BANCOS[materia];
