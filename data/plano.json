@@ -1730,7 +1730,76 @@
    "id": "sm-ansiedade",
    "materia": "saudemental",
    "nome": "Ansiedade e TOC",
-   "aula": "2026-11-06"
+   "aula": "2026-11-06",
+   "fontes": [
+    "Aula VAT2 · Transtornos de ansiedade",
+    "Aula VAT2 · Transtorno obsessivo-compulsivo (TOC)"
+   ],
+   "partes": [
+    {
+     "t": "Conceitos Fundamentais e Epidemiologia da Ansiedade",
+     "top": [
+      "Diferença entre ansiedade adaptativa e patológica",
+      "Epidemiologia global e no Brasil (prevalência, distribuição por sexo e idade de início)",
+      "Comorbidades psiquiátricas mais frequentes nos transtornos de ansiedade",
+      "Reclassificação no DSM-5-TR (separação de TOC e TEPT do capítulo de ansiedade)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Os Cinco Transtornos de Ansiedade",
+     "top": [
+      "Transtorno de Ansiedade Generalizada (TAG): preocupação crônica incontrolável e sintomas somáticos",
+      "Transtorno de Pânico: ataques de pânico recorrentes e inesperados sem gatilho evidente",
+      "Agorafobia: medo e esquiva de categorias situacionais de difícil escape ou socorro",
+      "Transtorno de Ansiedade Social (TAS): medo de avaliação negativa e resposta somática de rubor",
+      "Fobia Específica: resposta vasovagal (sangue/injeção/lesão) e ausência de indicação farmacológica de 1ª linha"
+     ],
+     "e": true
+    },
+    {
+     "t": "Tratamento, Diagnóstico Diferencial e Neurobiologia da Ansiedade",
+     "top": [
+      "Padrão de 1ª linha farmacológica: ISRS/IRSN para quase todos os transtornos (exceto Fobia Específica)",
+      "Uso pontual de benzodiazepínicos vs. papel da Pregabalina no TAG",
+      "Diagnóstico diferencial com condições clínicas (hipertireoidismo, feocromocitoma, cardiopatias e substâncias)",
+      "Bases neurobiológicas (circuito amígdala-CPF, eixo HHA, serotonina, noradrenalina e GABA)",
+      "Mitos/erros frequentes na prática clínica e consolidação com questões no estilo ENAMED"
+     ],
+     "e": true
+    },
+    {
+     "t": "Fundamentos Conceituais do TOC",
+     "top": [
+      "Definição de obsessões egodistônicas e compulsões (comportamentais e mentais)",
+      "Epidemiologia, prevalência e o problema do subdiagnóstico prolongado",
+      "Critérios diagnósticos nucleares: consumo de tempo (>1h/dia), sofrimento e prejuízo funcional",
+      "Diferenciação entre obsessões do TOC e ruminações depressivas congruentes com o humor"
+     ],
+     "e": false
+    },
+    {
+     "t": "Dimensões Clínicas, Caso Clínico e Diagnóstico Diferencial do TOC",
+     "top": [
+      "As 4 dimensões sintomáticas do TOC (contaminação/limpeza, agressão/dano, ordem/simetria, temas proibidos)",
+      "Mensuração de gravidade pela escala Y-BOCS e avaliação dos níveis de insight",
+      "Análise de caso clínico e o impacto da acomodação familiar na perpetuação dos sintomas",
+      "Diagnóstico diferencial com Transtorno da Personalidade Obsessivo-Compulsiva (TPOC) e TAG"
+     ],
+     "e": true
+    },
+    {
+     "t": "Tratamento do TOC e Manejo da Refratariedade",
+     "top": [
+      "Pilares de 1ª linha: TCC com Exposição e Prevenção de Resposta (EPR) e ISRS em doses elevadas",
+      "Estratégias de potencialização (associação de Clomipramina em dose baixa ou Antipsicóticos)",
+      "Erros comuns na farmacoterapia e abordagem psicoeducacional com a família",
+      "Indicações e critérios rigorosos de refratariedade para neuromodulação e neurocirurgia ablativa",
+      "Resolução e discussão de questões de fixação no estilo ENAMED"
+     ],
+     "e": true
+    }
+   ]
   }
  ],
  "dias": [
