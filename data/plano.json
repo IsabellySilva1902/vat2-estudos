@@ -946,56 +946,67 @@
    ],
    "partes": [
     {
-     "t": "Leiomiomatose Uterina: Conceito, Epidemiologia, Fatores de Risco e Fisiopatologia",
+     "t": "Leiomiomatose Uterina: Definição, Epidemiologia, Etiopatogenia e Classificação",
      "top": [
-      "Sistema PALM-COEIN: divisão das causas de Sangramento Uterino Anormal em estruturais (PALM) e não estruturais (COEIN)",
-      "Definição e natureza: tumor benigno de fibras musculares lisas e tecido conectivo, de origem monoclonal no miométrio",
-      "Epidemiologia e importância: tumor pélvico sólido mais comum na mulher, hormônio-dependente, pico entre 35-50 anos e principal indicação de histerectomia",
-      "Fatores de risco e de proteção: idade, raça negra, nuliparidade, obesidade e história familiar aumentam risco; multiparidade, pós-menopausa e tabagismo reduzem",
-      "Etiopatogenia e aspectos macroscópicos: influência de estrogênio e progesterona na proliferação celular; nodulações redondas, brancas nacaradas, firmes e espiraladas"
-     ],
-     "e": false
-    },
-    {
-     "t": "Leiomiomatose Uterina: Classificação Anatômica, Sistema FIGO e Particularidades",
-     "top": [
-      "Classificação topográfica clássica: miomas corporais (98%: subserosos, intramurais, submucosos), cervicais, mioma parido e mioma parasita",
-      "Classificação da FIGO (subtipos 0 a 8): categorização detalhada do componente 'L' do sistema PALM-COEIN conforme localização intramural, submucosa ou subserosa",
-      "Miomas submucosos (FIGO 0-2): menos comuns, porém causam sangramento menstrual intenso/irregular e impactam a fertilidade por alteração cavitária",
-      "Miomas intramurais (FIGO 3-5): localização mais frequente; causam aumento da intensidade/duração do fluxo menstrual e dor pélvica",
-      "Miomas subserosos (FIGO 6-7): predominantemente assintomáticos; quando volumosos causam dor e compressão de órgãos vizinhos (bexiga e reto)"
+      "Conceito de Leiomiomatose Uterina e inserção no espectro PALM-COEIN",
+      "Epidemiologia, faixa etária de pico (3ª e 4ª décadas) e regressão pós-menopausa",
+      "Fatores de risco (afrodescendência, idade, nuliparidade, obesidade, história familiar) e de proteção (paridade, tabagismo)",
+      "Etiopatogenia: tumor hormônio-dependente (estrogênio e progesterona) e transformação de linhagem celular monoclonal",
+      "Aparência patológica e padrão macroscópico dos nódulos (espiralado, firme, branco-nacarado)",
+      "Classificação por localização anatômica (subseroso, intramural, submucoso, cervical, parido e parasita)",
+      "Classificação FIGO (subtipos 0 a 8) e correlação com a profundidade e relação com as camadas uterinas"
      ],
      "e": true
     },
     {
-     "t": "Leiomiomatose Uterina: Quadro Clínico, Diagnóstico, Diagnóstico Diferencial e Tratamentos",
+     "t": "Leiomiomatose Uterina: Quadro Clínico, Infertilidade e Diagnóstico",
      "top": [
-      "Quadro clínico e infertilidade: 50% assintomáticas; sintomas de SUA, dismenorreia secundária, dor pélvica e mecanismos de infertilidade por distorção uterina/vascular",
-      "Diagnóstico: anamnese e toque bimanual; USG pélvica como exame de 1ª linha; RM para mapeamento pré-operatório; Histeroscopia para lesões intracavitárias",
-      "Diagnóstico diferencial: gestação, adenomiose, leiomiossarcoma, pólipos endometriais, carcinoma endometrial e sarcomas estromais",
-      "Tratamento clínico: AINEs e antifibrinolíticos (não hormonais); SIU-LNG, COCs, progestágenos isolados e Análogos do GnRH (como ponte cirúrgica)",
-      "Tratamento cirúrgico e minimamente invasivo: Miomectomia (preservação da fertilidade), Histerectomia (tratamento definitivo) e Embolização das Artérias Uterinas (EAU)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Adenomiose: Conceito Histológico, Fatores de Risco, Fisiopatologia e Classificação",
-     "top": [
-      "Definição histológica: invasão benigna do endométrio no miométrio (>2,5 mm de profundidade) acompanhada de hiperplasia/hipertrofia miometrial",
-      "Fatores de risco e doenças associadas: idade 40-50 anos, multiparidade, menarca precoce, cirurgias uterinas; associação com miomas (20%) e endometriose (11-21%)",
-      "Teorias fisiopatológicas: invasão endometrial direta, remanescentes müllerianos, invaginação linfática e células-tronco da medula óssea",
-      "Classificação por profundidade miometrial: superficial (40%), intermediária (40-80%) e profunda (80%) por Levgur; ou Graus 1, 2 e 3 (terços miometriais)"
+      "Quadro clínico geral: assintomáticas (~50%), Sangramento Uterino Anormal (SUA), dismenorreia secundária, dor pélvica acíclica e sintomas compressivos",
+      "Sintomatologia específica por localização dos miomas (submucosos com sangramento irregular, subserosos compressivos, intramurais com menorragia)",
+      "Mecanismos de infertilidade associados aos miomas (alteração cavitária/implanatação, distorção de óstios tubários, alteração vascular e inflamação)",
+      "Diagnóstico clínico: anamnese, palpação abdominal e toque bimanual",
+      "Exames complementares de imagem: Ultrassonografia pélvica (1ª linha), Ressonância Magnética (mapeamento e planejamento) e Histeroscopia",
+      "Diagnóstico diferencial (gestação, adenomiose, leiomiossarcoma, pólipos e carcinomas endometriais)"
      ],
      "e": false
     },
     {
-     "t": "Adenomiose: Quadro Clínico, Diagnóstico por Imagem e Abordagem Terapêutica",
+     "t": "Leiomiomatose Uterina: Tratamentos Clínicos, Cirúrgicos e Algoritmo de Conduta",
      "top": [
-      "Quadro clínico: tríade sintomática de sangramento genital anormal, dismenorreia e dor pélvica crônica, além de aumento uterino e infertilidade (30% assintomáticas)",
-      "Ultrassonografia transvaginal (USGTV): 1ª linha de imagem (sensibilidade 82%, especificidade 84%); achados de cistos miometriais, estrias radiadas, parede assimétrica, formato globoso e 'queijo suíço'",
-      "Ressonância Magnética e Histeroscopia: alta acurácia da RM na diferenciação entre mioma e adenomioma; HSC visualiza orifícios e manchas acastanheadas/conteúdo achocolatado",
-      "Diagnóstico definitivo: confirmação histórica por Exame Anatomopatológico pós-histerectomia",
-      "Manejo terapêutico: tratamento clínico sintomático por supressão hormonal (SIU-LNG, Dienogeste, GnRH); Histerectomia como único tratamento cirúrgico definitivo"
+      "Fatores norteadores da decisão terapêutica (idade, desejo reprodutivo, sintomas, tamanho e localização)",
+      "Tratamento clínico não hormonal (AINEs para dor/sangramento e antifibrinolíticos)",
+      "Tratamento clínico hormonal (SIU-LNG, contraceptivos combinados e progestágenos isolados)",
+      "Análogos do GnRH: indução de hipogonadismo hipogonadotrófico, restrição de tempo (<6 meses), add-back therapy e indicação como ponte cirúrgica",
+      "Tabela comparativa dos efeitos dos tratamentos clínicos sobre os sintomas",
+      "Tratamento cirúrgico conservador (Miomectomia): indicações, vias de acesso, taxas de gestação pós-procedimento e risco de recorrência (~18%)",
+      "Tratamento cirúrgico definitivo (Histerectomia): indicações por prole constituída, vias de acesso e satisfação do procedimento",
+      "Procedimento minimamente invasivo: Embolização das Artérias Uterinas (EAU) — técnica radiológica, indicações, intercorrências e complicações",
+      "Algoritmo decisório/fluxograma de conduta na leiomiomatose uterina"
+     ],
+     "e": true
+    },
+    {
+     "t": "Adenomiose: Conceito, Fatores de Risco, Sintomas, Classificação e Fisiopatologia",
+     "top": [
+      "Definição e critério histológico de adenomiose (invasão benigna do endométrio no miométrio > 2,5 mm ou 1 campo de grande aumento)",
+      "Fatores de risco (idade 40-50 anos, menarca precoce, multiparidade, cirurgias uterinas prévias, abortamentos, tamoxifeno)",
+      "Sinais e sintomas cardinais (sangramento genital, dismenorreia, dor pélvica crônica, infertilidade, aumento uterino e casos assintomáticos)",
+      "Coexistência com outras patologias (miomas, endometriose e pólipos endometriais)",
+      "Classificação segundo a profundidade de penetração miometrial (Superficial, Intermediária, Profunda ou Graus 1, 2 e 3)",
+      "Fisiopatologia e teorias etiopatogênicas (invasão direta, remanescentes müllerianos, invaginação linfática, células-tronco da medula óssea e alterações inflamatórias/endometriais)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Adenomiose: Diagnóstico por Imagem, Anatomo-patológico e Opções Terapêuticas",
+     "top": [
+      "Ultrassonografia transvaginal (USGTV): sensibilidade/especificidade, período ideal (pré-menstrual) e achados ecográficos (cistos miometriais, estrias radiadas, aspecto em queijo suíço, assimetria uterina)",
+      "Vantagens e desvantagens da USGTV no diagnóstico da adenomiose",
+      "Ressonância Magnética (RM): acurácia, papel crucial na diferenciação entre leiomiomas e adenomiomas, vantagens e desvantagens",
+      "Histeroscopia diagnóstica: achados sugestivos (orifícios, manchas acastanhadas, conteúdo achocolatado) e suas limitações",
+      "Diagnóstico definitivo: exame anatomo-patológico",
+      "Tratamento clínico da adenomiose: objetivos e opções de supressão hormonal (contraceptivos, dienogeste, SIU-LNG, análogos do GnRH)",
+      "Tratamento cirúrgico da adenomiose: Histerectomia como tratamento definitivo para mulheres com prole constituída ou sintomas graves"
      ],
      "e": true
     }
