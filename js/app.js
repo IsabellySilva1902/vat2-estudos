@@ -579,7 +579,7 @@ function telaCalendario() {
   marcarAba('calendario');
   const hoje = hojeISO();
   const ef = planoEfetivo(hoje);
-  let html = `<section class="blk"><h2>Calendário da VAT2</h2><p class="muted">O calendário se ajusta sozinho quando algo fica para trás. <a href="#" id="baixar-ics">Baixar para o Google Agenda (.ics)</a></p><div class="cal">`;
+  let html = `<section class="blk"><h2>Calendário da VAT2</h2><p class="muted">O calendário se ajusta sozinho quando algo fica para trás. <a href="#" id="baixar-ics">Baixar para o Calendário (Apple ou Google, .ics)</a></p><div class="cal">`;
   for (const d0 of PLANO.dias) {
     const d = ef[d0.data];
     const prova = (d.provas || []).length > 0;
@@ -834,11 +834,12 @@ function baixarICS() {
     const it = tarefasDoDia(d).map(i => (i.prova ? '🔴 ' : MAT[i.m].emoji + ' ') + i.txt);
     const ini = d.data.replace(/-/g, ''), fim = addDias(d.data, 1).replace(/-/g, '');
     const prova = (d.provas || []).map(p => MAT[p].curto).join(' + ');
+    if (!it.length || d.data < hojeISO()) continue; // dias passados ou sem nada não entram
     linhas.push('BEGIN:VEVENT', 'UID:vat2-' + ini + '@vat2-estudos', 'DTSTAMP:' + stamp,
       'DTSTART;VALUE=DATE:' + ini, 'DTEND;VALUE=DATE:' + fim,
       'SUMMARY:' + esc(prova ? 'PROVA ' + prova : 'Estudo VAT2: ' + it.filter(x => !x.startsWith('🔴')).slice(0, 2).join(' / ')),
       'DESCRIPTION:' + esc(it.join('\\n') + (d.nota ? '\\n' + d.nota : '')),
-      'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Estudo VAT2', 'TRIGGER:PT8H', 'END:VALARM', 'END:VEVENT');
+      'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Estudo VAT2', 'TRIGGER:PT13H', 'END:VALARM', 'END:VEVENT');
   }
   linhas.push('END:VCALENDAR');
   const blob = new Blob([linhas.join('\r\n')], { type: 'text/calendar' });
