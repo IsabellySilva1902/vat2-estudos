@@ -200,49 +200,40 @@
    ],
    "partes": [
     {
-     "t": "Conceitos Fundamentais e Definição de Farmacogenética",
+     "t": "Introdução e Conceitos Fundamentais da Farmacogenética",
      "top": [
-      "Mecanismos de atuação dos fármacos (interação com proteínas carreadoras, transportadoras e enzimas)",
-      "Fatores que influenciam a resposta aos medicamentos (ambientais, estado de saúde e características genéticas)",
-      "Conceito de Farmacogenética segundo Meyer, 2004 (sentido amplo vs. sentido estrito)"
+      "Mecanismos de atuação dos fármacos via proteínas carreadoras, transportadoras e enzimas de metabolização",
+      "Fatores que influenciam a resposta aos fármacos (ambientais, estado de saúde e características genéticas)",
+      "Conceito de Farmacogenética em sentido amplo (qualquer variabilidade genética na resposta a drogas) e sentido estrito (variação revelada apenas pela resposta a drogas)",
+      "Aplicações do sistema LADME e níveis de prevenção (primária e secundária) na estrutura da atenção à saúde"
      ],
      "e": false
     },
     {
-     "t": "Histórico e Perfis Metabolizadores (CYP2D6)",
+     "t": "Histórico da Farmacogenética e Perfis Metabolizadores",
      "top": [
-      "Garrod (1902) e o conceito de química individual (estudos sobre Alcaptonúria e Porfiria)",
-      "Marcos históricos dos anos 50/60 (Motulsky 1957, Beutler 1959 com deficiência de G6PD e primaquina, Kalow 1962)",
-      "Relação genótipo-fenótipo do gene CYP2D6 e os 4 perfis de metabolização da nortriptilina (ultrarrápido, extensivo, intermediário e lento)"
+      "Marcos históricos iniciais: Archibald Garrod (1902) e o conceito de química individual em Alcaptonúria e Porfiria",
+      "Avanços dos anos 50 e 60: Motulsky (1957), Beutler (1959 - deficiência de G6PD e uso de primaquina) e Kalow (1962)",
+      "Relação genótipo-fenótipo da enzima CYP2D6 e caracterização dos 4 perfis metabolizadores (ultrarrápido, extensivo, intermediário e pobre) na metabolização da nortriptilina"
      ],
      "e": true
     },
     {
-     "t": "Marcadores de DNA, SNPs e Sistema LADME",
+     "t": "Marcadores Genéticos, PCR e Alvos Farmacogenéticos",
      "top": [
-      "Aplicação de técnicas moleculares (PCR e geração de amplicons)",
-      "Diferença genômica entre Doença Monogênica e Doença Poligênica (mutações vs. polimorfismos >1%)",
-      "SNPs (Polimorfismos de Nucleotídeo Único): características e frequência no genoma humano",
-      "Sistema LADME (Liberação, Absorção, Distribuição, Metabolismo e Eliminação) na predição de desfecho clínico"
-     ],
-     "e": false
-    },
-    {
-     "t": "Alvos Farmacogenéticos: Transportadores, Receptores e Enzimas",
-     "top": [
-      "Transportadores de medicamentos: Gene MDR1, Glicoproteína-P e efluxo de fármacos na resistência terapêutica",
-      "Receptores de medicamentos: Mutações em canais de sódio e resposta à carbamazepina na epilepsia",
-      "Enzimas de detoxificação e metabolização (famílias GST, CYP e NAT2)",
-      "Polimorfismo do gene NAT2 e controle genético do metabolismo da Isoniazida (acetiladores rápidos vs. lentos na tuberculose)"
+      "Reação em Cadeia da Polimerase (PCR) para amplificação de DNA in vitro e geração de amplicons",
+      "Marcadores de DNA: Polimorfismos de Nucleotídeo Único (SNPs) e distinção genotípica em doenças monogênicas e poligênicas",
+      "Alvos de transportadores de medicamentos: Gene MDR1, expressão de Glicoproteína-P e efluxo de xenobióticos em artrite reumatoide",
+      "Alvos de receptores de medicamentos: Mutações em canais de sódio na epilepsia e resposta à carbamazepina"
      ],
      "e": true
     },
     {
-     "t": "Aplicabilidade Clínica, Oncogenética e Perspectivas Futuras",
+     "t": "Variabilidade Enzimática, Interações e Perspectivas Futuras",
      "top": [
-      "Aplicações na indústria farmacêutica, prognóstico de patologias e benefícios à Saúde Pública",
-      "Farmacogenética aplicada ao câncer (resposta quimioterápica populacional e alvos como EGFR)",
-      "Desafios na validação clínica de marcadores genéticos e questões de síntese da aula"
+      "Metabolismo da Isoniazida e polimorfismo de acetilação da enzima NAT2 (acetiladores rápidos vs. lentos em tuberculose)",
+      "Estudos de associação de toxicidade por interação poligênica (NAT2, GSTM1, GSTT1, CYP2E1) e fatores ambientais",
+      "Aplicabilidade clínica e perspectivas: desenvolvimento de drogas, saúde pública, terapia antineoplásica direcionada (ex: receptor EGFR) e validação de marcadores de relevância clínica"
      ],
      "e": false
     }
