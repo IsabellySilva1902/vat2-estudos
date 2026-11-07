@@ -356,11 +356,11 @@ ${mapa}
 🎯 Ideia central: em uma ou duas frases, do que trata esta parte.
 
 ${a.formato === 'medio'
-  ? `📘 Explicação: explique a parte como um texto bem encadeado, ligando um tópico ao outro e mostrando por que um leva ao outro, sem listas soltas. Cubra TODOS os tópicos da parte: conceito, mecanismo/porquê, classificação, critérios, números e exemplos. Quando o slide citar vários exemplos (síndromes, doenças, fármacos), explique cada um, não só um modelo. Use tabela só para comparar ou classificar, e comente a tabela no texto. Comece pelo slide e aprofunde com o livro onde o slide for raso, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo. Seja completo, sem repetir nem enrolar: algo em torno de 1.200 a 1.800 palavras por parte.
+  ? `📘 Explicação completa: divida a parte em subtópicos com título (A, B, C…), um para cada tópico do slide, e explique cada um com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes), em parágrafos curtos e tópicos, nunca em texto corrido longo. Quando o slide citar vários exemplos (síndromes, doenças, fármacos), explique cada um. Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Seja um pouco mais enxuto que um capítulo de livro: vá direto ao ponto em cada subtópico, sem repetir, mas sem cortar conteúdo.
 
-🩺 Na prática: 1 caso clínico (2 se a parte tiver cálculo ou conduta).
+🩺 Na prática: um ou dois casos clínicos mostrando como isso aparece no consultório e na prova.
 
-⚠️ Pegadinhas: 3 a 5 erros e confusões comuns de estudante sobre esta parte.`
+⚠️ Pegadinhas: os erros e confusões mais comuns de estudante sobre esta parte.`
   : `📘 Explicação completa: explique cada tópico da parte com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes). Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Não resuma e não limite o tamanho: prefiro uma explicação longa e completa.
 
 🩺 Na prática: um ou dois casos clínicos mostrando como isso aparece no consultório e na prova.
