@@ -1816,12 +1816,22 @@
  "dias": [
   {
    "data": "2026-11-05",
-   "estudar": [
-    "gen-ag"
-   ]
+   "nota": "Plano recalculado em 07/11: o que era deste dia foi redistribuído."
   },
   {
    "data": "2026-11-06",
+   "nota": "Plano recalculado em 07/11: o que era deste dia foi redistribuído."
+  },
+  {
+   "data": "2026-11-07",
+   "estudar": [
+    "gen-ag",
+    "gen-farmaco"
+   ],
+   "nota": "Plano recalculado hoje a partir do seu ritmo (1 a 1,5 assunto por dia; 2 em alguns dias depois da prova de Genética). Termine Aconselhamento genético e, se der, Farmacogenética (aula curta)."
+  },
+  {
+   "data": "2026-11-08",
    "estudar": [
     "gen-onco"
    ],
@@ -1830,29 +1840,10 @@
    ]
   },
   {
-   "data": "2026-11-07",
-   "estudar": [
-    "gen-farmaco",
-    "gen-crispr"
-   ],
-   "revisar": [
-    "genetica"
-   ],
-   "nota": "Farmacogenética e CRISPR são aulas curtas."
-  },
-  {
-   "data": "2026-11-08",
-   "estudar": [
-    "epi-sis"
-   ],
-   "simulado": [
-    "genetica"
-   ]
-  },
-  {
    "data": "2026-11-09",
    "estudar": [
-    "epi-causal"
+    "gen-crispr",
+    "pra-ciclo"
    ],
    "revisar": [
     "genetica"
@@ -1861,7 +1852,8 @@
   {
    "data": "2026-11-10",
    "estudar": [
-    "epi-valid"
+    "epi-sis",
+    "pra-climat"
    ],
    "revisar": [
     "genetica"
@@ -1870,7 +1862,7 @@
   {
    "data": "2026-11-11",
    "estudar": [
-    "far-anticonv"
+    "epi-causal"
    ],
    "revisar": [
     "genetica"
@@ -1879,7 +1871,7 @@
   {
    "data": "2026-11-12",
    "estudar": [
-    "far-infec"
+    "epi-valid"
    ],
    "revisar": [
     "genetica"
@@ -1887,15 +1879,16 @@
   },
   {
    "data": "2026-11-13",
+   "nota": "Dia da APA: dia leve.",
    "revisar": [
-    "genetica"
-   ],
-   "nota": "Dia da APA: dia leve."
+    "genetica",
+    "epidemio"
+   ]
   },
   {
    "data": "2026-11-14",
    "estudar": [
-    "far-trs"
+    "far-anticonv"
    ],
    "revisar": [
     "genetica"
@@ -1906,7 +1899,7 @@
    "simulado": [
     "genetica"
    ],
-   "nota": "Simulado completo de Genética + revisão dos erros."
+   "nota": "Simulado completo de Genética + revisão dos erros. Sem conteúdo novo."
   },
   {
    "data": "2026-11-16",
@@ -1920,64 +1913,67 @@
     "genetica"
    ],
    "estudar": [
-    "top-drc"
-   ],
-   "nota": "Depois da prova: só DRC, com calma."
+    "far-infec"
+   ]
   },
   {
    "data": "2026-11-18",
    "estudar": [
     "far-antidep",
-    "sm-humor"
+    "top-drc"
    ],
    "revisar": [
     "epidemio"
-   ],
-   "nota": "Antidepressivos e transtornos de humor são o mesmo tema visto de dois lados."
+   ]
   },
   {
    "data": "2026-11-19",
    "estudar": [
-    "far-contra",
-    "pra-contra"
+    "far-trs",
+    "top-chagas"
    ],
    "revisar": [
     "farmaco"
-   ],
-   "nota": "Contracepção vale para Farmaco e Práticas."
+   ]
   },
   {
    "data": "2026-11-20",
    "estudar": [
-    "pra-vulvo"
+    "far-contra",
+    "pra-contra"
    ],
+   "nota": "Dia com mais de um assunto: comece pelo de prova mais próxima. O que não der, marque as partes feitas e clique em \"Parar por hoje\".",
    "revisar": [
-    "epidemio",
     "farmaco"
    ]
   },
   {
    "data": "2026-11-21",
    "estudar": [
-    "pra-ciclo",
-    "pra-climat"
+    "pra-vulvo",
+    "top-tb"
    ],
-   "nota": "Revisão das TUTs 1 e 3. De manhã tem aula de TDAH e transtornos mentais comuns (Tópicos)."
+   "revisar": [
+    "farmaco"
+   ]
   },
   {
    "data": "2026-11-22",
    "simulado": [
     "epidemio",
     "farmaco"
+   ],
+   "estudar": [
+    "pra-utero"
    ]
   },
   {
    "data": "2026-11-23",
    "estudar": [
-    "pra-utero"
+    "pra-infert",
+    "top-esquisto"
    ],
    "revisar": [
-    "epidemio",
     "farmaco"
    ]
   },
@@ -1995,7 +1991,8 @@
     "farmaco"
    ],
    "estudar": [
-    "pra-infert"
+    "top-leish",
+    "top-hansen"
    ]
   },
   {
@@ -2013,34 +2010,30 @@
     "praticas"
    ],
    "estudar": [
-    "top-tb",
-    "top-chagas"
+    "top-escorp",
+    "top-ofid"
    ]
   },
   {
    "data": "2026-11-28",
    "estudar": [
-    "top-esquisto",
-    "top-leish",
-    "top-hansen"
+    "top-tmc",
+    "top-raiva",
+    "sm-ansiedade"
    ],
+   "nota": "Dia com mais de um assunto: comece pelo de prova mais próxima. O que não der, marque as partes feitas e clique em \"Parar por hoje\".",
    "revisar": [
     "topicos"
-   ],
-   "nota": "Dia pesado: são protocolos curtos, foque em diagnóstico e tratamento."
+   ]
   },
   {
    "data": "2026-11-29",
    "estudar": [
-    "top-escorp",
-    "top-ofid",
-    "top-raiva",
-    "top-tmc"
+    "sm-humor"
    ],
    "revisar": [
     "topicos"
-   ],
-   "nota": "Dia pesado: acidentes peçonhentos juntos, depois raiva/tétano e TMC."
+   ]
   },
   {
    "data": "2026-11-30",
@@ -2063,8 +2056,7 @@
   {
    "data": "2026-12-02",
    "estudar": [
-    "sm-spa",
-    "sm-ansiedade"
+    "sm-spa"
    ],
    "revisar": [
     "saudemental"
