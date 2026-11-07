@@ -351,7 +351,7 @@ function promptEstudo(assId) {
 1. O MAPA da aula já está definido. Use exatamente estas partes, nesta ordem, sem refazer a divisão:
 ${mapa}
 
-2. Explique UMA parte por vez, começando pela Parte ${prox}, sempre neste formato:
+2. Agora NÃO explique nada: só confirme que entendeu o mapa e espere. Eu vou pedir uma parte por vez ("Parte 1", "Parte 2"…). Cada parte deve vir sempre neste formato:
 
 🎯 Ideia central: em uma ou duas frases, do que trata esta parte.
 
@@ -371,6 +371,10 @@ ${a.formato === 'medio'
 
 ❓ Me teste: 2 perguntas (uma de conceito e uma aplicada, no estilo da prova). NÃO dê a resposta. Espere eu responder, corrija meu raciocínio explicando o que acertei e o que errei, e só então pergunte se sigo para a próxima parte.`;
 }
+function promptParte(assId, k) {
+  const p = partesDe(assId)[k];
+  return `Parte ${k + 1}${p.e ? ' ⭐' : ''}: ${p.t}${p.top && p.top.length ? '\nTópicos: ' + p.top.join('; ') : ''}\n\nExplique esta parte no formato combinado (🎯 Ideia central, 📘 Explicação completa em subtópicos A, B, C…, 🩺 Na prática, ⚠️ Pegadinhas, 🧠 Para memorizar, ❓ Me teste).`;
+}
 
 function blocoPartes(assId, hoje, parcial) {
   const a = ASS[assId], m = MAT[a.materia], e = estAss(assId), ps = partesDe(assId);
@@ -386,6 +390,7 @@ function blocoPartes(assId, hoje, parcial) {
     return `<div class="parte ${d ? 'ok' : ''}">
       <button class="check ${d ? 'on' : ''}" style="--c:${m.cor}" data-parte="${assId}|${k}" aria-label="Marcar parte ${k + 1}">${d ? '✓' : ''}</button>
       <div class="grow"><b>Parte ${k + 1}${p.e ? ' ⭐' : ''}</b> · ${h(p.t)}${d && d !== hoje ? ` <span class="muted">(estudada ${fmt(d)})</span>` : ''}
+      <button class="btn ghost" style="padding:.1rem .55rem;font-size:.78rem;margin-left:.3rem" data-prompt-parte="${assId}|${k}">📋 Prompt parte ${k + 1}</button>
       ${p.top && p.top.length ? `<details><summary class="muted">tópicos</summary><ul>${p.top.map(t => '<li>' + h(t) + '</li>').join('')}</ul></details>` : ''}</div></div>`;
   }).join('');
   const falta = partesFaltando(assId);
@@ -420,7 +425,7 @@ function cartaoEstudo(assId, hoje, item = {}, parcial = null) {
         ${blocoPartes(assId, hoje, parcial)}
         ${parcial ? '' : `<div class="actions">
           <a class="btn" href="${m.notebook}" target="_blank" rel="noopener">📓 Abrir notebook</a>
-          ${n && !e.estudado ? `<button class="btn" data-prompt="${assId}">📋 Copiar prompt (Parte ${(partesFaltando(assId)[0] ?? 0) + 1})</button>` : ''}
+          ${n && !e.estudado ? `<button class="btn" data-prompt="${assId}">📋 Prompt inicial (mapa e formato)</button>` : ''}
           ${temBanco ? `<a class="btn" href="${linkSimulado(a.materia, { a: assId, n: 10, modo: 'treino' })}">✍️ 10 questões</a>` : ''}
         </div>`}
       </div>
@@ -949,6 +954,12 @@ document.addEventListener('click', e => {
     e.preventDefault();
     const [id, p] = pf.dataset.promptFraco.split('|'); const txt = promptFraco(id, p ? +p : null);
     navigator.clipboard.writeText(txt).then(() => toast('Prompt copiado: cole no chat do notebook'), () => prompt('Copie o prompt:', txt));
+    return;
+  }
+  const ppt = e.target.closest('[data-prompt-parte]');
+  if (ppt) {
+    const [id, k] = ppt.dataset.promptParte.split('|'); const txt = promptParte(id, +k);
+    navigator.clipboard.writeText(txt).then(() => toast('Prompt da parte ' + (+k + 1) + ' copiado'), () => prompt('Copie o prompt:', txt));
     return;
   }
   const map = e.target.closest('[data-mapa-salvar]');
