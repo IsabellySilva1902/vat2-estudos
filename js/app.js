@@ -351,19 +351,17 @@ function promptEstudo(assId) {
 1. O MAPA da aula já está definido. Use exatamente estas partes, nesta ordem, sem refazer a divisão:
 ${mapa}
 
-2. Explique UMA parte por vez, começando pela Parte ${prox}, sempre neste formato:
+2. Trabalhe UMA parte por vez, começando pela Parte ${prox}. Quero estudo ativo e condensado: pouco texto corrido, muita prática. Formato:
 
-🎯 Ideia central: em uma ou duas frases, do que trata esta parte.
+🎯 Em uma frase: do que trata a parte.
 
-📘 Explicação completa: explique cada tópico da parte com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes). Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Não resuma e não limite o tamanho: prefiro uma explicação longa e completa.
+📌 Resumo de alto rendimento: SÓ o que cai em prova, em tópicos curtos e tabelas (conceitos, mecanismos em 1 linha, critérios, números, condutas, comparações). Sem enrolação, mas sem cortar nada que seja cobrado. Use o livro só para completar o que o slide deixa raso, avisando.
 
-🩺 Na prática: um ou dois casos clínicos mostrando como isso aparece no consultório e na prova.
+⚠️ Pegadinhas: 3 a 5 confusões típicas de prova.
 
-⚠️ Pegadinhas: os erros e confusões mais comuns de estudante sobre esta parte.
+🃏 Flashcards: 6 a 8 cartões "pergunta → resposta curta" com o essencial da parte.
 
-🧠 Para memorizar: tabela, esquema ou mnemônico com o essencial da parte.
-
-❓ Me teste: 2 perguntas (uma de conceito e uma aplicada, no estilo da prova). NÃO dê a resposta. Espere eu responder, corrija meu raciocínio explicando o que acertei e o que errei, e só então pergunte se sigo para a próxima parte.`;
+❓ Questões: 3 questões no estilo da prova, UMA POR VEZ, sem dar a resposta. Espere eu responder, corrija explicando o porquê (e o erro de cada alternativa) e só depois mande a próxima. No fim, pergunte se sigo para a próxima parte.`;
 }
 
 function blocoPartes(assId, hoje, parcial) {
@@ -380,6 +378,7 @@ function blocoPartes(assId, hoje, parcial) {
     return `<div class="parte ${d ? 'ok' : ''}">
       <button class="check ${d ? 'on' : ''}" style="--c:${m.cor}" data-parte="${assId}|${k}" aria-label="Marcar parte ${k + 1}">${d ? '✓' : ''}</button>
       <div class="grow"><b>Parte ${k + 1}${p.e ? ' ⭐' : ''}</b> · ${h(p.t)}${d && d !== hoje ? ` <span class="muted">(estudada ${fmt(d)})</span>` : ''}
+      ${(BANCOS[a.materia] || []).some(q => q.assunto === assId && PARTEQ[q.code] === k + 1) && !proprio ? ` <a class="muted" href="${linkSimulado(a.materia, { a: assId, p: k + 1, n: 5, modo: 'treino' })}">✍️ 5 questões</a>` : ''}
       ${p.top && p.top.length ? `<details><summary class="muted">tópicos</summary><ul>${p.top.map(t => '<li>' + h(t) + '</li>').join('')}</ul></details>` : ''}</div></div>`;
   }).join('');
   const falta = partesFaltando(assId);
