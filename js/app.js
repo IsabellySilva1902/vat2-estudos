@@ -355,11 +355,17 @@ ${mapa}
 
 🎯 Ideia central: em uma ou duas frases, do que trata esta parte.
 
-📘 Explicação completa: explique cada tópico da parte com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes). Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Não resuma e não limite o tamanho: prefiro uma explicação longa e completa.
+${a.formato === 'medio'
+  ? `📘 Explicação: explique cada tópico da parte de forma completa, mas objetiva: conceito, porquê (mecanismo) e o que costuma cair na prova, em 1 ou 2 parágrafos curtos por tópico. Use tabela quando houver comparação ou classificação. Comece pelo slide e aprofunde com o livro onde o slide for raso, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo. Algo em torno de 800 a 1.200 palavras por parte.
+
+🩺 Na prática: 1 caso clínico (2 se a parte tiver cálculo ou conduta).
+
+⚠️ Pegadinhas: 3 a 5 erros e confusões comuns de estudante sobre esta parte.`
+  : `📘 Explicação completa: explique cada tópico da parte com profundidade de livro-texto (conceito, mecanismo/porquê, classificação, critérios e números importantes). Comece pelo que está no slide e aprofunde com o livro, avisando quando algo vem só do livro. Se houver cálculo, resolva passo a passo, explicando cada etapa. Não resuma e não limite o tamanho: prefiro uma explicação longa e completa.
 
 🩺 Na prática: um ou dois casos clínicos mostrando como isso aparece no consultório e na prova.
 
-⚠️ Pegadinhas: os erros e confusões mais comuns de estudante sobre esta parte.
+⚠️ Pegadinhas: os erros e confusões mais comuns de estudante sobre esta parte.`}
 
 🧠 Para memorizar: tabela, esquema ou mnemônico com o essencial da parte.
 
