@@ -152,3 +152,5 @@ textarea.f{min-height:110px;font-family:'IBM Plex Mono',monospace;font-size:.78r
 .fraco .pill{margin-right:.35rem}
 .fraco-st{white-space:normal !important;color:var(--incorrect) !important;margin-top:.2rem}
 .fraco-st a{color:inherit}
+.rev-sim{margin-top:.55rem}
+.rev-sim .actions{margin-top:.35rem}

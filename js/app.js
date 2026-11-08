@@ -218,7 +218,7 @@ function acertoAssunto(materia, assId) {
 function chaveSim(m) { return 'simfc_vat2-' + m.pasta + '_'; }
 function lerLS(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
 function importarSimulados(hoje) {
-  let mudou = false; const lotes = {};
+  let mudou = false; const lotes = {}; const feitasHoje = new Set();
   for (const m of PLANO.materias) {
     const qs = BANCOS[m.id]; if (!Array.isArray(qs)) continue;
     const assDe = Object.fromEntries(qs.map(q => [q.code, q.assunto]));
@@ -231,6 +231,7 @@ function importarSimulados(hoje) {
         if (!r || !r.ts || ja.has(r.ts)) continue;
         const d = iso(new Date(r.ts));
         e.tent.push({ d, ok: !!r.ok, ts: r.ts, sim: 1 }); novo = true;
+        if (d === hoje) feitasHoje.add(m.id);
         const a = assDe[code];
         if (a) { const k = r.ts + '|' + a; lotes[k] = lotes[k] || { a, d, c: 0, t: 0 }; lotes[k].t++; if (r.ok) lotes[k].c++; }
       }
@@ -245,6 +246,8 @@ function importarSimulados(hoje) {
   for (const x of Object.values(lotes)) {
     if (x.t >= 3 && ASS[x.a] && estAss(x.a).estudado) { registrarRevisao(x.a, x.d, notaPorAcerto(x.c / x.t), Math.round(100 * x.c / x.t)); mudou = true; }
   }
+  // fez questões da matéria hoje no simulado completo: a revisão de hoje dessa matéria conta como feita
+  for (const mt of feitasHoje) { const k = hoje + '|rev|' + mt; if (!tarefaFeita(k)) { marcarTarefa(k, true); mudou = true; } }
   if (mudou) salvar();
 }
 
@@ -322,6 +325,12 @@ function linkSimulado(materia, opts = {}) {
   for (const [k, v] of Object.entries(opts)) if (v != null && v !== '') p.set(k, Array.isArray(v) ? v.join(',') : v);
   const qs = p.toString();
   return '#/simulado/' + materia + (qs ? '?' + qs : '');
+}
+function linkSimuladoCompleto(materia, opts = {}) {
+  const p = new URLSearchParams();
+  for (const [k, v] of Object.entries(opts)) if (v != null && v !== '') p.set(k, Array.isArray(v) ? v.map(encodeURIComponent).join(',') : v);
+  const qs = p.toString();
+  return '#/simulado-completo/' + materia + (qs ? '?' + qs : '');
 }
 function rota() {
   const raw = location.hash.replace(/^#\/?/, '') || 'hoje';
@@ -449,6 +458,18 @@ function cartaoRevisao(materia, hoje, chave) {
   }
   const temBanco = Array.isArray(BANCOS[materia]) && BANCOS[materia].length;
   const fracos = temBanco ? pontosFracos(materia) : [];
+  // revisão no simulado completo: todos os assuntos já estudados da matéria, questões sorteadas
+  const vistos = temBanco ? PLANO.assuntos.filter(a => a.materia === materia && estAss(a.id).estudado) : [];
+  const idsVistos = new Set(vistos.map(a => a.id));
+  const qsVistas = temBanco ? BANCOS[materia].filter(q => idsVistos.has(q.assunto)) : [];
+  const cats = [...new Set(qsVistas.map(q => q.category))];
+  const tamanhos = [10, 20, 30].filter(n => n < qsVistas.length);
+  if (qsVistas.length && tamanhos.length < 3) tamanhos.push(qsVistas.length);
+  const linkRev = n => linkSimuladoCompleto(materia, { assuntos: cats, qtd: n, aleatorio: 1 });
+  const blocoRev = qsVistas.length ? `<div class="rev-sim">
+          <div class="muted">✍️ <b>Revisão no simulado</b> com os assuntos já estudados (${vistos.map(a => h(a.nome)).join(', ')}). Quantas questões?</div>
+          <div class="actions">${tamanhos.map((n, i) => `<a class="btn ${i === 0 ? 'primary' : ''}" href="${linkRev(n)}">${n === qsVistas.length && n > 30 ? 'Todas (' + n + ')' : n}</a>`).join('')}</div>
+        </div>` : '';
   return `<div class="card ${feita ? 'done' : ''}" style="--c:${m.cor}">
     <div class="row">
       <button class="check ${feita ? 'on' : ''}" data-tarefa="${chave}" aria-label="Marcar revisão como feita">${feita ? '✓' : ''}</button>
@@ -456,10 +477,10 @@ function cartaoRevisao(materia, hoje, chave) {
         <div class="tag">${m.emoji} ${h(m.curto)} · revisão</div>
         <h3>Revisar ${h(m.curto)}</h3>
         <div class="muted">${texto}</div>
+        ${blocoRev}
         ${fracos.length ? `<div class="muted" style="margin-top:.3rem">🎯 Você tem errado: ${fracos.slice(0, 3).map(x => nomeFraco(x) + ` (${x.c}/${x.t})`).join('; ')}</div>` : ''}
         <div class="actions">
           ${fracos.length ? `<a class="btn" href="${linkSimulado(materia, { a: fracos[0].assId, p: fracos[0].parte || '', n: 10, modo: 'treino' })}">🎯 Treinar o ponto mais fraco</a>` : ''}
-          ${temBanco && alvo.length ? `<a class="btn primary" href="${linkSimulado(materia, { a: alvo.map(a => a.id), n: 15, modo: 'revisao', tarefa: chave })}">✍️ Revisar com 15 questões</a>` : ''}
           ${!temBanco ? `<span class="muted">Simulado desta matéria em preparação: revise pelo notebook.</span>` : ''}
           <a class="btn" href="${m.notebook}" target="_blank" rel="noopener">📓 Notebook</a>
         </div>
@@ -776,11 +797,14 @@ async function telaSimulados() {
   html += '</div></section>';
   $('#app').innerHTML = html;
 }
-function telaSimuladoCompleto(materia) {
+function telaSimuladoCompleto(materia, q = new URLSearchParams()) {
   marcarAba('simulados');
   const m = MAT[materia];
   if (!m) { location.hash = '#/simulados'; return; }
-  const src = urlSimulados() + m.pasta + '/';
+  // assuntos/qtd/aleatorio vêm do cartão de revisão e pré-preenchem o simulado
+  const p = new URLSearchParams();
+  for (const k of ['assuntos', 'qtd', 'aleatorio']) if (q.get(k)) p.set(k, q.get(k));
+  const src = urlSimulados() + m.pasta + '/' + (p.toString() ? '?' + p : '');
   $('#app').innerHTML = `<div class="sim-topo"><a class="btn ghost" href="#/simulados">← Simulados</a>
     <b>${m.emoji} ${h(m.curto)}</b>
     <span><button class="btn" data-copiar="${h(urlPublicaSimulado(m))}">📤 Link da turma</button>
@@ -921,7 +945,7 @@ async function render() {
   else if (tela === 'materias') await telaMaterias();
   else if (tela === 'ajustes') telaAjustes();
   else if (tela === 'simulados') await telaSimulados();
-  else if (tela === 'simulado-completo' && arg) telaSimuladoCompleto(arg);
+  else if (tela === 'simulado-completo' && arg) telaSimuladoCompleto(arg, q);
   else if (tela === 'simulado' && arg) await telaSimulado(arg, q);
   else if (tela === 'pontos' && arg) await telaPontos(arg);
   else await telaHoje();
