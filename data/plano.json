@@ -328,53 +328,43 @@
    ],
    "partes": [
     {
-     "t": "História, Racionalidade Científica e Causalidade em Epidemiologia",
+     "t": "Constituição da Epidemiologia e Racionalidade Causal",
      "top": [
-      "Constituição da epidemiologia no século XIX (clínica, bioestatística, positivismo e medicina social)",
-      "Racionalidade científica e raciocínio indutivo versus dedutivo",
-      "Conceito de causalidade, inferência causal e diferença entre associação e causalidade"
+      "Bases históricas da Epidemiologia (Nascimento da Clínica, Bioestatística, Positivismo e Medicina Social)",
+      "Racionalidade científica no processo saúde-doença (Causa x Efeito, Exposição x Desfecho, Variáveis)",
+      "Raciocínio científico (Métodos Indutivo e Dedutivo)",
+      "Conceito de Causalidade e Inferência Causal (Diferença entre Associação Estatística e Causalidade)"
      ],
      "e": false
     },
     {
      "t": "Critérios de Causalidade de Bradford Hill",
      "top": [
-      "Definição e aplicação dos 9 critérios de Hill na inferência causal",
-      "Força de associação, consistência (replicação), especificidade e analogia",
-      "Temporalidade (único critério indispensável)",
-      "Gradiente biológico (dose-resposta), plausibilidade biológica, coerência e experimentação"
+      "Estudo seminal de Doll & Hill (Tabagismo e Câncer de Pulmão)",
+      "Força de Associação e Consistência (Replicação dos achados)",
+      "Especificidade e Temporalidade (Único critério estritamente indispensável)",
+      "Gradiente Biológico (Dose-Resposta) e Plausibilidade Biológica",
+      "Coerência com a história natural da doença, Experimentação e Analogia"
      ],
      "e": true
     },
     {
-     "t": "Fundamentos da MBE, Pergunta PICO e Busca de Evidências",
+     "t": "Medicina Baseada em Evidências e Busca de Literatura",
      "top": [
-      "Conceito e tripé da Medicina Baseada em Evidências (evidência, experiência clínica e preferências do paciente)",
-      "Formulação de perguntas clínicas pela Estratégia PICO (População, Intervenção, Comparação, Desfecho)",
-      "Tipos de perguntas clínicas (tratamento, diagnóstico, prognóstico, prevenção e etiologia)",
-      "Busca de evidências científicas: bases de dados (PubMed, BVS, Cochrane), descritores (DeCS/MeSH), operadores booleanos (AND, OR, NOT) e literatura cinzenta"
+      "Conceito e Tríade da MBE (Evidência científica, Experiência clínica e Valores do paciente)",
+      "Hierarquia de Evidências e Delineamentos Epidemiológicos (Limites da pirâmide de evidências)",
+      "Formulação de Perguntas Clínicas via Estratégia PICO / PICOT",
+      "Estratégias de busca bibliográfica (PubMed/MEDLINE, BVS, Cochrane, DeCS/MeSH, Operadores Booleanos AND/OR/NOT e Literatura Cinzenta)"
      ],
      "e": true
     },
     {
-     "t": "Delineamentos, Revisão Sistemática, Metanálise e Sistema GRADE",
+     "t": "Revisões Sistemáticas, Metanálise e Leitura Crítica",
      "top": [
-      "Delineamentos epidemiológicos, pirâmide de evidências e suas limitações",
-      "Diferença entre revisão narrativa e Revisão Sistemática (etapas, registro no PROSPERO, fluxograma PRISMA e análise de concordância Kappa/ICC)",
-      "Avaliação do risco de viés em revisões sistemáticas",
-      "Metanálise e interpretação do Forest Plot (estimativa sumária, peso dos estudos, efeito nulo e heterogeneidade)",
-      "Avaliação da qualidade da evidência pelo sistema GRADE (níveis de confiança e fatores de rebaixamento)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Leitura Crítica e Interpretação de Medidas Clínicas de Efeito",
-     "top": [
-      "Leitura crítica de artigos: validade interna e externa, viés (seleção, informação, confundimento), randomização, cegamento e perdas de seguimento",
-      "Significância estatística versus relevância clínica e conflitos de interesse",
-      "Interpretação de Risco Relativo (RR), Odds Ratio (OR), Risco Absoluto, RAR e RRR",
-      "Cálculo e aplicação do Número Necessário para Tratar (NNT) e para Causar Dano (NNH)",
-      "Análise de Intervalo de Confiança (IC 95%), valor de p e tomada de decisão compartilhada com o paciente"
+      "Tipos de Revisão de Literatura (Narrativa, Integrativa e Sistemática / Etapas e Fluxograma PRISMA)",
+      "Metanálise (Síntese quantitativa, Medidas de associação RR/OR/DM/HR, Forest Plot e Efeito Nulo)",
+      "Avaliação da Qualidade da Evidência (Sistema GRADE e Risco de Viés)",
+      "Leitura Crítica e Confiabilidade (Validade Interna/Externa, Viés de Seleção/Informação, Confundimento, Precisão IC95% e Significância Estatística vs. Relevância Clínica)"
      ],
      "e": true
     }
@@ -397,66 +387,47 @@
    ],
    "partes": [
     {
-     "t": "Conceitos, Epidemiologia e Etiologias da Epilepsia",
+     "t": "Conceitos, Fisiopatologia e Alvos Farmacológicos",
      "top": [
-      "Diferença conceitual entre Epilepsia, Crise Epiléptica e Convulsão",
-      "Epidemiologia: prevalência, incidência e picos por faixa etária (infância e idosos)",
-      "Etiologias da epilepsia: genética, estrutural, infecciosa, metabólica, imune e desconhecida",
-      "Gatilhos e crises provocadas (privação do sono, estresse, substâncias, distúrbios eletrolíticos, fármacos proconvulsivantes)"
+      "Diferenciação conceitual: Epilepsia (predisposição crônica), Crise Epiléptica (evento neuronal transitório) e Convulsão (manifestação motora)",
+      "Etiologias da epilepsia (genética, estrutural, infecciosa, metabólica, imune, desconhecida) e Gatilhos/crises provocadas (estresse, privação de sono, álcool, hipoglicemia, fármacos proconvulsivantes)",
+      "Epidemiologia da epilepsia: prevalência, 4ª doença neurológica mais comum e picos de incidência na infância e idosos",
+      "Mecanismos fisiopatológicos fundamentais: Hiperexcitabilidade e Hiperssincronização neuronal (início, propagação e crise)",
+      "Principais alvos farmacológicos neuronais: Canais de Na+ e Ca2+, Neurotransmissão GABAérgica (potencialização inibitória), Neurotransmissão Glutamatérgica/AMPA/NMDA (redução da excitação) e Proteína de vesícula sináptica SV2A"
      ],
      "e": false
     },
     {
-     "t": "Fisiopatologia e Alvos Farmacológicos dos Anticonvulsivantes",
+     "t": "Classificação ILAE 2017, Quadro Clínico e Diagnóstico",
      "top": [
-      "Mecanismos fisiopatológicos fundamentais: Hiperexcitabilidade e Hiperssincronização neuronal",
-      "Dinâmica das crises: início, propagação e recrutamento de redes neuronais",
-      "Alvo 1: Bloqueio de canais de Na+ e Ca2+ voltagem-dependentes (Carbamazepina, Fenitoína, Lamotrigina, Oxcarbazepina, Lacosamida, Etossuximida)",
-      "Alvo 2: Potencialização da neurotransmissão inibitória GABAérgica (Clonazepam, Fenobarbital, Valproato, Tiagabina, Vigabatrina)",
-      "Alvo 3: Redução da neurotransmissão excitatória glutamatérgica / receptores NMDA e AMPA (Felbamato, Topiramato, Perampanel)",
-      "Alvo 4: Modulação da proteína vesicular presináptica SV2A (Levetiracetam, Brivaracetam)",
-      "Racional da associação terapêutica: escolha de mecanismos de ação complementares"
+      "Classificação ILAE 2017 das crises epilépticas: Início Focal, Início Generalizado, Início Desconhecido e Não Classificada",
+      "Crises de Início Focal: Consciência Preservada vs. Comprometida, manifestações motoras/automatismos e não motoras, e evolução para tônico-clônica bilateral",
+      "Crises de Início Generalizado: Motoras (tônico-clônica, atônica, mioclônica, clônica, tônica) e Não Motoras (crises de ausência típica e atípica)",
+      "Critérios diagnósticos clínicos formais da epilepsia: 2+ crises não provocadas (>24h), 1 crise com risco de recorrência ≥60% em 10 anos, ou diagnóstico de síndrome epiléptica",
+      "Papel complementar do Eletroencefalograma (EEG) e da Ressonância Magnética no diagnóstico e avaliação etiologicamente direcionada"
      ],
      "e": true
     },
     {
-     "t": "Classificação das Crises (ILAE 2017) e Critérios Diagnósticos",
+     "t": "Princípios do Tratamento e Anticonvulsivantes de 1ª e 2ª Geração",
      "top": [
-      "Classificação ILAE 2017: Crises de Início Focal (consciência preservada vs. comprometida; manifestações motoras, não motoras e evolução para tônico-clônica bilateral)",
-      "Crises de Início Generalizado: Motoras (tônico-clônica, atônica, mioclônica) e Não motoras (ausência típica, atípica, mioclônica)",
-      "Crises de Início Desconhecido e Não Classificadas",
-      "Impacto da classificação na escolha da droga anticonvulsivante (DA) e na prevenção do agravamento de crises",
-      "Critérios diagnósticos formais de epilepsia e papel da história clínica, EEG e neuroimagem"
+      "Objetivos do tratamento farmacológico (liberdade de crises com mínima toxicidade), conceito de epilepsia farmacorresistente e algoritmo terapêutico (monoterapia, titulação, troca e politerapia racional)",
+      "Critérios para escolha individualizada da droga anticonvulsivante (tipo de crise, idade, sexo/potencial reprodutivo, comorbidades, interações e função renal/hepática)",
+      "Anticonvulsivantes de 1ª Geração (Carbamazepina, Fenitoína, Valproato, Etossuximida, Fenobarbital): eficácia, faixa terapêutica estreita, indução/inibição enzimática e perfis de RAMs (hiponatremia, SJS, teratogenicidade, hiperplasia gengival, sedação)",
+      "Anticonvulsivantes de 2ª Geração como 1ª escolha na prática (Levetiracetam, Lamotrigina, Oxcarbazepina, Topiramato, Zonisamida, Gabapentina, Felbamato, Tiagabina): melhor tolerabilidade e farmacocinética mais simples",
+      "Mecanismos de ação e especificidades dos representantes da 2ª geração (Levetiracetam/SV2A, Lamotrigina/Na+ e idosos/bipolar, Oxcarbazepina/focal e hiponatremia, Topiramato/enxaqueca e perda de peso)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Anticonvulsivantes de 3ª Geração e Raciocínio Clínico Integrado",
+     "top": [
+      "Anticonvulsivantes de 3ª Geração para uso geral em crises (Brivaracetam, Lacosamida, Perampanel, Cenobamato, Pregabalina) e seus mecanismos de ação específicos",
+      "Fármacos de 3ª Geração direcionados a síndromes epilépticas específicas (Cannabidiol e Clobazam em Lennox-Gastaut, Vigabatrina em Espasmos Infantis, Stiripentol/Fenfluramina em Dravet)",
+      "Raciocínio clínico integrativo para escolha medicamentosa: identificação do tipo de crise -> preferência pela 2ª geração -> filtragem pelo perfil do paciente -> titulação gradual",
+      "Manejo da falha terapêutica, politerapia racional com mecanismos complementares e conduta frente à farmacorresistência"
      ],
      "e": false
-    },
-    {
-     "t": "Princípios do Tratamento e Anticonvulsivantes de 1ª Geração",
-     "top": [
-      "Objetivos do tratamento farmacológico, taxa de controle e conceito de epilepsia farmacorresistente",
-      "Algoritmo terapêutico: monoterapia inicial, titulação gradual, troca por falha/intolerância e politerapia racional",
-      "Panorama comparativo entre 1ª, 2ª e 3ª gerações de DAs (eficácia, tolerabilidade, farmacocinética e interações)",
-      "Carbamazepina: mecanismo de ação (canais de Na+), indicação (crises focais), forte indução enzimática e RAMs (diplopia, hiponatremia, SJS/TEN)",
-      "Fenitoína / Fosfenitoína: bloqueio de Na+, farmacocinética não linear/dose de carga e RAMs (hiperplasia gengival, hirsutismo, nistagmo, ataxia)",
-      "Valproato (Ácido Valpróico): amplo espectro (focais e generalizadas), múltiplos mecanismos e efeitos adversos graves (teratogenicidade, ganho de peso, hepatotoxicidade)",
-      "Etossuximida: bloqueio de canais de Ca2+ tipo T e uso como primeira escolha nas crises de ausência típica",
-      "Fenobarbital: potencialização GABA-A, indicação clínica, sedação, prejuízo cognitivo e indução enzimática"
-     ],
-     "e": true
-    },
-    {
-     "t": "Anticonvulsivantes de 2ª e 3ª Gerações e Síntese Clínica",
-     "top": [
-      "Vantagens gerais da 2ª Geração: farmacocinética simples, menor risco de interações e melhor tolerabilidade (primeira escolha inicial)",
-      "Levetiracetam: ligação à SV2A, amplo espectro, eliminação renal e alteração comportamental/irritabilidade",
-      "Lamotrigina: bloqueio de Na+, indicação clínica, titulação lenta por risco de rash/SJS e bom perfil cognitivo em idosos",
-      "Oxcarbazepina: derivada da CBZ, indicação em crises focais, menor indução enzimática e risco de hiponatremia",
-      "Outras DAs de 2ª Geração: Topiramato (perda de peso, enxaqueca, lentificação cognitiva), Zonisamida, Gabapentina, Felbamato (risco de anemia aplástica) e Tiagabina",
-      "DAs de 3ª Geração de uso geral (Brivaracetam, Lacosamida, Perampanel, Cenobamato, Pregabalina, Vigabatrina) e seus alvos farmacológicos",
-      "DAs de 3ª Geração para síndromes específicas (Cannabidiol, Clobazam, Rufinamida, Fenfluramina, Stiripentol, Everolimus, Ganaxolona)",
-      "Síntese e Raciocínio Clínico: do diagnóstico correto à escolha da DA, titulação e manejo da farmacorresistência"
-     ],
-     "e": true
     }
    ],
    "formato": "medio"
@@ -470,50 +441,44 @@
    ],
    "partes": [
     {
-     "t": "Conceitos Gerais e Modalidades de Uso dos Antimicrobianos",
+     "t": "Conceitos Gerais e Estratégias Terapêuticas",
      "top": [
-      "Definição geral e histórico (surgimento da penicilina e busca por novas substâncias)",
-      "Uso indiscriminado (consequências de toxicidade, potência excessiva e custo elevados)",
-      "As três modalidades gerais de uso: Terapia Empírica, Terapia Definitiva e Terapia Preventiva"
+      "Definição de antimicrobianos e histórico do surgimento da penicilina",
+      "Consequências do uso indiscriminado: toxicidade, potência elevada e custos desnecessários",
+      "Visão geral das três abordagens de uso: Terapia Empírica, Terapia Definitiva e Terapia Preventiva"
      ],
      "e": false
     },
     {
-     "t": "Terapia Empírica e Diagnóstico Clínico/Laboratorial",
+     "t": "Terapia Empírica e Indicadores Clínicos de Infecção",
      "top": [
-      "Variáveis no processo de escolha (identidade/sensibilidade, sítio da infecção, segurança e custo)",
-      "Avaliação dos sinais clínicos da infecção (febre, dor, inflamação local e formação de pus)",
-      "Interpretação da contagem celular/leucograma (neutrófilos/neutropenia em infecção bacteriana; linfócitos, monócitos, eosinófilos e basófilos)",
-      "Técnicas de identificação e suscetibilidade (antibiograma por difusão em disco, PCR e sorologia)"
+      "Conceito de terapia empírica e variáveis iniciais para escolha do antimicrobiano",
+      "Técnicas de identificação e microbiologia (difusão em disco/antibiograma, PCR e sorologia)",
+      "Avaliação da febre (definição e parâmetros de temperatura)",
+      "Interpretação da contagem de células brancas (leucocitose, neutrofilia, neutropenia e papéis de linfócitos, monócitos, eosinófilos e basófilos)",
+      "Sinais locais de infecção bacteriana (dor, inflamação) e constituição do pus"
      ],
      "e": true
     },
     {
-     "t": "Fatores Determinantes de Escolha e Classificação dos Antibióticos",
+     "t": "Fatores Determinantes na Seleção do Antibiótico",
      "top": [
-      "Fatores relacionados ao paciente (alergias, idade [recém-nascidos e idosos], hepatopatas, gestantes e imunodeprimidos)",
-      "Classificação por ação funcional: Bacteriostáticos (tetraciclinas, eritromicina, sulfonamidas, cloranfenicol) vs. Bactericidas (penicilinas, cefalosporinas, quinolonas)",
-      "Fatores relacionados às drogas (PK/PD, penetração no SNC, baixa toxicidade e amplo espectro no início)",
-      "Espectro de ação (pequeno, ampliado e amplo) e fatores da doença/sítio (ex: prostatite e sulfa + trimetroprima)"
+      "Fatores do paciente: alergias, restrições por idade (recém-nascidos e idosos), hepatopatias, gestação e imunodepressão",
+      "Diferenciação e exemplos de fármacos Bactericidas vs. Bacteriostáticos",
+      "Fatores da droga: farmacocinética/farmacodinâmica, penetração no SNC, toxicidade e espectro de ação (pequeno, ampliado e amplo)",
+      "Fatores da doença: sítio infeccioso e características físico-químicas (ex: uso de bases fracas em prostatites)"
      ],
      "e": true
     },
     {
-     "t": "Terapia Definitiva, Preventiva e Monitoramento Clínico",
+     "t": "Terapia Definitiva, Profilaxia, Monitoramento e Falhas",
      "top": [
-      "Terapia Definitiva (direcionamento ao patógeno, discrepâncias in vivo/in vitro e limitações de antibiograma/CIM)",
-      "Terapia Preventiva / Profilaxia (indicações em exposição à meningite meningocócica com rifampicina e endocardite em lesões valvares)",
-      "Monitoramento da resposta terapêutica (critérios de melhora da febre, leucócitos, inflamação e pus em 2 a 3 dias)"
-     ],
-     "e": false
-    },
-    {
-     "t": "Falhas Terapêuticas, Resistência Bacteriana e Aspectos Clínicos",
-     "top": [
-      "Causas de falha terapêutica (infecções virais/não tratáveis, posologia inadequada/superinfecção, fraca adesão e escolha incorreta)",
-      "Intervenções cirúrgicas/físicas necessárias (drenagem de abscessos, remoção de tecido necrosado, secreções ou dispositivos vasculares infectados)",
-      "Resistência bacteriana (aquisição por transformação, conjugação, transdução e mutação; seleção pelo uso indevido)",
-      "Classes mais prescritas (beta-lactâmicos, macrolídeos, tetraciclinas, clindamicina, metronidazol) e reações adversas gastrointestinais"
+      "Terapia Definitiva: seleção direcionada, limitações da CIM e discrepâncias in vivo vs. in vitro",
+      "Terapia Preventiva (Profilaxia): indicações (contatos de meningite, endocardite bacteriana) e erros de conduta",
+      "Monitoramento da resposta terapêutica: critérios de melhora clínica/laboratorial e reavaliação em 2 a 3 dias",
+      "Causas de falha terapêutica: infecções virais/não tratáveis, erros posológicos (subdosagem e superdosagem/superinfecção), problemas de absorção TGI e fraca adesão",
+      "Necessidade de intervenção física/cirúrgica (drenagem de abscessos, remoção de tecidos necrosados e dispositivos/cateteres)",
+      "Resistência bacteriana: mecanismos de aquisição (transformação, conjugação, transdução e mutação), pressão de seleção e prescrição racional"
      ],
      "e": true
     }
@@ -529,53 +494,45 @@
    ],
    "partes": [
     {
-     "t": "Introdução, Epidemiologia e Etiologia da Depressão",
+     "t": "Conceito, Etiologia e Fisiopatologia da Depressão",
      "top": [
-      "Conceito de distúrbios afetivos (alterações emocionais prolongadas, mania e depressão maior) e impacto epidemiológico",
-      "Epidemiologia da depressão maior (maior prevalência em mulheres e idosos)",
-      "Etiologia da depressão (vulnerabilidade genética, eventos estressores, tipo de personalidade e modificações moleculares por vírus/toxinas)"
-     ],
-     "e": false
-    },
-    {
-     "t": "Fisiopatologia e Teorias Neuroquímicas",
-     "top": [
-      "Hipótese monoaminérgica (déficit de Noradrenalina, Serotonina e Dopamina nas fendas sinápticas; papel da via mesolímbica)",
-      "Evidências farmacológicas clássicas (efeito depressógeno da Reserpina vs. efeito terapêutico de ADTs e IMAOs)",
-      "Alterações de sensibilidade de receptores pós-sinápticos (dessensibilização/infrarregulação de 5-HT1A e receptores noradrenérgicos)",
-      "Hipótese da desregulação homeostática e déficit do Fator Neurotrófico Derivado do Cérebro (BDNF) no hipocampo"
+      "Conceito de distúrbios afetivos e definição de Depressão Maior",
+      "Epidemiologia e fatores etiológicos (genéticos, eventos estressores e alteração molecular)",
+      "Hipótese monoaminérgica (serotonina, noradrenalina e dopamina)",
+      "Hipótese neurotrófica (débito de BDNF no hipocampo) e sensibilidade dos receptores pós-sinápticos",
+      "Evidências farmacológicas da fisiopatologia (mecanismos de ADTs, IMAOs e Reserpina)"
      ],
      "e": true
     },
     {
-     "t": "Manifestações Clínicas, Diagnóstico e Abordagem Terapêutica",
+     "t": "Sinais Clínicos, Diagnóstico e Diretrizes de Tratamento",
      "top": [
-      "Quadro clínico segundo DSM-IV (sintomas emocionais, cognitivos e físicos como fadiga crônica, cefaleia e queixas GI/cardiovasculares)",
-      "Critérios diagnósticos (mínimo de 5 sintomas por ≥ 2 semanas; exclusão de causas medicamentosas, doenças físicas e luto) e triagem para diagnóstico diferencial",
-      "Objetivos da farmacoterapia antidepressiva (redução de sintomas agudos, recuperação funcional e prevenção de reincidências)",
-      "Tratamento não farmacológico (psicoterapia isolada em casos leves/moderados vs. indispensabilidade da farmacoterapia na depressão severa)",
-      "Critérios determinantes para escolha do antidepressivo (histórico, subtipo do transtorno, resposta empírica, RAMs e interações medicamentosas)"
+      "Sinais clínicos do episódio depressivo maior: sintomas emocionais, cognitivos e físicos",
+      "Critérios diagnósticos DSM-IV (mínimo de 5 sintomas por no mínimo 2 semanas, humor deprimido obrigatório e exclusões de luto/medicações)",
+      "Diagnóstico diferencial e necessidade de triagem completa antes do fechamento do diagnóstico",
+      "Objetivos do tratamento farmacológico (redução dos sintomas agudos, funcionalidade e prevenção de reincidência)",
+      "Abordagem não farmacológica (psicoterapia isolada em casos leves/moderados e associação com farmacoterapia na depressão grave)"
      ],
      "e": false
     },
     {
-     "t": "Classes Farmacológicas dos Antidepressivos (Mecanismos e RAMs)",
+     "t": "Classes Farmacológicas: ISRSs, Antidepressivos Duais e Atípicos",
      "top": [
-      "ISRSs (Fluoxetina, Paroxetina, Sertralina, Citalopram): inibição seletiva de 5-HT e perfil de RAMs (disfunção sexual e ganho de peso com paroxetina)",
-      "Antidepressivos de Ação Dual / IRSNs (Venlafaxina, Duloxetina, Milnaciprano): indicações em casos severos/refratários, baixa ligação a proteínas e ausência de inibição do CYP450",
-      "Antidepressivos Atípicos: Bupropiona (recaptação de DA/NE, risco em epilépticos), Trazodona/Nefazodona (antagonismo 5-HT2, hepatotoxicidade, sedação e hipotensão ortostática) e Mirtazapina (antagonismo α2, 5-HT2, 5-HT3 e H1)",
-      "Antidepressivos Tricíclicos / ADTs (Amitriptilina, Nortriptilina, Imipramina, Clomipramina, Doxepina, Maprotilina, Desipramina, Amoxapina): inibição da recaptação de NE/5-HT, alta lipofilicidade, ligação proteica e metabolismo pelo CYP450",
-      "Inibidores da MAO / IMAOs (Moclobemida, Tranilcipromina): indicação na depressão refratária/atípica/bipolar e Reação à Tiramina ('efeito queijo' por acúmulo de tiramina e liberação massiva de NE)"
+      "Critérios clínicos para a escolha do antidepressivo (histórico do paciente, subtipo do transtorno, resposta empírica, RAMs e interações)",
+      "Inibidores Seletivos de Recaptação de Serotonina (ISRSs): mecanismo, representantes (Fluoxetina, Paroxetina, Sertralina, Citalopram) e RAMs (ganho de peso específico da paroxetina e disfunção sexual)",
+      "Antidepressivos de Ação Dual (Venlafaxina, Duloxetina, Milnaciprano): indicação em depressões severas/refratárias e perfil farmacocinético (menor ligação proteica e sem inibição expressiva do P450)",
+      "Antidepressivos Atípicos: Bupropiona (recaptação de DA/NE e risco em epilépticos), Trazodona/Nefazodona (receptores 5-HT2/5-HT1A, risco de toxicidade hepática, tontura e hipotensão) e Mirtazapina (antagonismo de autorreceptores/heterorreceptores α2, 5-HT2, 5-HT3 e bloqueio H1)"
      ],
      "e": true
     },
     {
-     "t": "Acompanhamento Farmacoterapêutico e Atenção Primária no SUS",
+     "t": "Classes Farmacológicas: ADTs, IMAOs e Acompanhamento Farmacoterapêutico",
      "top": [
-      "Monitoramento de exames laboratoriais, eficácia clínica do tratamento e adesão terapêutica",
-      "Monitoramento de segurança cardiovascular (pressão arterial e ECG, especialmente para ADTs e Duais)",
-      "Avaliação contínua do risco de ideação suicida e aplicação de instrumentos psicométricos (Escala de Hamilton)",
-      "Protocolo clínico e diretrizes das Linhas de Cuidado para Depressão no SUS (Atenção Primária à Saúde)"
+      "Antidepressivos Tricíclicos (ADTs): mecanismo de inibição de recaptação de NE e 5-HT, lipofilia (BHE), alta ligação a proteínas plasmáticas, metabolismo pelo P450 e representantes (Amitriptilina, Imipramina, Nortriptilina, Clomipramina, Doxepina, Maprotilina, Desipramina, Amoxapina)",
+      "Inibidores da Monoamina Oxidase (IMAOs): indicações em depressão refratária/atípica e representantes (Moclobemida e Tranilcipromina)",
+      "Interação fisiopatológica entre IMAOs e Tiramina dos alimentos (inibição da MAO-A intestinal/periférica levando ao acúmulo de tirosina e liberação exagerada de Noradrenalina)",
+      "Acompanhamento farmacoterapêutico: exames laboratoriais, avaliação de eficácia e adesão, monitoramento de PA e ECG (para Duais e Tricíclicos), acompanhamento de ideação suicida e uso da Escala Hamilton",
+      "Protocolo de manejo terapêutico da depressão na Atenção Primária do SUS"
      ],
      "e": true
     }
@@ -591,63 +548,54 @@
    ],
    "partes": [
     {
-     "t": "Otite Média Aguda (OMA)",
+     "t": "Otite Média Aguda (OMA) e Manejo Farmacológico",
      "top": [
-      "Definição, anatomia da orelha e fisiopatologia da tuba auditiva",
-      "Etiologia bacteriana principal: S. pneumoniae, H. influenzae e M. catarrhalis",
-      "Manifestações clínicas: dor intensa, tímpano abaulado/descorado e efusão",
-      "Tratamento sintomático (analgésicos/antipiréticos) e monitoramento da resposta em até 3 dias",
-      "Esquema antimicrobiano empírico: Amoxicilina (1ª escolha), Amoxicilina + Clavulanato, Cefuroxima e Ceftriaxona IM"
+      "Definição, anatomia (orelha média e tuba auditiva) e epidemiologia infantil",
+      "Etiologia bacteriana principal (S. pneumoniae, H. influenzae, M. catarrhalis)",
+      "Manifestações clínicas (otalgia, alteração timpânica e efusão)",
+      "Tratamento sintomático (paracetamol e AINEs)",
+      "Primeira escolha farmacológica (Amoxicilina em dose adequada)",
+      "Manejo da falha terapêutica ou micro-organismos resistentes (Amoxicilina + Clavulanato, Cefuroxima, Ceftriaxona IM)",
+      "Objetivos terapêuticos e tempo de monitoramento da resposta clínica (até 3 dias)"
      ],
      "e": true
     },
     {
-     "t": "Faringite e Faringoamigdalite Estreptocócica",
+     "t": "Faringite Aguda: Diagnóstico e Tratamento",
      "top": [
-      "Diferenciação entre faringite viral e bacteriana",
-      "Etiologia bacteriana principal: Streptococcus pyogenes (Estreptococo beta-hemolítico do grupo A)",
-      "Sinais clínicos característicos: eritema/exsudato amigdaliano, petéquias no palato, linfonodopatia dolorosa e ausência de tosse/coriza",
-      "Diagnóstico por swab de garganta e teste rápido de detecção de antígenos",
-      "Manejo sintomático: preferência pelo Paracetamol em crianças (risco de reações adversas por AINEs)",
-      "Tratamento antimicrobiano de 1ª escolha: Penicilina (benzatina) e Amoxicilina oral",
-      "Alternativas terapêuticas em caso de alergia/resistência: Eritromicina, Cefalexina, Azitromicina, Claritromicina e Cefuroxima (contraindicação de tetraciclinas)"
+      "Diferenciação entre faringite viral e bacteriana (Streptococcus pyogenes / Estreptococo do Grupo A)",
+      "Fatores de risco, faixa etária prevalente (5 a 15 anos) e sazonalidade",
+      "Sinais clínicos característicos da infecção estreptocócica (exsudato, petéquias no palato, linfonodopatia e ausência de tosse/coriza)",
+      "Exames diagnósticos (swab de garganta e teste rápido de antígenos)",
+      "Manejo sintomático (uso preferencial de Paracetamol em crianças e medidas de suporte)",
+      "Tratamento antimicrobiano de 1ª escolha (Penicilina e Amoxicilina VO)",
+      "Opções para alérgicos/resistência (Eritromicina, Cefalexina, Azitromicina, Claritromicina) e contraindicação absoluta de Tetraciclinas",
+      "Critérios de avaliação e isolamento inicial (24 horas)"
      ],
      "e": true
     },
     {
-     "t": "Visão Geral dos Beta-Lactâmicos e Subclasses de Penicilinas",
+     "t": "Introdução aos Beta-Lactâmicos e Subclasses de Penicilinas",
      "top": [
-      "Estrutura do anel beta-lactâmico, mecanismo de ação e sensibilidade às beta-lactamases",
-      "Classes principais de beta-lactâmicos: Penicilinas, Cefalosporinas, Carbapenêmicos, Monobactâmicos e Inibidores de Beta-lactamase",
-      "Benzilpenicilinas (Penicilina G/Benzatina): espectro prioritário gram-positivo, sensibilidade à hidrólise e indicação em sífilis e faringite",
-      "Aminopenicilinas (Amoxicilina e Ampicilina): ampliação de espectro para gram-negativos e uso oral nas infecções respiratórias",
-      "Penicilinas resistentes às beta-lactamases (antiestafilocócicas): Oxacilina, Cloxacilina, Nafcilina e Dicloxacilina",
-      "Penicilinas antipseudomonas: Ticarcilina e Piperacilina (associação com Tazobactam)"
+      "Características estruturais da classe dos beta-lactâmicos e mecanismo de sensibilidade às beta-lactamases",
+      "Divisão geral: penicilinas, cefalosporinas, carbapenêmicos, monobactâmicos e inibidores",
+      "Benzilpenicilinas: espectro Gram-positivo, indicações clínicas e hidrólise",
+      "Aminopenicilinas (Amoxicilina e Ampicilina): espectro ampliado para Gram-negativos e administração oral",
+      "Penicilinas resistentes às beta-lactamases / penicilinases (Oxacilina, Cloxacilina, Nafcilina, Dicloxacilina)",
+      "Penicilinas antipseudomonas (Ticarcilina, Piperacilina) e associação com Tazobactam"
      ],
      "e": false
     },
     {
-     "t": "Cefalosporinas: Gerações, Espectro e Toxicidades",
+     "t": "Cefalosporinas, Outros Beta-Lactâmicos e Toxicidades",
      "top": [
-      "Mecanismo de ação, depuração renal e penetração no LCR (Cefotaxima e Ceftriaxona)",
-      "Classificação em 1ª geração (Cefazolina, Cefalotina, Cefalexina) e espectro contra Gram-positivos (S. aureus, Streptococci)",
-      "2ª geração (Cefuroxima, Cefaclor, Cefprozil): ganho de espectro contra E. coli, H. influenzae e M. catarrhalis",
-      "3ª e 4ª gerações (Ceftriaxona, Cefotaxima, Ceftazidima e Cefepima): atividade contra Pseudomonas e cepas produtoras de lactamases",
-      "Reatividade cruzada alérgica com penicilinas e risco de hipoprotrombinemia",
-      "Neurotoxicidade da Cefepima por inibição de receptores GABA",
-      "Reação adversa grave: incompatibilidade Ceftriaxona + Cálcio (precipitação cristalina em neonatos/vasculatura)"
+      "Cefalosporinas: mecanismo, excreção renal e penetração no LCR",
+      "Evolução das gerações de cefalosporinas (1ª a 4ª geração: Cefazolina, Cefuroxima, Ceftriaxona, Cefepima) e espectros de ação",
+      "Reações adversas graves de cefalosporinas: risco de hipoprotrombinemia, neurotoxicidade de Cefepima (via receptor GABA) e precipitação cristalina grave de Ceftriaxona + Cálcio",
+      "Carbapenêmicos (Imipeném e Ertapeném) e Monobactâmicos (Aztreonam para Gram-negativos aeróbios)",
+      "Inibidores de beta-lactamase (Ácido Clavulânico, Sulbactam, Tazobactam) como inibidores suicidas irreversíveis"
      ],
      "e": true
-    },
-    {
-     "t": "Carbapenêmicos, Monobactâmicos e Inibidores de Beta-Lactamase",
-     "top": [
-      "Carbapenêmicos (Imipeném e Ertapeném): estrutura anular de 5 elementos, elevada resistência às beta-lactamases e amplo espectro",
-      "Monobactâmicos (Aztreonam): espectro restrito a bactérias gram-negativas aeróbicas (sem ação contra gram-positivos ou anaeróbios)",
-      "Inibidores de Beta-lactamase (Ácido Clavulânico, Sulbactam, Tazobactam): inibidores suicidas sem ação antimicrobiana intrínseca",
-      "Sinergismo e ampliação do espectro gram-negativo em associações (ex: Amoxicilina + Clavulanato, Piperacilina + Tazobactam)"
-     ],
-     "e": false
     }
    ],
    "formato": "medio"
@@ -661,49 +609,48 @@
    ],
    "partes": [
     {
-     "t": "Fisiologia Hormonal, Ciclo Menstrual e Métodos Não Farmacológicos",
+     "t": "Fisiologia Hormonal e Ciclo Menstrual",
      "top": [
-      "Impactos da gravidez indesejada e fisiologia dos hormônios sexuais naturais (estrogênios e progestinas)",
-      "Eixo hipotalâmico-hipofisário-ovariano: regulação por GnRH, FSH e LH",
-      "Fases do ciclo menstrual (folicular, ovulatória e luteal) e flutuações hormonais",
-      "Objetivos gerais da contracepção e métodos não farmacológicos de barreira",
-      "Contracepção farmacológica de barreira química: espermicidas (9-Nonoxinol)"
+      "Impactos da gravidez indesejada e objetivos da contracepção",
+      "Biossíntese dos estrogênios e progestinas naturais",
+      "Eixo hipotalâmico-hipofisário-ovariano (GnRH, FSH e LH)",
+      "Fases do ciclo menstrual (folicular, ovulatória e luteal)",
+      "Papel do surto de LH, ovulação e modulação endometrial"
      ],
      "e": false
     },
     {
-     "t": "Mecanismo de Ação, Receptores e Classificação dos Contraceptivos Orais",
+     "t": "Métodos Contraceptivos e Mecanismos dos ACOs",
      "top": [
-      "Farmacodinâmica dos ACOs: receptores ER-α/β, PR-α/β e modulação da transcrição de DNA",
-      "Mecanismo de ação primário: inibição do surto de LH/FSH por feedback negativo e anovulação",
-      "Mecanismos secundários: espessamento do muco cervical e alteração do endométrio",
-      "Classificação dos ACOs: monofásicos, bifásicos, trifásicos e minipílulas",
-      "Fármacos e dosagens (etinilestradiol, levonorgestrel, desogestrel, noretisterona, linestrenol)",
-      "Farmacocinética e vias de administração (oral, transdérmica, IM, SC, intrauterina)"
+      "Tratamento não farmacológico (métodos de barreira e espermicidas)",
+      "Mecanismo de ação dos ACOs (receptores ER/PR e inibição do surto de FSH/LH)",
+      "Classificação dos ACOs (monofásicos, bifásicos, trifásicos e minipílulas)",
+      "Farmacocinética e vias de administração",
+      "Contracepção de emergência (levonorgestrel e esquema Yuzpe)",
+      "Terapia de reposição hormonal e atrofia urogenital"
      ],
      "e": true
     },
     {
-     "t": "Contracepção de Emergência, Efeitos Adversos e Contraindicações",
+     "t": "Reações Adversas, Contraindicações e Interações",
      "top": [
-      "Aplicações terapêuticas: contracepção de emergência (levonorgestrel e regime Yuzpe) e TRH",
-      "Reações adversas gerais dos ACOs (hipertensão, edema, cefaleia, alterações de humor, sangramentos)",
-      "Quadro comparativo de efeitos específicos: estrogênicos, progestagênicos e androgênicos",
-      "Contraindicações absolutas e relativas (trombose, câncer de mama, gravidez, disfunção hepática, tabagismo >35 anos)",
-      "Perfil farmacológico das progestinas de nova geração (drospirenona/Yasmin, desogestrel, gestodeno, norgestimato)"
+      "Reações adversas gerais dos anticoncepcionais orais",
+      "Tabela de efeitos estrogênicos, progestagênicos e androgênicos",
+      "Contraindicações absolutas e relativas (trombose, CA de mama, tabagismo >35 anos, hepatopatias, hipertensão)",
+      "Progestágenos modernos (drospirenona, desogestrel, gestodeno, norgestimato)",
+      "Interações medicamentosas (fármacos que reduzem a eficácia ou alteram outros medicamentos)"
      ],
      "e": true
     },
     {
-     "t": "Interações Medicamentosas, Rotina de Uso e Formas Injetáveis/Implantes",
+     "t": "Posologia, Injetáveis e Monitoramento Clínico",
      "top": [
-      "Tabela de interações medicamentosas (fármacos que reduzem a eficácia do ACO vs. alteração de outros medicamentos)",
-      "Instruções de posologia, rotina do ciclo de 21 dias + 7 dias de pausa e conduta em caso de esquecimento",
-      "Sintomas graves de alarme para suspensão imediata (alterações visuais, formigamento unilateral, dor torácica, fala arrastada)",
-      "Anticoncepcionais injetáveis (Depo-Provera, combinações mensais) e implantes (Norplant)",
-      "Avaliação e monitorização terapêutica (pressão arterial, glicemia, citologia, mamografia)"
+      "Instruções à paciente e posologia (esquema de 21 dias, pausa de 7 dias e rotina)",
+      "Manejo de esquecimento de comprimidos e sintomas de alarme para suspensão",
+      "Anticoncepcionais injetáveis e implantes (Depo-Provera, Norplant e combinações mensais)",
+      "Avaliação e monitoramento terapêutico (pressão arterial, glicemia, citologia, mamografia e ISTs)"
      ],
-     "e": true
+     "e": false
     }
    ],
    "formato": "medio"
@@ -718,61 +665,44 @@
    ],
    "partes": [
     {
-     "t": "Eixo Hipotálamo-Hipófise-Ovariano (HHO) e Controle Central",
+     "t": "Eixo Hipotálamo-Hipófise-Ovariano e Controle Neuroendócrino",
      "top": [
-      "Conceito biológico de ciclicidade e sincronia refinada do eixo HHO",
-      "Hipotálamo: produção e secreção pulsátil de GnRH (diferenças de frequência e amplitude nas fases folicular e lútea; downregulation)",
-      "Modulação neuroendócrina: neurotransmissores excitatórios (glutamato, NPY, norepinefrina) e inibitórios (endorfinas, dopamina)",
-      "Adeno-hipófise: ação e síntese de gonadotrofinas (FSH para desenvolvimento folicular e aromatase; LH para luteinização e androgênios)"
+      "Conceito de ciclicidade reprodutiva e sincronia neuroendócrina",
+      "Hipotálamo e padrão de liberação pulsátil do GnRH (fases folicular e lútea)",
+      "Modulação por neurotransmissores excitatórios (glutamato, NPY, norepinefrina) e inibitórios (endorfinas, dopamina)",
+      "Adeno-hipófise e papéis fisiológicos do FSH (aromatase) e LH (androgênios e ovulação)"
      ],
      "e": true
     },
     {
-     "t": "Reserva Ovariana e Foliculogênese",
+     "t": "Reserva Ovariana, Foliculogênese e Esteroidogênese",
      "top": [
-      "Composição celular ovariana: células epiteliais, germinativas e do estroma",
-      "Trajetória e perda da reserva folicular (pico intrauterino de 6-8 milhões, nascimento com 1-2 milhões, puberdade com 300-500 mil e perda contínua por apoptose)",
-      "Estágios da foliculogênese: folículo primordial, primário, secundário (início da responsividade às gonadotrofinas), terciário (antral) e maduro (Graaf)"
+      "Composição celular ovariana (epitelial, germinativa e estromal)",
+      "Reserva ovariana e trajetória da perda folicular por apoptose (vida intrauterina à menopausa)",
+      "Estágios da foliculogênese (folículos primordial, primário, secundário, terciário/antral e pré-ovulatório/Graaf)",
+      "Esteroidogênese ovariana e Teoria das Duas Células, Duas Gonadotrofinas (Teca/LH e Granulosa/FSH; conversão a partir do colesterol)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Fases do Ciclo Ovariano, Mecanismo Ovulatório e Corpo Lúteo",
+     "top": [
+      "Fase folicular e recrutamento/seleção do folículo dominante (up-regulation de receptores, atresia por inibina B e AMH)",
+      "Feedback positivo do estradiol (limiar > 200 pg/mL por 36-48h) e gatilho do pico de LH",
+      "Fase ovulatória: retomada da meiose I, síntese de prostaglandinas e degradação tecidual para extrusão do oócito",
+      "Fase lútea: formação do corpo lúteo, secreção de progesterona, luteólise (corpo albicans) versus resgate pelo hCG"
+     ],
+     "e": true
+    },
+    {
+     "t": "Ciclo Endometrial e Aplicações Clínicas",
+     "top": [
+      "Histologia endometrial: camada basal (regeneração) e camada funcional (descamação)",
+      "Fases endometriais: Proliferativa (aspecto trilaminar ao ultrassom) e Secretora (aspecto hiperecogênico)",
+      "Fisiopatologia da menstruação: vasoespasmo das artériolas espiradas, isquemia e desagregação endometrial",
+      "Aplicações clínicas: mecanismo dos contraceptivos hormonais combinados, riscos de ciclos anovulatórios e causas de amenorreia funcional"
      ],
      "e": false
-    },
-    {
-     "t": "Esteroidogênese Ovariana e Teoria das Duas Células",
-     "top": [
-      "Colesterol como matéria-prima comum de todos os esteroides sexuais",
-      "Teoria das Duas Células, Duas Gonadotrofinas: Célula da Teca (estimulada pelo LH para produzir androgênios) e Célula da Granulosa (estimulada pelo FSH para converter androgênios em estrogênios via Aromatase)",
-      "Formas e origens dos estrogênios: Estradiol (E2 - principal ovariano), Estrona (E1 - conversão periférica) e Estriol (E3 - predomínio placentário)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Fases do Ciclo Ovariano: Folicular, Ovulatória e Lútea",
-     "top": [
-      "Mecanismo de seleção do folículo dominante (disponibilidade de FSH, up-regulation de receptores, inibição dos demais por Inibina B e AMH)",
-      "Fase folicular e o gatilho do Pico de LH (feedback positivo quando estradiol ultrapassa 200 pg/mL por 36-48h)",
-      "Fase ovulatória: retoma da meiose I (parada em prófase I), síntese de prostaglandinas e colagenases para rotura folicular (~36h pós-inicio do pico de LH) e achado ultrassonográfico (>18 mm)",
-      "Fase lútea: produção de progesterona pelo corpo lúteo, duração fixa de 14 dias e destino (luteólise/corpo albicans na ausência de gravidez vs. resgate pelo hCG placentário)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Ciclo Endometrial e Mecanismo da Menstruação",
-     "top": [
-      "Divisão anatomo-funcional do endométrio: camada basal (regenerativa) e camada funcional (hormônio-dependente)",
-      "Fase Proliferativa / Estrogênica: mitoses, crescimento glandular/estromal, cicatrização e aspecto ultrassonográfico trilaminar (8-10 mm)",
-      "Fase Secretora / Progestacional: acúmulo de glicogênio, tortuosidade glandular/arteriolar para nidação e aspecto ultrassonográfico hiperecogênico (10-15 mm)",
-      "Mecanismo vascular da menstruação: queda de estrogênio/progesterona, vasoespasmo das artérias espiraladas, isquemia e descamação"
-     ],
-     "e": false
-    },
-    {
-     "t": "Aplicações Clínicas e Modulação do Eixo",
-     "top": [
-      "Mecanismo da Contracepção Hormonal Combinada: supressão do eixo HHO por feedback negativo e bloqueio do pico de LH",
-      "Riscos dos Ciclos Anovulatórios: estrogênio sem oposição progestacional levando à proliferação exacerbada, sangramento irregular, hiperplasia e câncer de endométrio",
-      "Modulação do eixo HHO e amenorreia hipotalâmica: impacto de estresse, exercício intenso, anorexia/bulimia, hiperprolactinemia e hipotireoidismo"
-     ],
-     "e": true
     }
    ],
    "formato": "medio"
@@ -787,49 +717,46 @@
    ],
    "partes": [
     {
-     "t": "Introdução à Microbiota Vaginal e Avaliação Clínica",
+     "t": "Fisiologia Vaginal, Exame Clínico e Vulvovaginites Típicas",
      "top": [
-      "Fisiologia do meio vaginal normal: lactobacilos (80-95% da flora), produção de ácido lático e H2O2, conversão de glicogênio e pH normal (3,8 a 4,5)",
-      "Diferenciação conceitual: Vulvovaginites/Vaginites (com inflamação) vs Vaginoses (sem inflamação)",
-      "Anamnese direcionada e exame ginecológico (avaliação de genitais externos, conteúdo vaginal e colo uterino)"
-     ],
-     "e": false
-    },
-    {
-     "t": "Vulvovaginites Típicas (Vaginose Bacteriana, Candidíase e Tricomoníase)",
-     "top": [
-      "Vaginose Bacteriana (VB): Gardnerella vaginalis e anaeróbios, leucorreia homogênea e odor fétido (peixe), critérios de Amsel (3 de 4), escore de Nugent (padrão-ouro Gram), complicações obstétricas e tratamentos (Metronidazol, Clindamicina, Tinidazol)",
-      "Candidíase Vulvovaginal: Candida albicans e não-albicans, dimorfismo fungico e biofilme, fatores de risco, quadro de prurido e 'leite talhado', diagnóstico (pH < 4,5, exame a fresco KOH/Gram), esquemas para forma simples, complicada, de repetição (fluconazol semanal) e não-albicans (ácido bórico)",
-      "Tricomoníase: Trichomonas vaginalis (única típica que é IST), corrimento amarelo-esverdeado bolhoso, colo em framboesa/morango (colpite tigroide), diagnóstico a fresco (protozoário móvel) e cultura Diamond, tratamento oral e tratamento obrigatório de parcerias"
+      "Componentes do meio vaginal e microbiota normal (Lactobacilos, pH 3,8 a 4,5 e produção de ácido lático/H2O2)",
+      "Anamnese direcionada e exame ginecológico (avaliação de genitais externos, conteúdo vaginal e colo uterino)",
+      "Vaginose Bacteriana (etiologia por anaeróbios/Gardnerella, quadro clínico, critérios de Amsel e Nugent, complicações e tratamento)",
+      "Candidíase Vulvovaginal (Candida albicans e não-albicans, fatores de risco, diagnóstico, tratamento simples vs. complicado/recorrente)",
+      "Tricomoníase (Trichomonas vaginalis, transmissão sexual, colpite em framboesa, diagnóstico a fresco e tratamento do casal)"
      ],
      "e": true
     },
     {
-     "t": "Vulvovaginites Atípicas e Tabelas Comparativas",
+     "t": "Vulvovaginites Atípicas e Cervicites",
      "top": [
-      "Vaginose Citolítica: excesso de lactobacilos, pH muito ácido (< 4,0), citólise epitelial com núcleos desnudos, piora pré-menstrual, diagnóstico diferencial com candidíase e tratamento com bicarbonato de sódio",
-      "Vaginite Aeróbica: aeróbios entéricos (E. coli, E. faecalis, S. aureus), corrimento purulento, inflamação vaginal, ausência de clue cells, microscopia com aumento de polimorfonucleares e tratamentos (clindamicina, hidrocortisona, estrogênio)",
-      "Vaginite Inflamatória Descamativa: vaginite purulenta crônica, processo inflamatório intenso com petéquias e equimoses na mucosa, estágio grave da vaginite aeróbica e tratamento com clindamicina + hidrocortisona",
-      "Tabelas de síntese: comparação de sintomas, exames microscópicos (pH, Whiff, bacterioscopia), etiopatogenia e esquemas terapêuticos de 1ª escolha"
+      "Vaginose Citolítica (excesso de lactobacilos, pH < 4,0, diagnóstico diferencial com candidíase e alcalinização com bicarbonato)",
+      "Vaginite Aeróbica (microflora entérica, ausência de clue cells, aumento de polimorfonucleares e conduta terapêutica)",
+      "Vaginite Inflamatória Descamativa (etiologia, sintomas purulentos crônicos, eritema/petéquias e tratamento com clindamicina/corticoides)",
+      "Cervicites (Neisseria gonorrhoeae e Chlamydia trachomatis, apresentação assintomática, mucopus endocervical, colo friável, biologia molecular NAAT e tratamento)"
      ],
      "e": false
     },
     {
-     "t": "Cervicites (ISTs do Colo Uterino)",
+     "t": "Úlceras Genitais ISTs: Úlceras Dolorosas e Indolores",
      "top": [
-      "Etiologia e fatores de risco: Neisseria gonorrhoeae e Chlamydia trachomatis, idade < 25 anos, múltiplas parcerias e uso irregular de preservativo",
-      "Quadro clínico e achados ao exame especular: maioria assintomática (70-80%), sangramento pós-coito/intermenstrual, dispareunia, dor à mobilização do colo, colo friável (sangrante) e mucopus exteriorizando pelo orifício cervical externo",
-      "Diagnóstico e conduta: Biologia molecular (NAAT) como padrão-ouro, tratamento empírico (Ceftriaxona IM + Azitromicina VO em dose única), tratamento de parcerias e rastreio de outras ISTs"
+      "Abordagem inicial e diferenciação sindrômica das úlceras genitais (dor vs. ausência de dor e etiologias IST vs. não-IST)",
+      "Herpes Genital (HSV-1 e HSV-2, lesões vesiculosas dolorosas, primoinfecção vs. recorrência, esquemas com Aciclovir e manejo em gestantes)",
+      "Cancro Mole / Cancroide (Haemophilus ducreyi, úlceras múltiplas purulentas e dolorosas, adenopatia supurativa unilateral e tratamento)",
+      "Sífilis Primária / Cancro Duro (Treponema pallidum, úlcera única indolor endurecida, diagnósticos treponêmicos/não-treponêmicos e Penicilina Benzatina)",
+      "Donovanose (Klebsiella granulomatis, úlcera vermelho-carne sangrante, ausência de adenite e corpúsculos de Donovan na biópsia)",
+      "Linfogranuloma Venéreo / LGV (Chlamydia trachomatis L1-L3, úlcera fugaz, linfadenopatia dolorosa supurativa em bico de regador)"
      ],
      "e": true
     },
     {
-     "t": "Úlceras Genitais (ISTs) e Síntese de Prova",
+     "t": "Síntese Comparativa, Manejo e Pegadinhas de Prova",
      "top": [
-      "Abordagem sindrômica inicial: classificação por dor (dolorosas vs indolores) e diferenciação de causas não-infecciosas (úlcera de Lipschütz, Doença de Behçet)",
-      "Úlceras Dolorosas: Herpes Genital (HSV-1/HSV-2, vesículas agrupadas → úlceras rasas → crostas, primoinfecção sistêmica vs recorrência, esquemas com Aciclovir e conduta em gestantes) e Cancro Mole (Haemophilus ducreyi, lesões múltiplas moles purulentas de fundo sujo, adenopatia inguinal supurativa unilateral que fistuliza, tratamento com Azitromicina ou Ceftriaxona)",
-      "Úlceras Indolores: Sífilis primária (Treponema pallidum, cancro duro único limpo e indolor, testes treponêmicos e não-treponêmicos/VDRL, Penicilina Benzatinica), Donovanose (Klebsiella granulomatis, lesão granulosa vermelho-carne autoinoculável em espelho, sem adenite, corpúsculos de Donovan na biópsia, Doxiciclina/Azitromicina) e Linfogranuloma Venéreo (Chlamydia L1-L3, úlcera pequena fugaz + linfadenopatia dolorosa supurativa em múltiplos orifícios 'bico de regador', Doxiciclina)",
-      "Dicas de prova ('Para não confundir'): variação de pH entre infecções, indicação de tratamento de parceiros (quais tratam e quais não tratam), particularidades no manejo de gestantes e conduta na candidíase recorrente"
+      "Tabela comparativa clínica e microscópica das vulvovaginites (características do corrimento, odor, prurido, pH, Whiff test e microscopia)",
+      "Tabela comparativa diferencial das úlceras genitais (agente, número de lesões, dor, aspecto da úlcera e comprometimento linfonodal)",
+      "Diferenciação por pH vaginal (pH alcalino > 4,5 vs. pH ácido < 4,5 e < 4,0)",
+      "Indicações de tratamento de parceiros sexuais (ISTs vs. não-ISTs)",
+      "Condutas terapêuticas em gestantes e manejo de casos de repetição"
      ],
      "e": true
     }
@@ -847,58 +774,54 @@
    ],
    "partes": [
     {
-     "t": "Fisiologia e Definições",
+     "t": "Fisiologia e Definições do Climatério",
      "top": [
-      "Conceitos de climatério, menopausa, perimenopausa e pós-menopausa",
-      "Epidemiologia e longevidade feminina",
-      "Fisiologia da reserva folicular e atresia ao longo da vida",
-      "Teoria das duas células e duas gonadotrofinas (Teca/LH e Granulosa/FSH)",
-      "Fisiopatologia hormonal da transição (Inibina B, FSH, Estradiol e Estrona)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Clínica da Síndrome Climatérica",
-     "top": [
-      "Diagnóstico clínico do climatério e indicações de exames hormonais",
-      "Fisiopatologia dos sintomas vasomotores (fogachos, neurotransmissores e neurônios KNDy)",
-      "Síndrome Geniturinária da Menopausa (atrofia vulvovaginal, pH e sintomas urogenitais)",
-      "Osteoporose pós-menopáusica (fisiopatologia da remodelação óssea e fatores de risco)",
-      "Repercussões neuropsíquicas, distúrbios do sono e risco cardiovascular"
-     ],
-     "e": true
-    },
-    {
-     "t": "Propedêutica e Rastreamento",
-     "top": [
-      "Anamnese, exame físico e exames laboratoriais pré-terapia hormonal",
-      "Rastreamento do câncer de mama (mamografia e mamas densas)",
-      "Rastreamento do câncer de colo do útero (Papanicolaou e estrogenioterapia local prévia)",
-      "Rastreamento do câncer colorretal e conduta sobre USG transvaginal rotineira",
-      "Rastreamento da osteoporose (Densitometria Óssea e interpretação do Escore T)"
+      "Diferença entre Climatério (fase de transição ampla) e Menopausa (última menstruação, diagnóstico retrospectivo após 12 meses de amenorreia)",
+      "Períodos do climatério: Transição Menopausal (estágios STRAW -2 e -1), Perimenopausa, Pós-menopausa e Insuficiência Ovariana Prematura (IOP < 40 anos)",
+      "Epidemiologia e impacto do envelhecimento populacional/longevidade feminina no Brasil",
+      "Reserva e dinâmica folicular: atresia continuada por apoptose (7 milhões a 0) e número limite de ovulações ao longo da vida",
+      "Teoria das duas células e duas gonadotrofinas (Teca/LH sintetiza androgênios; Granulosa/FSH ativa aromatase e produz Estradiol e Inibina B)",
+      "Fisiopatologia da 1ª fase do climatério: queda precoce da Inibina B, elevação seletiva do FSH e encurtamento da fase folicular (ciclos menstruais curtos)",
+      "Fisiopatologia da 2ª fase e Pós-menopausa: esgotamento folicular, anovulação crônica, queda severa do estradiol, alteração do AMH e dominância da Estrona via aromatização periférica no tecido adiposo"
      ],
      "e": false
     },
     {
-     "t": "Terapia Hormonal (TH)",
+     "t": "Manifestações Clínicas e Repercussões Sistêmicas",
      "top": [
-      "Indicações formais e princípios de prescrição",
-      "Conceito essencial da Janela de Oportunidade (<60 anos ou <10 anos de menopausa)",
-      "Contraindicações absolutas da Terapia Hormonal",
-      "Regimes terapêuticos em mulheres com útero (E+P) e sem útero (E isolado)",
-      "Vias de administração dos estrogênios (oral vs. transdérmica vs. vaginal) e progestagênios",
-      "Uso da Tibolona, análise do Estudo WHI e riscos de TEV e Câncer de Mama"
+      "Consequências do hipoestrogenismo e distribuição dos receptores estrogênicos nos tecidos",
+      "Sintomas Vasomotores (Fogachos): fisiopatologia da desestabilização do termostato hipotalâmico (serotonina, noradrenalina, neurônios KNDy/NKB e núcleo pré-óptico), estreitamento da zona termoneutra e apresentação clínica",
+      "Síndrome Geniturinária da Menopausa (SGM): alterações histológicas do epitélio vaginal, queda de lactobacilos, elevação do pH (> 4,5), sintomas genitais, sexuais (dispareunia) e urinários (disúria, urgência, ITU de repetição)",
+      "Osteoporose pós-menopáusica: papel do estrogênio na remodelação óssea (inibição da osteoclastogênese), perda acelerada de osso trabecular e fatores de risco clínicos",
+      "Impacto na saúde neuropsíquica e no sono: insônia crônica ('efeito dominó' dos fogachos), alterações cognitivas/memória e vulnerabilidade aos transtornos do humor",
+      "Risco Cardiovascular: perda da vasoproteção endotelial do estrogênio, alteração do perfil lipídico e IAM como principal causa de morte em mulheres > 50 anos"
      ],
      "e": true
     },
     {
-     "t": "Terapêutica Não Hormonal e Manejos Específicos",
+     "t": "Propedêutica Inicial e Rastreamentos",
      "top": [
-      "Tratamento não hormonal dos fogachos (ISRS/IRSN, Gabapentina, Clonidina e Fezolinetanto)",
-      "Evidências sobre fitoterápicos (isoflavonas e placebo)",
-      "Tratamento específico da SGM (hidratantes, lubrificantes e estrogenioterapia vaginal)",
-      "Prevenção e tratamento da Osteoporose (cálcio, vitamina D, Bisfosfonatos e Raloxifeno)",
-      "Fluxograma de manejo dos sintomas vasomotores e pontos-chave"
+      "Avaliação inicial: anamnese, exame físico/ginecológico e exames laboratoriais pré-terapia hormonal (glicemia e perfil lipídico)",
+      "Diagnóstico da Síndrome Climatérica: diagnóstico eminentemente clínico e conduta perante dúvida diagnóstica (dosagens de FSH com intervalo de 4-6 semanas) ou suspeita de IOP",
+      "Rastreamento de Câncer de Mama: diretrizes FEBRASGO (idade de início aos 40 anos, mamografia digital anual, conduta em mamas densas e critério de interrupção)",
+      "Rastreamento de Câncer de Colo do Útero: diretrizes INCA/MS (Papanicolaou dos 25 aos 64 anos, periodicidade e uso de estrogenioterapia local prévia se atrofia severa)",
+      "Rastreamento de Câncer Colorretal e outros cânceres ginecológicos: indicações de sangue oculto/colonoscopia e não indicação de USG pélvica de rotina em assintomáticas",
+      "Rastreamento e Diagnóstico da Osteoporose: Densitometria Óssea (DMO) padrão-ouro, indicações (≥ 65 anos ou < 65 com fatores de risco), sítios analisados (L1-L4, colo do fêmur, fêmur total), FRAX-Brasil e classificação pelo Escore T (Normal ≥ -1,0; Osteopenia -1,0 a -2,5; Osteoporose ≤ -2,5 DP)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Terapêutica (Terapia Hormonal e Tratamentos Não Hormonais)",
+     "top": [
+      "Terapia Hormonal (TH): indicações formais (sintomas vasomotores, SGM, prevenção de osteoporose e IOP) e princípios de prescrição (menor dose efetiva)",
+      "Conceito essencial da Janela de Oportunidade (< 10 anos de menopausa ou < 60 anos) e redução de risco cardiovascular/mortalidade",
+      "Contraindicações absolutas da TH (câncer de mama/endométrio, sangramento vaginal não esclarecido, TEV/trombofilias, hepatopatia ativa, etc.)",
+      "Regimes Terapêuticos da TH: obrigatoriedade do progestagênio em mulheres com útero (esquemas combinado sequencial vs. combinado contínuo) e estrogenioterapia isolada em histerectomizadas",
+      "Vias e doses dos estrogênios: oral (primeira passagem hepática, risco de TEV) vs. transdérmica (desvia do fígado, escolha para obesas, hipertensas, diabéticas e dislipidêmicas) vs. vaginal (SGM isolada)",
+      "Opções de Progestagênios, Tibolona (esteroide sintético de ação tripla que melhora a libido) e reavaliação do Estudo WHI / riscos absolutos de TEV e câncer de mama",
+      "Terapêutica Não Hormonal para fogachos: ISRS/IRSN (paroxetina, venlafaxina), Gabapentina/Pregabalina, Clonidina e Fezolinetant",
+      "Tratamento específico da SGM (não hormonais: hidratantes/lubrificantes; hormonais: estriol/promestrieno vaginal) e da Osteoporose (cálcio, vit D, Bisfosfonatos e SERMs/Raloxifeno)",
+      "Fluxograma de manejo clínico dos sintomas vasomotores e pontos-chave finais da aula"
      ],
      "e": true
     }
@@ -915,67 +838,45 @@
    ],
    "partes": [
     {
-     "t": "Leiomiomatose Uterina: Definição, Epidemiologia, Etiopatogenia e Classificação",
+     "t": "Leiomiomatose Uterina: Conceito, Epidemiologia, Etiopatogenia e Classificação",
      "top": [
-      "Conceito de Leiomiomatose Uterina e inserção no espectro PALM-COEIN",
-      "Epidemiologia, faixa etária de pico (3ª e 4ª décadas) e regressão pós-menopausa",
-      "Fatores de risco (afrodescendência, idade, nuliparidade, obesidade, história familiar) e de proteção (paridade, tabagismo)",
-      "Etiopatogenia: tumor hormônio-dependente (estrogênio e progesterona) e transformação de linhagem celular monoclonal",
-      "Aparência patológica e padrão macroscópico dos nódulos (espiralado, firme, branco-nacarado)",
-      "Classificação por localização anatômica (subseroso, intramural, submucoso, cervical, parido e parasita)",
-      "Classificação FIGO (subtipos 0 a 8) e correlação com a profundidade e relação com as camadas uterinas"
+      "Sistema de Classificação FIGO (PALM-COEIN) e Definição de Leiomioma Uterino",
+      "Epidemiologia e Fatores de Risco (Idade, etnia, nuliparidade, obesidade e hiperestrogenismo)",
+      "Etiopatogenia, Fisiopatologia Hormonal e Aparência Patológica (Macroscopia)",
+      "Classificação por Localização (Corporais, Cervicais, Subserosos, Intramurais, Submucosos, Paridos, Parasitas)",
+      "Sistema de Classificação FIGO (Tipos 0 a 8)"
      ],
      "e": true
     },
     {
-     "t": "Leiomiomatose Uterina: Quadro Clínico, Infertilidade e Diagnóstico",
+     "t": "Leiomiomatose Uterina: Quadro Clínico, Diagnóstico e Tratamento",
      "top": [
-      "Quadro clínico geral: assintomáticas (~50%), Sangramento Uterino Anormal (SUA), dismenorreia secundária, dor pélvica acíclica e sintomas compressivos",
-      "Sintomatologia específica por localização dos miomas (submucosos com sangramento irregular, subserosos compressivos, intramurais com menorragia)",
-      "Mecanismos de infertilidade associados aos miomas (alteração cavitária/implanatação, distorção de óstios tubários, alteração vascular e inflamação)",
-      "Diagnóstico clínico: anamnese, palpação abdominal e toque bimanual",
-      "Exames complementares de imagem: Ultrassonografia pélvica (1ª linha), Ressonância Magnética (mapeamento e planejamento) e Histeroscopia",
-      "Diagnóstico diferencial (gestação, adenomiose, leiomiossarcoma, pólipos e carcinomas endometriais)"
-     ],
-     "e": false
-    },
-    {
-     "t": "Leiomiomatose Uterina: Tratamentos Clínicos, Cirúrgicos e Algoritmo de Conduta",
-     "top": [
-      "Fatores norteadores da decisão terapêutica (idade, desejo reprodutivo, sintomas, tamanho e localização)",
-      "Tratamento clínico não hormonal (AINEs para dor/sangramento e antifibrinolíticos)",
-      "Tratamento clínico hormonal (SIU-LNG, contraceptivos combinados e progestágenos isolados)",
-      "Análogos do GnRH: indução de hipogonadismo hipogonadotrófico, restrição de tempo (<6 meses), add-back therapy e indicação como ponte cirúrgica",
-      "Tabela comparativa dos efeitos dos tratamentos clínicos sobre os sintomas",
-      "Tratamento cirúrgico conservador (Miomectomia): indicações, vias de acesso, taxas de gestação pós-procedimento e risco de recorrência (~18%)",
-      "Tratamento cirúrgico definitivo (Histerectomia): indicações por prole constituída, vias de acesso e satisfação do procedimento",
-      "Procedimento minimamente invasivo: Embolização das Artérias Uterinas (EAU) — técnica radiológica, indicações, intercorrências e complicações",
-      "Algoritmo decisório/fluxograma de conduta na leiomiomatose uterina"
+      "Quadro Clínico (Sangramento Uterino Anormal, dismenorreia, sintomas compressivos) e Mecanismos de Infertilidade",
+      "Diagnóstico (Exame Físico, USG Pélvica de 1ª linha, RM e Histeroscopia) e Diagnósticos Diferenciais",
+      "Tratamento Medicamentoso Não Hormonal (AINEs, Antifibrinolíticos) e Hormonal (SIU-LNG, COCs, Progestágenos, Análogos do GnRH)",
+      "Tratamento Cirúrgico (Miomectomia vs. Histerectomia) e Embolização das Artérias Uterinas (EAU: técnica, indicações e complicações)",
+      "Algoritmo de Decisão Terapêutica em Leiomiomatose"
      ],
      "e": true
     },
     {
-     "t": "Adenomiose: Conceito, Fatores de Risco, Sintomas, Classificação e Fisiopatologia",
+     "t": "Adenomiose: Definição, Epidemiologia, Quadro Clínico e Fisiopatologia",
      "top": [
-      "Definição e critério histológico de adenomiose (invasão benigna do endométrio no miométrio > 2,5 mm ou 1 campo de grande aumento)",
-      "Fatores de risco (idade 40-50 anos, menarca precoce, multiparidade, cirurgias uterinas prévias, abortamentos, tamoxifeno)",
-      "Sinais e sintomas cardinais (sangramento genital, dismenorreia, dor pélvica crônica, infertilidade, aumento uterino e casos assintomáticos)",
-      "Coexistência com outras patologias (miomas, endometriose e pólipos endometriais)",
-      "Classificação segundo a profundidade de penetração miometrial (Superficial, Intermediária, Profunda ou Graus 1, 2 e 3)",
-      "Fisiopatologia e teorias etiopatogênicas (invasão direta, remanescentes müllerianos, invaginação linfática, células-tronco da medula óssea e alterações inflamatórias/endometriais)"
+      "Definição Histológica da Adenomiose (Invasão endometrial no miométrio > 2,5 mm)",
+      "Fatores de Risco e Quadro Clínico (SUA, dismenorreia, dor pélvica crônica, infertilidade e patologias associadas)",
+      "Classificação da Adenomiose (Grau de penetração no miométrio: Superficial/Intermediária/Profunda e Graus 1, 2 e 3)",
+      "Fisiopatologia (Invasão direta, resquícios müllerianos, invaginação linfática e células-tronco da medula óssea)"
      ],
      "e": false
     },
     {
-     "t": "Adenomiose: Diagnóstico por Imagem, Anatomo-patológico e Opções Terapêuticas",
+     "t": "Adenomiose: Diagnóstico por Imagem, Histopatológico e Manejo Terapêutico",
      "top": [
-      "Ultrassonografia transvaginal (USGTV): sensibilidade/especificidade, período ideal (pré-menstrual) e achados ecográficos (cistos miometriais, estrias radiadas, aspecto em queijo suíço, assimetria uterina)",
-      "Vantagens e desvantagens da USGTV no diagnóstico da adenomiose",
-      "Ressonância Magnética (RM): acurácia, papel crucial na diferenciação entre leiomiomas e adenomiomas, vantagens e desvantagens",
-      "Histeroscopia diagnóstica: achados sugestivos (orifícios, manchas acastanhadas, conteúdo achocolatado) e suas limitações",
-      "Diagnóstico definitivo: exame anatomo-patológico",
-      "Tratamento clínico da adenomiose: objetivos e opções de supressão hormonal (contraceptivos, dienogeste, SIU-LNG, análogos do GnRH)",
-      "Tratamento cirúrgico da adenomiose: Histerectomia como tratamento definitivo para mulheres com prole constituída ou sintomas graves"
+      "Diagnóstico por USGTV (Cistos miometriais, estrias radiadas, aspecto em queijo suíço, vantagens e limitações)",
+      "Diagnóstico por Ressonância Magnética (Diferenciação precisa entre Leiomioma e Adenomioma) e Histeroscopia",
+      "Diagnóstico Definitivo (Exame Anatomicopatológico)",
+      "Tratamento Clínico Hormonal (Dienogeste, SIU-LNG, Anticoncepcionais e Análogos do GnRH)",
+      "Tratamento Cirúrgico Definitivo (Indicações de Histerectomia)"
      ],
      "e": true
     }
@@ -991,56 +892,48 @@
    ],
    "partes": [
     {
-     "t": "Introdução, Aconselhamento e Conceitos Fundamentais",
+     "t": "Introdução, Aconselhamento e Métodos Não Hormonais",
      "top": [
-      "Panorama das gestações não planejadas no Brasil e impactos socioeconômicos",
-      "Pilares do aconselhamento contraceptivo e abordagem da FEBRASGO ('Uma Só Pergunta')",
-      "Evolução histórica dos contraceptivos hormonais",
-      "Conceito, fórmula e interpretação do Índice de Pearl (uso perfeito vs. habitual)",
-      "Divisão didática das categorias de métodos contraceptivos"
+      "Epidemiologia e impacto da gestação não planejada no Brasil",
+      "Pilares do aconselhamento contraceptivo e recomendação da FEBRASGO",
+      "História da contracepção hormonal e evolução das formulações",
+      "Conceito de eficácia: Índice de Pearl (IP) e diferença entre uso perfeito e habitual",
+      "Métodos comportamentais: tabelinha (Ogino-Knaus), temperatura basal, muco cervical (Billings) e coito interrompido",
+      "Métodos de barreira: preservativo masculino e feminino, diafragma e espermicidas"
      ],
      "e": false
     },
     {
-     "t": "Métodos Comportamentais, de Barreira e Farmacologia Hormonal",
+     "t": "Farmacologia Hormonal, Mecanismos, Benefícios e Efeitos Adversos",
      "top": [
-      "Métodos comportamentais (tabelinha/Ogino-Knaus, temperatura basal, Billings e coito interrompido)",
-      "Métodos de barreira (preservativo masculino/feminino, diafragma e espermicidas)",
-      "Farmacologia dos progestagênios: classificação por gerações (1ª a 4ª) e receptores esteroides",
-      "Mecanismos de ação contraceptiva dos progestagênios (bloqueio do LH, muco cervical e endométrio)",
-      "Farmacologia dos estrogênios (EE, E2, E2V, E4) e seus papéis no controle do ciclo e FSH"
-     ],
-     "e": false
-    },
-    {
-     "t": "Benefícios Não Contraceptivos, Efeitos Adversos e Formas de Apresentação",
-     "top": [
-      "Benefícios clínicos não contraceptivos (controle de SUA/dismenorreia, TPM, endometriose, acne/hirsutismo e proteção oncológica)",
-      "Efeitos adversos vasculares: risco de tromboembolismo venoso (TVP/EP) e papel hemostático do EE",
-      "Efeitos sobre a pressão arterial (sistema SRAA) e massa óssea (AMPD trimestral)",
-      "Formas de apresentação e regimes terapêuticos (orais combinados e de progestagênio isolado, injetáveis mensal/trimestral, adesivo transdérmico e anel vaginal)"
+      "Progestagênios: classificação em gerações (1ª a 4ª), receptores hormonais e mecanismos de ação",
+      "Estrogênios: tipos (E1, E2, E3, E4, EE, E2V), razões da associação e mecanismo contraceptivo",
+      "Benefícios clínicos não contraceptivos: controle do SUA, TPM/TDPM, endometriose/adenomiose, hiperandrogenismo/SOP e proteção oncológica",
+      "Efeitos adversos e riscos: tromboembolismo venoso (TVP/EE), pressão arterial e perda de massa óssea (AMPD)",
+      "Formas de apresentação e regimes terapêuticos: orais combinados, minipílula, injetáveis (mensal/trimestral), adesivo transdérmico e anel vaginal",
+      "Critérios e definições dos padrões de sangramento uterino em 90 dias"
      ],
      "e": true
     },
     {
-     "t": "Métodos Reversíveis de Longa Duração (LARCs) e Intrauterinos",
+     "t": "LARCs, Métodos Intrauterinos e Critérios da OMS",
      "top": [
-      "Implante subdérmico de etonogestrel (Implanon NXT): características, eficácia (99,95%) e padrão de sangramento",
-      "Critérios padronizados de avaliação do padrão de sangramento (Belsey / período de 90 dias)",
-      "DIU não hormonal de Cobre (TCu 380A): mecanismo, momento de inserção e duração",
-      "Sistemas intrauterinos liberadores de levonorgestrel (SIU-LNG: Mirena 52 mg vs. Kyleena 19,5 mg - indicações e diferenças)",
-      "Conceito de LARCs e eficácia comparativa (estudo CHOICE e tabela de falha de uso)"
+      "Conceito, vantagens e custo-efetividade dos LARCs (Long-Acting Reversible Contraception) e Estudo CHOICE",
+      "Implante subdérmico de Etonogestrel (Implanon NXT): características, eficácia e padrão de sangramento",
+      "DIU não hormonal de Cobre (TCu 380A): indicações, inserção, duração de 10 anos e efeitos colaterais",
+      "Sistemas Intrauterinos de Levonorgestrel (SIU): Mirena (52 mg) vs Kyleena (19,5 mg), durações e indicações terapêuticas",
+      "Critérios de Elegibilidade Médica da OMS: definição das Categorias 1 a 4",
+      "Situações clínicas com contraindicação absoluta aos métodos combinados (Categoria 4 da OMS)"
      ],
      "e": true
     },
     {
-     "t": "Critérios da OMS, Perimenopausa, Emergência e Métodos Cirúrgicos",
+     "t": "Situações Especiais, Anticoncepção de Emergência e Esterilização Cirúrgica",
      "top": [
-      "Critérios de Elegibilidade Médica da OMS (Categorias 1 a 4)",
-      "Quadro de contraindicações absolutas (Categoria 4) aos contraceptivos hormonais combinados",
-      "Contracepção na perimenopausa (estrógenos naturais, riscos e benefícios)",
-      "Anticoncepção de emergência (Levonorgestrel 1,5 mg vs. DIU de cobre de emergência)",
-      "Esterilização cirúrgica (laqueadura tubária e vasectomia) e aspectos legais (Lei nº 14.443/2022)"
+      "Contracepção na perimenopausa: estrogênios naturais, alívio dos sintomas vasomotores e avaliação de riscos",
+      "Anticoncepção de Emergência (AE): Levonorgestrel 1,5 mg (mecanismo e janela terapêutica de 72h-96h) e DIU de Cobre de emergência (até 5 dias)",
+      "Esterilização cirúrgica: laqueadura tubária e vasectomia (eficácia e aspectos legais atualizados pela Lei nº 14.443/2022)",
+      "Visão geral comparativa de eficácia, taxa de falha de uso e descontinuidade dos métodos contraceptivos"
      ],
      "e": true
     }
@@ -1056,57 +949,45 @@
    ],
    "partes": [
     {
-     "t": "Introdução, Conceitos e Epidemiologia",
+     "t": "Conceitos, Epidemiologia e Fatores de Risco",
      "top": [
-      "Definição de infertilidade conjugal (critérios de tempo e corte de 35 anos)",
-      "Conceitos de fecundabilidade, fecundidade, esterilidade e subfertilidade",
-      "Classificação da infertilidade em primária e secundária",
-      "Epidemiologia e declínio progressivo da fertilidade com a idade materna"
-     ],
-     "e": false
-    },
-    {
-     "t": "Etiologia da Infertilidade (Fatores Femininos e Masculinos)",
-     "top": [
-      "Distribuição percentual das causas de infertilidade (feminina, masculina, conjugal e ISCA)",
-      "Fatores femininos: ovulatório (45%), tuboperitoneal/DIP (30%), endometriose (15%) e uterino (5%)",
-      "Fatores masculinos: causas congênitas, adquiridas (varicocele, infecções, traumas) e idiopáticas",
-      "Impacto da idade na reserva ovariana, atresia folicular e taxa de abortamento"
+      "Definição de infertilidade conjugal e momentos para início da propedêutica (12 meses para ≤35 anos, 6 meses para >35 anos e imediata em presença de fatores de risco)",
+      "Conceitos de fecundabilidade, fecundidade, esterilidade, subfertilidade e classificação em primária vs. secundária",
+      "Impacto da idade materna na reserva ovariana (dinâmica e atresia folicular), declínio da fertilidade e elevação da taxa de abortamento",
+      "Etiologia geral da infertilidade e distribuição percentual (fator feminino 35%, fator masculino 30%, ambos parceiros 20% e sem causa aparente 15%)"
      ],
      "e": true
     },
     {
-     "t": "Indicação e Propedêutica Básica do Casal Infértil",
+     "t": "Abordagem do Casal e Propedêutica Feminina",
      "top": [
-      "Fluxograma de início da propedêutica (idade ≤ 35 anos, > 35 anos ou investigação imediata)",
-      "Anamnese do casal e exame físico pélvico/geral",
-      "Avaliação da reserva ovariana: AMH (padrão-ouro), FSH basal (3º ao 5º dia) e contagem de folículos antrais (CFA)",
-      "Investigação do fator ovariano/ovulatório (padrão menstrual e dosagens hormonais)",
-      "Investigação do fator tubário: Histerossalpingografia (exame inicial) e Videolaparoscopia com cromotubagem",
-      "Investigação do fator uterino: USG TV, Histerossalpingografia, Histeroscopia e Ressonância Magnética"
+      "Anamnese e exame físico direcionados à mulher e ao casal infértil",
+      "Avaliação da reserva ovariana: Hormônio Antimülleriano (AMH - padrão-ouro), FSH basal (3º ao 5º dia do ciclo) e Ultrassonografia TV com Contagem de Folículos Antrais (CFA)",
+      "Investigação do fator ovariano e métodos de avaliação da ovulação/anovulação",
+      "Investigação do fator tuboperitoneal: Histerossalpingografia (exame inicial para permeabilidade tubária) e Videolaparoscopia com Cromotubagem",
+      "Investigação do fator uterino: Ultrassonografia transvaginal, Histerossalpingografia, Histeroscopia, Ressonância Magnética e Laparoscopia"
      ],
      "e": true
     },
     {
      "t": "Avaliação Masculina e Espermograma",
      "top": [
-      "Anamnese direcionada ao parceiro (desenvolvimento, infecções, cirurgias, varicocele e uso de anabolizantes)",
-      "Espermograma como exame inicial fundamental e critérios para repetição de amostra",
-      "Valores de referência da OMS (volume, concentração, motilidade progressiva, vitalidade e morfologia)",
-      "Nomenclatura das alterações espermáticas: normo, oligo, asteno, terato e azoospermia"
-     ],
-     "e": true
-    },
-    {
-     "t": "Tratamentos, Reprodução Assistida e Normas CFM nº 2.320/2022",
-     "top": [
-      "Técnicas de baixa complexidade (coito programado, inseminação intrauterina) vs alta complexidade (FIV e ICSI)",
-      "Diagnóstico por exclusão e conduta na Infertilidade Sem Causa Aparente (ISCA)",
-      "Regras do CFM: limite de idade para gestação (50 anos), número de embriões por idade e proibição de redução embrionária",
-      "Normas para doação de gametas, gestação compartilhada homoafetiva e cessão temporária de útero",
-      "Resumo das recomendações FEBRASGO (exames essenciais da propedêutica inicial)"
+      "Anamnese direcionada ao parceiro (causas congênitas, adquiridas como varicocele/traumas, fatores idiopáticos e estilo de vida)",
+      "Exame complementar inicial fundamental: Espermograma / análise seminal e avaliação hormonal secundária (FSH, testosterona total, prolactina)",
+      "Valores de referência da OMS para o espermograma (volume, pH, concentração espermática, total no ejaculado, motilidade progressiva, vitalidade, leucócitos e morfologia)",
+      "Nomenclatura e interpretação das alterações seminais (Normozoospermia, Oligozoospermia, Astenozoospermia, Teratozoospermia e Azoospermia) e necessidade de confirmação em nova amostra"
      ],
      "e": false
+    },
+    {
+     "t": "Tratamento, Reprodução Assistida e Normas Éticas do CFM",
+     "top": [
+      "Técnicas de Reprodução Assistida de baixa complexidade (coito programado, inseminação intrauterina) e alta complexidade (FIV clássica e ICSI)",
+      "Diagnóstico por exclusão e condutas na Infertilidade Sem Causa Aparente (ISCA)",
+      "Regras da Resolução CFM nº 2.320/2022: idade limite de 50 anos para gestação, proibição de seleção de sexo, doação gratuita/anônima de gametas (e exceção para parentesco consanguíneo até 4º grau), cessão temporária do útero e reprodução post mortem",
+      "Limites de transferência de embriões por idade (até 37 anos: até 2; >37 anos: até 3), vedação à redução embrionária e gestação compartilhada homoafetiva feminina"
+     ],
+     "e": true
     }
    ],
    "formato": "medio"
@@ -1120,52 +1001,42 @@
    ],
    "partes": [
     {
-     "t": "Epidemiologia, Iniquidades e Carga da DRC no SUS",
+     "t": "Epidemiologia, Conceito e Fisiopatologia da DRC",
      "top": [
-      "Impacto epidemiológico da DRC no Brasil e no mundo (estudos PNS e Censo SBN)",
-      "O iceberg da DRC no SUS: custos e impacto da fase pré-dialítica (G1) versus dialítica (G5)",
-      "Determinantes sociais da saúde, vulnerabilidade demográfica e racismo ambiental (coorte ELSA-Brasil)",
-      "Papel da Atenção Primária à Saúde (APS), telemedicina e matriciamento"
+      "Epidemiologia da DRC, impacto no SUS (Iceberg da DRC) e determinantes sociais da saúde",
+      "Critérios conceituais definidores de DRC (TFG < 60 mL/min/1,73m² ou marcador de dano renal por ≥ 3 meses)",
+      "Fatores de risco aceleradores e teia etiológica (DM, HAS, senilidade, obesidade, agentes nefrotóxicos)",
+      "Cascata fisiopatológica da progressão renal (hiperfiltração adaptativa, hipertensão glomerular, esclerose e fibrose)"
      ],
      "e": false
     },
     {
-     "t": "Critérios Conceituais, Etiologia e Cascata Fisiopatológica",
+     "t": "Diagnóstico, Estadiamento KDIGO e Risco Cardiovascular",
      "top": [
-      "Critérios definidores de DRC: critério funcional (TFG < 60 mL/min/1,73m² por > 3 meses) versus marcadores de dano parenquimatoso (RAC ≥ 30 mg/g, hematúria, alterações estruturais/histológicas)",
-      "Teia etiológica e fatores de risco aceleradores (DM, HAS, senilidade, obesidade, antecedentes cardiovasculares e agentes nefrotóxicos)",
-      "Cascata fisiopatológica do ciclo vicioso: da hiperfiltração adaptativa e hipertensão glomerular à esclerose e fibrose túbulo-intersticial"
+      "Arsenal diagnóstico na APS: equação CKD-EPI, relação albumina/creatinina (RAC) em amostra isolada e USG renal",
+      "Matriz de classificação KDIGO/PCDT: categorias de TFG (G1 a G5) e Albuminúria (A1 a A3)",
+      "Critérios de encaminhamento obrigatório para a Nefrologia/Atenção Especializada (estágios G3B, G4, G5 ou A3)",
+      "Estratificação de risco cardiovascular (RCV) com a calculadora HEARTS/OPAS/OMS"
      ],
      "e": true
     },
     {
-     "t": "Arsenal Diagnóstico, Matriz KDIGO/PCDT e Risco Cardiovascular",
+     "t": "Nefroproteção Farmacológica e Manejo Não Farmacológico",
      "top": [
-      "Ferramentas diagnósticas na APS: equação CKD-EPI (padrão-ouro funcional), Relação Albumina/Creatinina (RAC) em amostra isolada e Ultrassonografia renal",
-      "Matriz de Classificação KDIGO/PCDT: estadiamento pelo cruzamento de TFG (G1 a G5) e Albuminúria (A1 a A3)",
-      "Critérios de encaminhamento obrigatório à Atenção Especializada/Nefrologia (estágios G3B, G4, G5 ou A3)",
-      "Estratificação do Risco Cardiovascular (RCV) na DRC via ferramenta HEARTS/OPAS/OMS e o eixo coração-rim"
+      "Manejo não farmacológico na APS: restrição proteica (< 0,8 g/kg/dia), controle de sódio (< 2g/dia) e estilo de vida",
+      "Pirâmide farmacológica de nefroproteção: fundação SRAA com IECA ou BRA e bloqueio adicional com Espironolactona",
+      "Inovação no SUS com Dapagliflozina (iSGLT-2): critérios de inclusão (TFG 25-75 mL/min em DM2 ou RAC > 300 mg/g)",
+      "Segurança farmacológica: monitorização obrigatória de K+ e Creatinina em 2 a 4 semanas e critérios de suspensão"
      ],
      "e": true
     },
     {
-     "t": "Manejo Terapêutico: Nutrição e Arsenal Farmacológico do PCDT",
+     "t": "Algoritmo de Manejo, Monitorização e Questões de Prova",
      "top": [
-      "Medidas não farmacológicas na APS: otimização nutricional (proteínas < 0,8 g/kg/dia), controle de sódio (< 2 g/dia) e estilo de vida",
-      "Espinha dorsal do bloqueio do SRAA: indicações de IECA ou BRA conforme grau de albuminúria e contraindicação do duplo bloqueio",
-      "Bloqueio mineralocorticoide com Espironolactona: indicações em estágios 1 a 4 com RAC ≥ 300 mg/g ou HVE/insuficiência cardíaca",
-      "Inovação com iSGLT-2 (Dapagliflozina 10 mg/dia): critérios de elegibilidade no SUS (TFG 25-75 mL/min em DM2 ou não DM com RAC > 300 mg/g)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Segurança Farmacológica, Matriciamento, Monitorização e ENAMED",
-     "top": [
-      "Regra de ouro de segurança farmacológica: reavaliação obrigatória de K+ e TFG/creatinina em 2 a 4 semanas após início ou ajuste de IECA/BRA/Espironolactona",
-      "Critérios formais de interrupção medicamentosa (hipercalemia refratária, LRA severa ou início de diálise/transplante)",
-      "Algoritmo de manejo e matriciamento clínico por estágio (acompanhamento na APS vs. Atenção Especializada)",
-      "Painel de exames obrigatórios e periodicidade de monitorização clínica (estágios G1 a G5-ND)",
-      "Resolução de casos clínicos práticos no formato de questões do ENAMED"
+      "Algoritmo de acompanhamento e matriciamento clínico entre APS e Atenção Especializada por estágio",
+      "Painel de monitorização clínica periódica e exames laboratoriais obrigatórios por estágio (G1 a G5-ND)",
+      "Síntese do círculo virtuoso da nefroproteção e equidade no cuidado no SUS",
+      "Resolução e análise de casos clínicos e questões de fixação no estilo ENAMED (Questões 01 a 09)"
      ],
      "e": false
     }
@@ -1183,47 +1054,39 @@
     {
      "t": "Etiologia, Transmissão e Determinantes Sociais",
      "top": [
-      "Agente etiológico (Trypanosoma cruzi) e vetor (triatomíneos / barbeiro)",
-      "Vias de transmissão: vetorial clássica, oral (surtos de alta gravidade e letalidade), vertical (materno-fetal), transfusional/transplante (pós-1992) e acidental/sexual",
-      "Determinantes sociais e ambientais de vulnerabilidade: habitação em taipa/pau-a-pique, desmatamento, histórico de risco, transição demográfica/urbanização e negligência estrutural"
+      "Agente etiológico (Trypanosoma cruzi) e vias de transmissão (vetorial clássica, oral, vertical, transfusional e acidental)",
+      "Determinantes sociais e ambientais (habitação em pau-a-pique/taipa, histórico de risco e transição demográfica)",
+      "Negligência estrutural e iniquidades no acesso à saúde na Doença de Chagas"
      ],
      "e": false
     },
     {
-     "t": "Fisiopatologia e Matriz Clínica (Fases Aguda e Crônica)",
+     "t": "Fisiopatologia e Matriz Clínica (Aguda vs. Crônica)",
      "top": [
-      "Fisiopatologia e história natural: curva de parasitemia vs. dano tecidual/inflamatório e taxa de evolução para forma crônica (10% a 30%)",
-      "Apresentação da Fase Aguda: curso assintomático/oligossintomático, febre prolongada (<39ºC), Sinal de Romaña, chagoma de inoculação, adenomegalia e complicações graves (<1%: miopericardite, encefalite)",
-      "Apresentação da Fase Crônica: Forma Indeterminada (assintomática, sem dano orgânico, ECG normal) e Formas Determinadas (Cardíaca com arritmias/bloqueios/IC, Digestiva com megaesôfago/megacólon e Cardiodigestiva)"
+      "Fisiopatologia e história natural da doença (transição da fase aguda parasitêmica para a fase crônica inflamatória e silenciosa)",
+      "Apresentação clínica da fase aguda (febre prolongada, Sinal de Romaña, chagoma de inoculação e complicações como miopericardite)",
+      "Manifestações da fase crônica (forma indeterminada assintomática vs. formas determinadas: cardíaca, digestiva e cardiodigestiva)"
      ],
      "e": true
     },
     {
-     "t": "Algoritmos Diagnósticos e Rastreamento na APS",
+     "t": "Algoritmos Diagnósticos e Rastreamento na APS (PCDT)",
      "top": [
-      "Algoritmo da Fase Aguda: notificação obrigatória, fluxo parasitológico prioritário (exame a fresco e métodos de concentração como Strout) e fluxo sorológico de apoio (IgM e IgG pareada)",
-      "Algoritmo da Fase Crônica: regra das duas sorologias com métodos ou preparações antigênicas distintas (ELISA, IFI, HAI, WB, CLIA), conduta frente a sorologias discordantes (3º teste) e exceção do teste rápido em áreas de difícil acesso",
-      "Indicações e critérios de rastreamento sorológico da infecção crônica na Atenção Primária à Saúde (APS) com base no risco epidemiológico"
+      "Algoritmo diagnóstico da fase aguda (prioridade para exames parasitológicos diretos a fresco/Strout e suporte com sorologia IgM/IgG)",
+      "Algoritmo diagnóstico da fase crônica (regra das duas sorologias com metodologias distintas, conduta em discordância e uso de teste rápido)",
+      "Diretrizes do PCDT/CONITEC para o rastreamento sorológico da Doença de Chagas crônica na Atenção Primária em populações vulneráveis"
      ],
      "e": true
     },
     {
-     "t": "Tratamento Etiológico e Diretrizes do PCDT",
+     "t": "Tratamento Etiológico, Populações Especiais e Questões",
      "top": [
-      "Arsenal terapêutico etiológico: Benznidazol (1ª linha, padrão-ouro na APS) vs. Nifurtimox (2ª linha, restrições e contraindicações)",
-      "Matriz de indicação terapêutica por faixa etária e fase clínica: tratamento na fase aguda, crônica indeterminada/digestiva em crianças e adultos <50 anos, conduta em adultos ≥50 anos e manejo da cardiopatia (fases iniciais vs. avançada/estudo BENEFIT)",
-      "Esquemas posológicos (adulto e pediátrico) e duração padrão do tratamento com Benznidazol (60 dias)"
+      "Arsenal terapêutico etiológico (Benznidazol como 1ª linha na APS vs. Nifurtimox de 2ª linha em atenção especializada)",
+      "Matriz de indicação terapêutica baseada em idade e comprometimento orgânico (critérios para tratar na fase aguda, crônica e cardiopatia)",
+      "Esquemas posológicos do Benznidazol (terapia de 60 dias para adultos e pediatria) e manejo em populações especiais (gestantes, coinfecção HIV e transplantados)",
+      "Navegação na rede (APS vs. Atenção Especializada) e resolução de questões de fixação/bancas de prova (ENAMED, ENADE, Revalida e AMP)"
      ],
      "e": true
-    },
-    {
-     "t": "Populações Especiais, Linha de Cuidado e Questões de Prova",
-     "top": [
-      "Manejo em Populações Especiais: Gestantes (contraindicação na fase crônica, foco no rastreamento neonatal), Coinfecção HIV (tratamento imediato da reativação) e Transplantados",
-      "Organização da Rede de Saúde: papel da Atenção Primária à Saúde (APS) no acompanhamento longitudinal vs. critérios de encaminhamento para a Atenção Especializada",
-      "Momento ENAMED: resolução e análise de questões de concursos e exames nacionais (ENADE, Revalida, AMP)"
-     ],
-     "e": false
     }
    ],
    "formato": "medio"
@@ -1237,53 +1100,41 @@
    ],
    "partes": [
     {
-     "t": "Epidemiologia, Etiologia, Transmissão e Fisiopatologia",
+     "t": "Epidemiologia, Etiologia, Fisiopatologia e Vulnerabilidades",
      "top": [
-      "O paradoxo da TB, carga epidemiológica no Brasil e os 3 pilares da Estratégia End TB",
-      "Etiologia (Mycobacterium tuberculosis/BAAR) e dinâmica de transmissão por aerossóis (núcleos de Wells)",
-      "Fisiopatologia: da fagocitose macrofágica à formação do granuloma caseoso",
-      "Evolução clínica: Infecção Latente (ILTB - 90%) vs TB Ativa (10%: primária, pós-primária/secundária e milar)",
-      "Multiplicadores de vulnerabilidade social e risco relativo de adoecimento (PSR 56x, PPL 28x, PVHIV 28x, Indígenas 3x)"
+      "Carga da tuberculose no Brasil, cenário global e os 3 Pilares da Estratégia End TB",
+      "Etiologia (Mycobacterium tuberculosis / Bacilo de Koch, BAAR, parede rica em lipídios) e dinâmica de transmissão por aerossóis (Núcleos de Wells)",
+      "Fisiopatologia: fagocitose macrofágica, formação do granuloma caseoso e vias de evolução (Infecção Latente / ILTB vs. TB Ativa Primária, Pós-Primária e Miliar)",
+      "Determinantes sociais e multiplicadores de risco de adoecimento (Povos Indígenas 3x, PVHIV 28x, PPL 28x e População em Situação de Rua 56x)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Espectro Clínico e Rastreamento na Atenção Primária",
+     "top": [
+      "Espectro clínico pulmonar: diferenças de apresentação entre adultos (tosse persistente >= 3 semanas) e crianças (tríade clássica de inapetência, perda de peso e tosse)",
+      "Espectro extrapulmonar (20% dos casos): manifestações das formas pleural, meningoencefálica, ganglionar periférica e osteoarticular (Mal de Pott)",
+      "Conceito chave de Sintomático Respiratório (SR) e critérios de busca ativa na Atenção Primária à Saúde (APS)"
      ],
      "e": false
     },
     {
-     "t": "Espectro Clínico, Formas Extrapulmonares e Sintomático Respiratório",
+     "t": "Métodos Diagnósticos, Escore Pediátrico e ILTB",
      "top": [
-      "Espectro clínico pulmonar no adulto (tosse persistente, febre vespertina, sudorese noturna, emagrecimento)",
-      "Espectro clínico pulmonar pediátrico (tríade clássica: inapetência, perda de peso, tosse crônica)",
-      "Espectro extrapulmonar (pleural, ganglionar periférica, meningoencefálica e osteoarticular/Mal de Pott)",
-      "Conceito de Sintomático Respiratório (SR) e critérios de rastreamento na APS (≥3 semanas na população geral vs qualquer duração em vulneráveis)"
+      "Matriz de evidências bacteriológicas e moleculares: TRM-TB (GeneXpert), Cultura automatizada com TS (padrão-ouro) e Baciloscopia direta",
+      "Diagnóstico por imagem (padrões radiográficos pós-primário, primário e miliar) e histopatologia tecidual (granuloma caseoso)",
+      "Escore diagnóstico pediátrico (< 10 anos) e classificação operacional (Multibacilar vs. Paucibacilar)",
+      "Diagnóstico da Infecção Latente (ILTB): exclusão de doença ativa, Prova Tuberculínica (PT/PPD) in vivo vs. teste IGRA in vitro"
      ],
      "e": true
     },
     {
-     "t": "Diagnóstico Bacteriológico, Molecular, Imagem e Escore Pediátrico",
+     "t": "Farmacologia, Esquemas Terapêuticos, TDO e Notificação",
      "top": [
-      "Matriz diagnóstica bacteriológica/molecular: TRM-TB (GeneXpert em 2h e detecção de resistência à Rifampicina), Cultura com TS (padrão-ouro) e Baciloscopia direta (BAAR)",
-      "Métodos complementares: Radiografia de tórax (padrões primário, pós-primário e milar) e Histopatologia (granuloma caseoso)",
-      "Escore diagnóstico pediátrico para <10 anos (critérios clínicos, radiológicos, epidemiológicos, PT e nutricionais)",
-      "Classificação operacional (Multibacilar MB vs Paucibacilar PB) e Matriz Diagnóstica integrativa do SUS"
-     ],
-     "e": true
-    },
-    {
-     "t": "Diagnóstico da Infecção Latente por Tuberculose (ILTB)",
-     "top": [
-      "Pré-requisito crítico: exclusão obrigatória de tuberculose ativa (exame clínico + Raio-X de tórax)",
-      "Diagnóstico in vivo: Prova Tuberculínica (PT / PPD), técnica de aplicação, leitura do endurado em 48-72h e interferência da vacina BCG",
-      "Diagnóstico in vitro: Ensaio de Liberação de Interferon-Gama (IGRA), alta especificidade e não interferência da BCG"
-     ],
-     "e": true
-    },
-    {
-     "t": "Tratamento Farmacológico, TDO, Vigilância (SINAN) e Questões de Prova",
-     "top": [
-      "Bases bacteriológicas e ação dos fármacos principais (Isoniazida, Pirazinamida, Rifampicina e Etambutol)",
-      "Esquema Básico para adultos/adolescentes ≥10 anos (2 RHZE / 4 RH em dose fixa combinada)",
-      "Esquema Pediátrico <10 anos (2 RHZ / 4 RH - exclusão do Etambutol pelo risco de neurite óptica)",
-      "Tratamento Diretamente Observado (TDO): conceitos operacionais, acolhimento, proteção social e supervisão de doses (mínimo 3x/semana)",
-      "Notificação compulsória no SINAN e resolução de questões de fixação/concursos (Momento ENAMED)"
+      "Bases bacteriológicas e farmacológicas: relação entre localização da lesão, metabolismo bacilar e mecanismo dos fármacos (Isoniazida, Pirazinamida, Rifampicina e Etambutol)",
+      "Esquema Básico de Tratamento na APS (2RHZE / 4RH para adultos/adolescentes e 2RHZ / 4RH para crianças < 10 anos sem Etambutol)",
+      "Tratamento Diretamente Observado (TDO): pilares de acolhimento clínico, combate ao estigma, prevenção de resistência e proteção social (SUAS)",
+      "Fluxograma da Matriz Diagnóstica no SUS, notificação compulsória na ficha do SINAN e resolução de questões de fixação (ENAMED/ENADE)"
      ],
      "e": true
     }
@@ -1301,63 +1152,48 @@
     {
      "t": "Epidemiologia, Ciclo Biológico e Fisiopatologia",
      "top": [
-      "Definições de caso suspeito e caso confirmado de esquistossomose",
-      "Tríade epidemiológica: Agente (Schistosoma mansoni), Vetor (Biomphalaria) e Hospedeiro (Homem)",
-      "Etapas do ciclo biológico: eclosão de miracídios, proliferação nos caramujos, liberação de cercárias e infecção humana",
-      "Fisiopatologia da gênese do dano: deposição capilar de ovos, reação granulomatosa e Fibrose de Symmers",
-      "Alerta fisiopatológico: hipertensão portal pré-sinusoidal com preservação da estrutura lobular e da função hepatocelular"
-     ],
-     "e": true
-    },
-    {
-     "t": "Espectro Clínico (Fase Aguda e Fase Crônica)",
-     "top": [
-      "Linha do tempo da evolução clínica (da dermatite cercariana à modulação granulomatosa e fibrose)",
-      "Fase Aguda: Dermatite cercariana (0 a 72h) e Febre de Katayama / Forma Toxêmica (3 a 6 semanas)",
-      "Marcador de ouro laboratorial da fase aguda: eosinofilia maciça (> 1.000 células/mm³)",
-      "Fase Crônica Hepatointestinal: diarreia/constipação, dor abdominal à palpação, fígado palpável e ausência de esplenomegalia",
-      "Matriz de Gravidade da Forma Hepatoesplênica: compensada (esplenomegalia maciça, varizes esofágicas, função hepática preservada) vs descompensada (hemorragia digestiva alta, ascite, icterícia, hipoalbuminemia)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Complicações Sistêmicas e Formas Ectópicas",
-     "top": [
-      "Mielorradiculopatia esquistossomótica (SNC: compressão medular, mielite transversa e paraparesia)",
-      "Comprometimento pulmonar (hipertensão vasculopulmonar / cor pulmonale) e renal (glomerulopatia por imunocomplexos)",
-      "Aliança patogênica: associação S. mansoni + Salmonella com bacteriemia e síndrome séptica recorrentes"
+      "Definição de caso suspeito (história de contato com água doce) e caso confirmado (ovos de S. mansoni em fezes ou tecidos)",
+      "Tríade epidemiológica: Agente etiológico (Schistosoma mansoni), Vetor/Hospedeiro intermediário (Biomphalaria glabrata, B. straminea, B. tenagophila) e Hospedeiro definitivo (Homem)",
+      "Ciclo biológico e invasão sistêmica: liberação de ovos nas fezes, eclosão de miracídios no meio aquático, reprodução assexuada no caramujo, liberação de cercárias, penetração ativa na pele humana (2 a 15 min) e conversão em esquistossômulos",
+      "Migração venosa e maturação: circulação venosa, passagem por coração e pulmões, amadurecimento no fígado e acasalamento nas veias mesentéricas",
+      "Gênese do dano e fisiopatologia: carga antigênica dos ovos em sinusoides hepáticos, reação granulomatosa (fase aguda exsudativa vs. fase crônica produtiva/fibrótica) e desenvolvimento da Fibrose periportal de Symmers",
+      "Mecanismo da hipertensão portal: alteração pré-sinusoidal com preservação da estrutura lobular e da função hepatocelular inicial"
      ],
      "e": false
     },
     {
-     "t": "Arsenal Diagnóstico (Direto, Sorológico e por Imagem)",
+     "t": "Espectro Clínico (Fase Aguda, Crônica e Ectopias)",
      "top": [
-      "Diagnóstico direto: Kato-Katz (padrão-ouro OMS, OPG), Lutz/HPJ (avaliação de viabilidade de ovos) e biópsias retal/hepática",
-      "Diagnóstico sorológico (ELISA e Imunofluorescência) e armadilhas (cicatriz sorológica e reatividade cruzada)",
-      "Ultrassonografia hepática: padrão-ouro morboso para identificação e estadiamento da fibrose periportal (Padrões Niamey A a F)",
-      "Exames de imagem especializada: Ressonância Magnética (mielopatias) e Endoscopia Digestiva Alta (rastreio e ligadura de varizes)"
+      "Fase Aguda: Dermatite cercariana (lesões papulares pruriginosas de 0 a 72h no local de penetração da pele)",
+      "Febre de Katayama (Forma Toxêmica aguda, 3 a 6 semanas pós-exposição): febre, tosse seca, diarreia mucossanguinolenta, hepatoesplenomegalia dolorosa e marcador laboratorial de ouro (eosinofilia maciça > 1.000 células/mm³)",
+      "Fase Crônica Forma Hepatointestinal: diarreia/disenteria intercalada com constipação, epigastralgia, fígado palpável e endurecido, com baço impalpável ao exame físico",
+      "Matriz de Gravidade na Forma Hepatoesplênica: Compensada (hipertensão portal, esplenomegalia maciça indolor, varizes esofágicas e função hepática preservada) vs. Descompensada (hemorragia digestiva alta grave, ascites, icterícia e insuficiência funcional severa)",
+      "Complicações Ectópicas e Sistêmicas: Mielorradiculopatia esquistossomótica (SNC), Cor pulmonale e hipertensão vasculopulmonar (Pulmões) e Glomerulopatia por imunocomplexos (Rins)",
+      "Aliança Patogênica: Associação S. mansoni + Salmonella (bacteriúmia e síndrome séptica prolongada aderida ao tegumento do verme adulto)"
      ],
      "e": true
     },
     {
-     "t": "Estratégias de Vigilância e Busca Ativa por Endemicidade",
+     "t": "Arsenal Diagnóstico (Parasitológico, Sorologia e Imagem)",
      "top": [
-      "Mapa estratégico I: fluxograma de manejo e conduta clínica para o paciente suspeito em área endêmica vs indene",
-      "Mapa estratégico II: condutas por taxa de endemicidade (baixa <10%, moderada 10-25% e alta >25% com tratamento em massa)",
-      "Ficha de investigação epidemiológica e notificação compulsória no SINAN"
+      "Diagnóstico Direto: Método de Kato-Katz (padrão-ouro quantitativo em OPG; exigência de até 6 lâminas/amostras em áreas de baixa endemicidade)",
+      "Técnica de Lutz/HPJ (sedimentação espontânea qualitativa para avaliação de viabilidade dos ovos) e Biópsias retal (válvula de Houston) e hepática",
+      "Diagnóstico Indireto e Sorologia: ELISA (sensibilidade 92-98%) e Imunofluorescência (especificidade 99-100%); alerta de falsos-positivos por cicatriz sorológica e reatividade cruzada",
+      "Ultrassonografia Hepaticoportal (USG): padrão-ouro morfológico para caracterização da fibrose periportal de Symmers, mensuração do diâmetro das veias porta e esplênica e estadiamento pelos Padrões de Niamey (A, C, E e F em teia de aranha)",
+      "Imagem Especializada: Ressonância Magnética no SNC (alargamento do cone medular e captação na mielorradiculopatia) e Endoscopia Digestiva Alta (EDA obrigatória para rastreio e profilaxia de varizes esofágicas)"
      ],
      "e": true
     },
     {
-     "t": "Tratamento Farmacológico, Populações Especiais e Determinação Social",
+     "t": "Manejo Farmacológico, Vigilância Epidemiológica e Questões",
      "top": [
-      "Esquema farmacológico com Praziquantel: posologia em dose única (50 mg/kg em adultos, 60 mg/kg em crianças) e controle de cura (30-40 dias)",
-      "Uso obrigatório de corticosteroides pré-tratamento antiparasitário (fase aguda toxêmica grave, cor pulmonale agudo e mielorradiculopatia)",
-      "Manejo em populações especiais: gestantes, lactantes, crianças < 4 anos, idosos e hepatopatas",
-      "Determinantes sociais da saúde, saneamento, racismo ambiental e controle do vetor (reavaliação do uso da niclosamida)",
-      "Resolução comentada de questões no modelo ENAMED / Revalida"
+      "Tratamento Antiparasitário Específico: Praziquantel em dose única (50 mg/kg para adultos e 60 mg/kg para crianças de 4 a 15 anos); protocolo de cura com Kato-Katz em 30-40 dias pós-tratamento",
+      "Papel dos Corticosteroides (imunossupressão prévia): indicações absolutas na Fase Aguda Toxêmica grave, Cor Pulmonale agudo e Mielorradiculopatia (pulsoterapia com metilprednisolona)",
+      "Manejo em Populações Especiais: Gestantes/Lactantes, Crianças menores de 4 anos (dificuldade de dosagem/formulação) e Idosos/Comorbidades hepáticas",
+      "Busca Ativa por Taxa de Endemicidade: Baixa (<10%: Kato-Katz intenso e tratar apenas confirmados), Moderada (10-25%: tratar positivos e conviventes) e Alta (>25%: tratamento comunitário em massa)",
+      "Vigilância e Aspectos Sociais: Notificação compulsória no SINAN, Iceberg clínico (saneamento básico e racismo ambiental) e Resolução de Questões de Fixação (ENAMED / Revalida / Residência)"
      ],
-     "e": false
+     "e": true
     }
    ],
    "formato": "medio"
@@ -1371,50 +1207,40 @@
    ],
    "partes": [
     {
-     "t": "Epidemiologia e Paralelo Etiológico (LT vs LV)",
+     "t": "Epidemiologia, Etiologia e Tropismo Parasitário",
      "top": [
-      "Magnitude epidemiológica e impacto das Leishmanioses no Brasil (casos anuais de LT e letalidade da LV)",
-      "Paralelo etiológico: espécies causadoras de LT (L. braziliensis, L. amazonensis, L. guyanensis) e LV (L. infantum/chagas)",
-      "Diferenciação de vetores (Lutzomyia spp. vs Lutzomyia longipalpis) e reservatórios (silvestres vs cão urbano)",
-      "Tropismo do parasito e alvos celulares: pele/mucosas vs Sistema Mononuclear Fagocítico (SMF)"
+      "Magnitude das leishmanioses no Brasil (casos anuais de LT e taxa de letalidade na LV)",
+      "Paralelo etiológico e epidemiológico (espécies de Leishmania, vetores Lutzomyia e reservatórios na LT vs LV)",
+      "Tropismo do parasito e mecanismo de invasão (reação superficial cutâneo-mucosa vs reação sistêmica no SMF)"
      ],
      "e": false
     },
     {
-     "t": "Espectro Clínico e Diagnóstico Diferencial da Leishmaniose Tegumentar (LT)",
+     "t": "Espectro Clínico, Diagnóstico Diferencial e Alterações Laboratoriais",
      "top": [
-      "Formas clínicas da LT: Cutânea Localizada (LC), Mucosa (LM), Disseminada (LD) e Cutânea Difusa (LCD)",
-      "Morfologia da lesão cutânea típica (úlcera indolora, bordas elevadas em moldura, fundo granuloso)",
-      "Particularidades e gravidade da Leishmaniose Mucosa (associação com L. braziliensis, lesões aerodigestivas e desnutrição)",
-      "Tripé de diagnóstico diferencial da LT (sífilis primária, tuberculose cutânea e hanseníase)"
+      "Espectro clínico da Leishmaniose Tegumentar (Cutânea Localizada, Mucosa, Disseminada e Cutânea Difusa)",
+      "Tripé de diagnósticos diferenciais da LT (Sífilis primária, Tuberculose cutânea e Hanseníase)",
+      "Comprometimento sistêmico na Leishmaniose Visceral (febre prolongada, hepatoesplenomegalia maciça e emagrecimento)",
+      "Marcadores laboratoriais característicos da LV (citopenias/anemia profunda, hipergamaglobulinemia e hipoalbuminemia)"
      ],
      "e": true
     },
     {
-     "t": "Comprometimento Sistêmico e Aspectos Epidemiológicos da Leishmaniose Visceral (LV)",
+     "t": "Abordagem Diagnóstica e Manejo Terapêutico",
      "top": [
-      "Quadro clínico clássico da LV: febre irregular de longa duração, hepatoesplenomegalia maciça, emagrecimento e edema",
-      "Alterações laboratoriais marcantes: citopenias (anemia profunda e leucopenia), hipergamaglobulinemia e hipoalbuminemia",
-      "Dilema de saúde pública: reservatório canino urbano, razão epidemiológica e recomendação sanitária da eutanásia canina"
+      "Estrutura diagnóstica para LT (métodos parasitológicos diretos/biópsia como padrão, PCR e limitações da sorologia)",
+      "Dualidade diagnóstica na LV (testes imunológicos rápidos/rK39 na APS vs parasitológico direto em aspirado de medula óssea)",
+      "Antimoniato de Meglumina (indicação de 1ª escolha e monitoramento rigoroso de toxicidade cardíaca, renal e pancreática)",
+      "Expansão do arsenal terapêutico (Anfotericina B lipossomal, Pentamidina, Pentoxifilina, Miltefosina) e abordagens locais (intralesional e termoterapia)"
      ],
      "e": true
     },
     {
-     "t": "Estrutura e Dualidade Diagnóstica (LT e LV)",
+     "t": "Saúde Pública, Vigilância no SINAN e Questões Práticas",
      "top": [
-      "Diagnóstico da LT: parasitológico direto (esfregaço/biópsia - padrão), exames moleculares (PCR) e limitações da sorologia",
-      "Dualidade diagnóstica na LV: exames imunológicos (teste rápido IT-LEISH rK39, RIFI) vs parasitológicos (aspirado de medula óssea - padrão-ouro)",
-      "Notificação compulsória e preenchimento das fichas de investigação do SINAN (LV e LTA)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Manejo Terapêutico (Sistêmico e Local) e Questões Práticas",
-     "top": [
-      "Antimoniato de Meglumina (1ª escolha) e monitoramento de toxicidades (cardíaca com prolongamento de QT, renal e pancreática)",
-      "Arsenal terapêutico de resgate e alternativas: Anfotericina B (lipossomal/desoxicolato), Pentamidina, Pentoxifilina e Miltefosina",
-      "Abordagens locais para LC simples na Atenção Primária: antimoniato intralesional e termoterapia",
-      "Aplicação clínica e resolução de questões no padrão ENAMED"
+      "Dilema em saúde pública da eutanásia canina na LV (razão epidemiológica, infecção persistente no cão e controle vetorial integrado)",
+      "Notificação compulsória e preenchimento das fichas de investigação do SINAN (LV e LTA)",
+      "Resolução de casos clínicos e questões do Momento ENAMED (conduta em sorologia positiva assintomática e pegadinhas de prova)"
      ],
      "e": true
     }
@@ -1430,52 +1256,38 @@
    ],
    "partes": [
     {
-     "t": "Conceito, Imunopatologia e Fisiopatologia Neural",
+     "t": "Conceitos Gerais, Fisiopatologia e Imunologia",
      "top": [
-      "Definição, epidemiologia no Brasil e etiologia (Mycobacterium leprae)",
-      "O paradoxo biológico: alta infectividade vs. baixa patogenicidade",
-      "Balanço imunológico: resposta celular (Th1 / Macrófagos M1) vs. humoral (Th2/Treg / Macrófagos M2)",
-      "Fisiopatologia da neuropatia hansênica: invasão dos vasa nervorum e células de Schwann"
+      "Definição, etiologia (Mycobacterium leprae) e paradoxo biológico (alta infectividade vs. baixa patogenicidade)",
+      "Espectro imunológico: Balança Th1 (resposta celular microbicida) vs. Th2/Treg (resposta humoral insuficiente)",
+      "Fisiopatologia da neuropatia hansênica (invasão dos vasa nervorum e infecção das células de Schwann)"
      ],
-     "e": false
+     "e": true
     },
     {
      "t": "Espectro Clínico e Fenômenos Reacionais",
      "top": [
-      "Classificação operacional (Paucibacilar vs. Multibacilar) e matriz das formas clínicas (Indeterminada, Tuberculoide, Dimorfa e Virchowiana)",
-      "Manifestações dermatológicas e neurológicas características (lesões foveolares, face leonina, madarose, anestesia em luvas/botas)",
-      "Ordem cronológica da perda de sensibilidade (Térmica > Dolorosa > Tátil) e forma neural pura",
-      "Fenômenos agudos: Reação Tipo 1 (Reversa - imunidade celular Th1) vs. Reação Tipo 2 (Eritema Nodoso Hansênico - imunocomplexos)"
+      "Matriz de classificação completa: Formas Indeterminada, Tuberculoide (PB), Dimorfa e Virchowiana (MB)",
+      "Manifestações cutâneo-neurais e sequência cronológica da perda de sensibilidade (térmica > dolorosa > tátil)",
+      "Reações Hansênicas: Reação Tipo 1 (Reversa, hipersensibilidade tipo IV) vs. Reação Tipo 2 (Eritema Nodoso Hansênico, tipo III)"
      ],
      "e": true
     },
     {
-     "t": "Diagnóstico, Baciloscopia e Avaliação Neurológica (ANS)",
+     "t": "Diagnóstico, Avaliação Neurológica e Vigilância",
      "top": [
-      "Os Três Sinais Cardinais do diagnóstico clínico-epidemiológico (Dermatológico, Neurológico e Laboratorial)",
-      "Técnica dos 4 sítios e interpretação da baciloscopia de esfregaço intradérmico (BAAR)",
-      "Avaliação Neurológica Simplificada (ANS) e Escore OMP (Graus de Incapacidade Física 0, 1 e 2)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Vigilância de Contatos, Imunoprofilaxia e Notificação",
-     "top": [
-      "Rastreamento e vigilância de contatos domiciliares e sociais dos últimos 5 anos",
-      "Testes complementares na APS (Anti-PGL-1) e na Atenção Especializada (qPCR)",
-      "Esquema de imunoprofilaxia com a vacina BCG em contatos assintomáticos",
-      "Notificação compulsória e preenchimento dos dados complementares na ficha do SINAN"
+      "Os três sinais cardinais do diagnóstico clínico e papel da baciloscopia de esfregaço intradérmico",
+      "Avaliação Neurológica Simplificada (ANS) e mensuração do Grau de Incapacidade Física (GIF 0, 1 e 2)",
+      "Vigilância de contatos (teste Anti-PGL-1, qPCR) e regras de imunoprofilaxia com vacina BCG"
      ],
      "e": false
     },
     {
-     "t": "Tratamento Farmacológico (PQT-U) e Resolução de Questões",
+     "t": "Tratamento PQT-U, Gestão do Cuidado e Questões Práticas",
      "top": [
-      "Novo paradigma da Poliquimioterapia Única (PQT-U) no SUS (Rifampicina, Clofazimina e Dapsona)",
-      "Posologia e esquemas adulto e infantil para Paucibacilar (6 doses) e Multibacilar (12 doses)",
-      "Proibição crítica e diretrizes do PCDT sobre a extensão do tempo de tratamento",
-      "Tratamento Diretamente Observado (TDO) e atribuições da equipe multiprofissional",
-      "Resolução integradora de questões de prova no padrão ENAMED / Revalida"
+      "Esquema Poliquimioterapia Única (PQT-U com Rifampicina, Clofazimina e Dapsona) para PB (6 doses) e MB (12 doses)",
+      "Gestão do cuidado, Tratamento Diretamente Observado (TDO), notificação no SINAN e determinantes sociais",
+      "Análise e resolução das questões de prova e casos clínicos do ENAMED / Revalida / UFMT"
      ],
      "e": true
     }
@@ -1519,61 +1331,50 @@
    ],
    "partes": [
     {
-     "t": "Humor e Epidemiologia Geral",
+     "t": "Conceitos de Humor, Episódios e Transtorno Depressivo Maior (TDM)",
      "top": [
-      "Conceito de humor como estado emocional de base vs. afeto",
-      "Epidemiologia da depressão e do espectro bipolar",
-      "Impacto funcional e relevância dos transtornos de humor na prática médica"
+      "Diferença entre humor, afeto e tristeza normal vs. patológica",
+      "Distinção fundamental: Episódio de humor (o que tem agora) vs. Transtorno (padrão de vida)",
+      "Os três episódios de humor: depressivo, hipomaníaco e maníaco",
+      "Epidemiologia e fatores de risco do Transtorno Depressivo Maior (TDM)",
+      "Critérios diagnósticos e domínios de sintomas do TDM (afetivo, neurovegetativo, cognitivo)",
+      "Classificação da gravidade do episódio depressivo (leve, moderado e grave com/sem psicose)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Especificadores, Distimia e Tratamento da Depressão",
+     "top": [
+      "Curso, evolução e risco de recorrência no TDM",
+      "Especificadores do DSM-5-TR: ansioso, melancólico, atípico, psicótico e periparto",
+      "Depressão nos extremos de idade (crianças/adolescentes e idosos)",
+      "Transtorno Depressivo Persistente (Distimia) vs. TDM (critérios de cronicidade e gravidade)",
+      "Diagnóstico diferencial da depressão (causas médicas, substâncias, luto, burnout)",
+      "Tratamento farmacológico e psicoterapêutico da depressão por gravidade (ISRS e remissão)"
      ],
      "e": false
     },
     {
-     "t": "Episódios de Humor (Depressivo, Maníaco e Hipomaníaco)",
+     "t": "Transtorno Bipolar: Clínica, Diagnóstico Diferencial e Espectro",
      "top": [
-      "Diferença conceitual fundamental entre Episódio (atual) e Transtorno (longo da vida)",
-      "Episódio Depressivo Maior (sintomas principais: humor deprimido/anedonia e sintomas acessórios)",
-      "Episódio Maníaco (critérios diagnósticos, humor elevado/irritável, energia e impulsividade)",
-      "Episódio Hipomaníaco (duração mínima de 4 dias e ausência de prejuízo grave ou psicose)"
+      "Epidemiologia, idade de início e genética do Transtorno Afetivo Bipolar (TAB)",
+      "Episódio maníaco vs. hipomaníaco: critérios, duração, prejuízo, internação e psicose",
+      "Diagnóstico e diferenciação entre TAB Tipo I e TAB Tipo II",
+      "Pistas clínicas para diferenciar depressão unipolar de depressão bipolar",
+      "Transtorno ciclotímico e especificadores do TAB (ciclagem rápida e características mistas)",
+      "Diagnóstico diferencial do TAB (mania secundária, espectro psicótico, borderline e comorbidades)"
      ],
      "e": true
     },
     {
-     "t": "Transtornos Depressivos (TDM e Distimia)",
+     "t": "Tratamento do TAB, Risco de Suicídio e Integração Prática",
      "top": [
-      "Critérios diagnósticos do Transtorno Depressivo Maior (TDM) no DSM-5-TR e CID-11",
-      "Transtorno Depressivo Persistente (Distimia) e diagnóstico diferencial com TDM",
-      "Curso clínico, tempo médio de episódio e taxa de recorrência",
-      "Especificadores do TDM que mudam a conduta (psicótico, atípico, ansioso, melancólico, peripartum)",
-      "Tratamento da depressão: algoritmo em seis passos e manejo psicofarmacológico"
-     ],
-     "e": true
-    },
-    {
-     "t": "Transtorno Bipolar (TAB I, TAB II e Ciclotimia)",
-     "top": [
-      "Diagnóstico do TAB Tipo I (presença de mania) e TAB Tipo II (hipomania + depressão maior)",
-      "Transtorno Ciclotímico, Ciclagem Rápida e Especificador de Características Mistas",
-      "Diagnóstico diferencial do TAB (mania secundária a doenças orgânicas, esquizofrenia e borderline)",
-      "Tratamento do TAB: conduta na mania aguda, depressão bipolar e manutenção (Lítio, Valproato e Carbamazepina)"
-     ],
-     "e": true
-    },
-    {
-     "t": "Suicídio, Luto, Burnout e Condições Não Transtorno",
-     "top": [
-      "Avaliação estruturada do risco de suicídio e conduta médica",
-      "Diferenciação entre Luto normal e Episódio Depressivo Maior",
-      "Burnout (fenômeno ocupacional) e Transtorno de Adaptação",
-      "Investigação laboratorial para exclusão de causas médicas (ex: hipotireoidismo) e iatrogenias/substâncias"
-     ],
-     "e": true
-    },
-    {
-     "t": "Integração Clínica e Casos de Prova (ENAMED)",
-     "top": [
-      "Algoritmo sintético de decisão do episódio ao diagnóstico definitivo",
-      "Casos clínicos de prova (virada maníaca induzida por antidepressivo e escolha de estabilizadores)",
-      "Resolução de questões no modelo ENAMED / Prova de Residência Médica"
+      "Tratamento farmacológico do TAB: mania aguda, depressão bipolar (CANMAT) e manutenção",
+      "Escolha dos estabilizadores do humor (Lítio, Ácido Valproico, Carbamazepina)",
+      "Uso cauteloso de antidepressivos no TAB e risco de virada maníaca ou desestabilização",
+      "Avaliação e manejo do risco de suicídio em transtornos de humor (fatores de risco e proteção)",
+      "Diferenciação de luto normal, luto prolongado e burnout",
+      "Síntese do raciocínio diagnóstico e resolução de casos clínicos (Momento ENAMED)"
      ],
      "e": true
     }
@@ -1589,63 +1390,45 @@
    ],
    "partes": [
     {
-     "t": "Personalidade e Transtorno",
+     "t": "Conceitos Fundamentais e Modelos de Classificação",
      "top": [
-      "Conceito de personalidade: temperamento e caráter",
-      "Critérios diagnósticos gerais do DSM-5-TR e caráter clínico/longitudinal",
-      "Prevalência populacional (~10%) e etiologia multifatorial (fatores biológicos, psicológicos e ambientais)"
+      "Conceito de personalidade: temperamento (biológico) e caráter (adquirido)",
+      "Critérios gerais, epidemiologia e etiopatogenia dos transtornos da personalidade",
+      "Modelo Categórico do DSM-5-TR: os três agrupamentos (Clusters A, B e C)",
+      "Modelo Alternativo Dimensional (DSM-5 Seção III) e CID-11: gravidade e qualificadores de traço"
      ],
      "e": true
     },
     {
-     "t": "Modelos de Classificação",
-     "top": [
-      "Modelo Categórico do DSM-5-TR (divisão nos Clusters A, B e C)",
-      "Modelo Alternativo Dimensional do DSM-5-TR (Seção III: prejuízo no funcionamento e traços patológicos)",
-      "Classificação Dimensional da CID-11 (diagnóstico único por gravidade, 5 qualificadores de traço e padrão limítrofe)",
-      "Comparação didática entre DSM-5-TR e CID-11"
-     ],
-     "e": false
-    },
-    {
      "t": "Grupo A — Transtornos Excêntricos",
      "top": [
-      "Transtorno da Personalidade Paranoide (desconfiança persistente e interpretação hostil)",
-      "Transtorno da Personalidade Esquizoide (distanciamento social, isolamento e indiferença afetiva)",
-      "Transtorno da Personalidade Esquizotípica (excentricidade cognitivo-perceptiva, discursos e crenças estranhas)",
-      "Quadro-síntese do Grupo A, diagnósticos diferenciais e relação com o espectro da esquizofrenia"
+      "TP Paranoide: desconfiança persistente, interpretação hostil e diagnóstico diferencial",
+      "TP Esquizoide: distanciamento social, desinteresse interpessoal e diferencial com TEA e ansiedade social",
+      "TP Esquizotípica: excentricidade cognitivo-perceptiva, sintomas psicóticos breves e diferencial com esquizofrenia",
+      "Quadro-síntese, espectro da esquizofrenia e condutas de manejo do Grupo A"
      ],
      "e": false
     },
     {
      "t": "Grupo B — Transtornos Dramáticos e Erráticos",
      "top": [
-      "Transtorno da Personalidade Antissocial (desrespeito aos direitos alheios, conduta manipuladora e idade mínima de 18 anos)",
-      "Transtorno da Personalidade Borderline (instabilidade afetiva/relacional, medo de abandono, splitting e risco de suicídio/autolesão)",
-      "Transtornos Histriônico e Narcisista (busca de atenção/teatralidade vs grandiosidade e fragilidade da autoestima)",
-      "Quadro-síntese do Grupo B, contratransferência médica e manejo do risco relacional"
+      "TP Antissocial: desconsideração por direitos alheios, ausência de remorso e histórico de transtorno de conduta",
+      "TP Borderline: instabilidade afetiva, medo de abandono, risco de autolesão/suicídio e manejo clínico",
+      "Fenômenos relacionais: mecanismo de defesa de splitting (cisão) e análise da contratransferência médica",
+      "TP Histriônica: busca constante de atenção, teatralidade e discurso impressionista",
+      "TP Narcisista: grandiosidade (manifesta vs. vulnerável) e manejo clínico"
      ],
      "e": true
     },
     {
-     "t": "Grupo C — Transtornos Ansiosos e Medrosos",
+     "t": "Grupo C — Transtornos Ansiosos/Medrosos e Síntese Geral",
      "top": [
-      "Transtorno da Personalidade Evitativa (desejo de vínculo com medo de rejeição e hipersensibilidade)",
-      "Transtorno da Personalidade Dependente (necessidade excessiva de cuidado, submissão e medo de separação)",
-      "Transtorno da Personalidade Obsessivo-Compulsiva (perfeccionismo egossintônico, rigidez e diferencial com TOC)",
-      "Quadro-síntese do Grupo C e abordagem terapêutica (psicoterapia e papel da farmacoterapia)"
+      "TP Evitativa: inibição social por medo de rejeição e diagnóstico diferencial com ansiedade social",
+      "TP Dependente: comportamento submisso, medo de separação e busca excessiva de reasseguramento",
+      "TP Obsessivo-Compulsiva (TPOC): perfeccionismo egossintônico vs. TOC egodistônico",
+      "Quadro-síntese do Grupo C, pilares terapêuticos (psicoterapia vs. farmacoterapia) e síntese geral da aula"
      ],
      "e": false
-    },
-    {
-     "t": "Avaliação Clínica e Diagnóstico Diferencial",
-     "top": [
-      "Investigação da personalidade na anamnese (história longitudinal, múltiplos contextos e informantes)",
-      "Manejo de crises e armadilhas diagnósticas (estabelecimento de limites, alinhamento de equipe e clivagem)",
-      "Princípios da farmacoterapia (foco em sintomas-alvo/comorbidades, não no núcleo do transtorno)",
-      "Síntese da aula, resumo dos pontos-chave e questões de consolidação (Momento ENAMED)"
-     ],
-     "e": true
     }
    ],
    "formato": "medio"
@@ -1659,65 +1442,44 @@
    ],
    "partes": [
     {
-     "t": "Fundamentos e Diagnóstico",
+     "t": "Fundamentos Neurobiológicos e Diagnóstico DSM-5-TR",
      "top": [
-      "Neurobiologia do circuito de recompensa mesolímbico e dopamina no núcleo accumbens",
-      "Classificação das drogas de abuso (estimulantes, depressoras e perturbadoras do SNC)",
-      "Classificação unificada do DSM-5-TR: os 11 critérios contáveis e níveis de gravidade",
-      "Modelo transteórico de estágios motivacionais (Prochaska e DiClemente)",
-      "Diagnóstico diferencial e investigação sistemática de comorbidades psiquiátricas"
+      "Circuito de recompensa cerebral e neurobiologia da dependência (circuito mesolímbico cortical e liberação de dopamina)",
+      "Classificação farmacológica das substâncias psicoativas no SNC (estimulantes, depressoras e perturbadoras)",
+      "Classificação unificada do DSM-5-TR: os 11 critérios diagnósticos contáveis, 4 domínios e estadiamento de gravidade",
+      "Instrumento de rastreio rápido para uso nocivo de álcool (questionário CAGE)"
      ],
      "e": true
     },
     {
-     "t": "Cocaína e Crack",
+     "t": "Abordagem Clínica, Estágios Motivacionais e Comorbidades",
      "top": [
-      "Epidemiologia no Brasil e mecanismo de bloqueio pré-sináptico de recaptação de monoaminas",
-      "Quadro clínico da intoxicação aguda (síndrome adrenérgica) e complicações cardiovasculares",
-      "Síndrome de abstinência e suas fases ('crash' e síndrome disfórica tardia)",
-      "Abordagem terapêutica psicossocial (TCC e Entrevista Motivacional) e ausência de medicação específica"
-     ],
-     "e": true
-    },
-    {
-     "t": "Cannabis (Maconha)",
-     "top": [
-      "Princípios ativos (THC e CBD), receptores canabinoides (CB1/CB2) e epidemiologia",
-      "Critérios diagnósticos do transtorno por uso e da síndrome de abstinência de Cannabis (DSM-5-TR)",
-      "Tratamento psicossocial (TCC e manejo de contingências) e pergunta única de triagem",
-      "Impacto em comorbidades psiquiátricas e exacerbação de transtornos psicóticos (esquizofrenia)"
+      "Modelo transteórico dos estágios motivacionais de Prochaska e DiClemente (pré-contemplação à manutenção e recaída)",
+      "Entrevista motivacional e intervenções psicossociais (TCC)",
+      "Investigação e manejo de comorbidades psiquiátricas (quadros psicóticos, transtornos de humor e TDAH)"
      ],
      "e": false
     },
     {
-     "t": "Opioides",
+     "t": "Estimulantes, Álcool e Sedativos-Hipnóticos",
      "top": [
-      "Neurofarmacologia dos receptores opioides (μ, κ, δ) e mecanismo de tolerância",
-      "Tríade clássica da intoxicação por opioides (rebaixamento de consciência, miose puntiforme e depressão respiratória)",
-      "Manejo de emergência e uso da Naloxona IV como antídoto reversor",
-      "Síndrome de abstinência de opioides e suporte farmacológico"
+      "Estimulantes (cocaína/crack, anfetaminas): intoxicação aguda, evolução temporal da fissura e manejo da abstinência",
+      "Álcool e Benzodiazepínicos: intoxicação, tolerância cruzada e síndrome de abstinência grave (delirium tremens e risco convulsivo)",
+      "Diferencial e prevenção de emergências clínicas (Encefalopatia de Wernicke, Korsakoff e reposição de tiamina)",
+      "Tratamento farmacológico da dependência de álcool e estimulantes (naltrexona, topiramato, baclofeno, bupropiona)"
      ],
      "e": true
     },
     {
-     "t": "Álcool",
+     "t": "Opioides, Alucinógenos/Club Drugs e Manejo Integrado",
      "top": [
-      "Epidemiologia e magnitude do Transtorno por Uso de Álcool (TUA)",
-      "Síndrome de Abstinência do Álcool (SAA), critérios do DSM-5-TR e estadiamento de gravidade (escala CIWA-Ar)",
-      "Diagnóstico diferencial das complicações graves: Encefalopatia de Wernicke, Síndrome de Korsakoff e Delirium Tremens",
-      "Tratamento agudo (reposição de tiamina e benzodiazepínicos) e farmacoterapia de manutenção (Naltrexona, Acamprosato, Disulfiram)"
+      "Opioides: neurofarmacologia dos receptores (mu, kappa, delta), tolerância e lipossolubilidade",
+      "Tríade clássica da intoxicação/overdose por opioides e conduta de emergência com Naloxona",
+      "Síndrome de abstinência e farmacoterapia de manutenção em opioides (metadona, buprenorfina, clonidina, naltrexona)",
+      "Alucinógenos e Club Drugs (LSD, MDMA): características clínicas e ausência de síndrome de abstinência física",
+      "Princípios transversais da abordagem integrada e manejo da dependência química como doença crônica"
      ],
      "e": true
-    },
-    {
-     "t": "Tabaco, Sedativos e Club Drugs",
-     "top": [
-      "Sedativos/Benzodiazepínicos: atuação no receptor GABA-A, intoxicação (Flumazenil) e desmame gradual obrigatório",
-      "Tabaco/Nicotina: avaliação do grau de dependência (Teste de Fagerström) e síndrome de abstinência",
-      "Club Drugs e Alucinógenos (MDMA, LSD): mecanismos, ausência de abstinência física clássica e risco de flashbacks (HPPD)",
-      "Farmacologia de emergência, quadro-resumo dos antídotos e questões de consolidação no estilo ENAMED"
-     ],
-     "e": false
     }
    ],
    "formato": "medio"
@@ -1733,67 +1495,48 @@
    ],
    "partes": [
     {
-     "t": "Conceitos Fundamentais e Epidemiologia da Ansiedade",
+     "t": "Ansiedade: Conceitos, TAG, Pânico e Agorafobia",
      "top": [
-      "Diferença entre ansiedade adaptativa e patológica",
-      "Epidemiologia global e no Brasil (prevalência, distribuição por sexo e idade de início)",
-      "Comorbidades psiquiátricas mais frequentes nos transtornos de ansiedade",
-      "Reclassificação no DSM-5-TR (separação de TOC e TEPT do capítulo de ansiedade)"
+      "Diferenciação entre ansiedade adaptativa e patológica",
+      "Bases neurobiológicas e circuitos neurais da ansiedade (amígdala, córtex pré-frontal)",
+      "Transtorno de Ansiedade Generalizada (TAG): preocupação crônica difusa, critérios DSM-5-TR e sintomas somáticos",
+      "Transtorno de Pânico: ataques súbitos e inesperados, critérios diagnósticos e alterações comportamentais",
+      "Agorafobia: as 5 situações fóbicas e o diagnóstico independente do Transtorno de Pânico no DSM-5-TR"
+     ],
+     "e": true
+    },
+    {
+     "t": "Ansiedade: TAS, Fobias Específicas e Tratamento",
+     "top": [
+      "Transtorno de Ansiedade Social (TAS): medo de escrutínio e o especificador 'apenas desempenho'",
+      "Fobia Específica: medo circunscrito e particularidades do tipo sangue-injeção-lesão",
+      "Quadro comparativo dos 5 transtornos de ansiedade e seus respectivos núcleos do medo",
+      "Manejo farmacológico e psicoterápico: regra do ISRS/IRSN de 1ª linha e a exceção da Fobia Específica (exposição)",
+      "Diagnóstico diferencial, mitos/pegadinhas clínicas e resolução de questões no estilo ENAMED"
+     ],
+     "e": true
+    },
+    {
+     "t": "TOC: Conceito, Critérios, Dimensões e Avaliação",
+     "top": [
+      "Definição de obsessões (pensamentos intrusivos) e compulsões (rituais/atos mentais de anulação)",
+      "Critérios diagnósticos DSM-5-TR: tempo consumido (>1h/dia), sofrimento e prejuízo funcional",
+      "As 5 dimensões de sintomas: contaminação/limpeza, agressão/dano, ordem/simetria, tabus e acumulação",
+      "Avaliação estruturada de gravidade pela escala Y-BOCS e determinação do nível de insight",
+      "Caso clínico C.A.: aplicação prática da avaliação, critérios de gravidade e caracterização dos rituais"
+     ],
+     "e": true
+    },
+    {
+     "t": "TOC: Comorbidades, Etiologia e Tratamento",
+     "top": [
+      "Investigação de comorbidades psiquiátricas (>90% dos casos: ansiedade, depressão, tiques e impulsos)",
+      "Fisiopatologia e circuitos neurais cortico-estriato-talâmicos envolvidos no TOC",
+      "Pilares do tratamento de 1ª linha: TCC com Exposição e Prevenção de Resposta (EPR) e ISRS em altas doses",
+      "Manejo da refratariedade/potencialização (clomipramina, antipsicóticos) e intervenção na acomodação familiar",
+      "Diagnóstico diferencial (ruminações depressivas vs. TOC, TPOC) e resolução de questões ENAMED"
      ],
      "e": false
-    },
-    {
-     "t": "Os Cinco Transtornos de Ansiedade",
-     "top": [
-      "Transtorno de Ansiedade Generalizada (TAG): preocupação crônica incontrolável e sintomas somáticos",
-      "Transtorno de Pânico: ataques de pânico recorrentes e inesperados sem gatilho evidente",
-      "Agorafobia: medo e esquiva de categorias situacionais de difícil escape ou socorro",
-      "Transtorno de Ansiedade Social (TAS): medo de avaliação negativa e resposta somática de rubor",
-      "Fobia Específica: resposta vasovagal (sangue/injeção/lesão) e ausência de indicação farmacológica de 1ª linha"
-     ],
-     "e": true
-    },
-    {
-     "t": "Tratamento, Diagnóstico Diferencial e Neurobiologia da Ansiedade",
-     "top": [
-      "Padrão de 1ª linha farmacológica: ISRS/IRSN para quase todos os transtornos (exceto Fobia Específica)",
-      "Uso pontual de benzodiazepínicos vs. papel da Pregabalina no TAG",
-      "Diagnóstico diferencial com condições clínicas (hipertireoidismo, feocromocitoma, cardiopatias e substâncias)",
-      "Bases neurobiológicas (circuito amígdala-CPF, eixo HHA, serotonina, noradrenalina e GABA)",
-      "Mitos/erros frequentes na prática clínica e consolidação com questões no estilo ENAMED"
-     ],
-     "e": true
-    },
-    {
-     "t": "Fundamentos Conceituais do TOC",
-     "top": [
-      "Definição de obsessões egodistônicas e compulsões (comportamentais e mentais)",
-      "Epidemiologia, prevalência e o problema do subdiagnóstico prolongado",
-      "Critérios diagnósticos nucleares: consumo de tempo (>1h/dia), sofrimento e prejuízo funcional",
-      "Diferenciação entre obsessões do TOC e ruminações depressivas congruentes com o humor"
-     ],
-     "e": false
-    },
-    {
-     "t": "Dimensões Clínicas, Caso Clínico e Diagnóstico Diferencial do TOC",
-     "top": [
-      "As 4 dimensões sintomáticas do TOC (contaminação/limpeza, agressão/dano, ordem/simetria, temas proibidos)",
-      "Mensuração de gravidade pela escala Y-BOCS e avaliação dos níveis de insight",
-      "Análise de caso clínico e o impacto da acomodação familiar na perpetuação dos sintomas",
-      "Diagnóstico diferencial com Transtorno da Personalidade Obsessivo-Compulsiva (TPOC) e TAG"
-     ],
-     "e": true
-    },
-    {
-     "t": "Tratamento do TOC e Manejo da Refratariedade",
-     "top": [
-      "Pilares de 1ª linha: TCC com Exposição e Prevenção de Resposta (EPR) e ISRS em doses elevadas",
-      "Estratégias de potencialização (associação de Clomipramina em dose baixa ou Antipsicóticos)",
-      "Erros comuns na farmacoterapia e abordagem psicoeducacional com a família",
-      "Indicações e critérios rigorosos de refratariedade para neuromodulação e neurocirurgia ablativa",
-      "Resolução e discussão de questões de fixação no estilo ENAMED"
-     ],
-     "e": true
     }
    ],
    "formato": "medio"
