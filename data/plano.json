@@ -136,59 +136,41 @@
    ],
    "partes": [
     {
-     "t": "Introdução, Epidemiologia e Prevenção do Câncer",
+     "t": "Epidemiologia e Prevenção do Câncer",
      "top": [
-      "Epidemiologia do câncer no Brasil (dados do INCA por sexo e localização primária)",
-      "História natural da doença e dependência temporal no controle do câncer",
-      "Níveis de prevenção em oncologia (primária, secundária/rastreamento e terciária)",
-      "Estrutura do sistema de saúde e linhas de cuidado no câncer"
+      "Estimativas de incidência e principais tipos de câncer no Brasil",
+      "História natural da doença e níveis de prevenção (primária, secundária/rastreamento e terciária)",
+      "Fatores de risco ambientais/hereditários e linhas de cuidado em oncologia"
      ],
      "e": false
     },
     {
-     "t": "Carcinogênese e Fatores de Risco",
+     "t": "Carcinogênese e Base Molecular",
      "top": [
-      "Cascata de eventos da carcinogênese (transformação celular, proliferação, invasão e metástase)",
-      "Fatores de risco ambientais (tabagismo, alimentação, radiação UV, infecções)",
-      "Contribuição da predisposição hereditária (15%) versus fatores ambientais"
+      "Conceito e cascata de eventos da carcinogênese (transformação, proliferação, invasão e metástase)",
+      "Caminhos celulares durante a divisão celular (divisão normal, apoptose e formação tumoral)",
+      "Esquema geral de oncogênese (agentes ambientais vs. mutações germinativas e somáticas)"
      ],
      "e": false
     },
     {
-     "t": "Base Molecular do Câncer, Ciclo Celular e p53",
+     "t": "Genética Tumoral: Oncogenes, Supressores e p53",
      "top": [
-      "Mecanismos moleculares da oncogênese (ativação de proto-oncogenes, inativação de supressores e desregulação da apoptose)",
-      "Pontos de checagem (checkpoints) do ciclo celular e reparo de danos no DNA",
-      "Sinalização pela proteína ATM e papel central da p53 na manutenção da estabilidade genômica e apoptose"
+      "Proto-oncogenes e Oncogenes (fatores de crescimento, receptores RET/Erb-A, transdução de sinal RAS/Abl e fatores de transcrição MYC)",
+      "Genes supressores de tumor (RB1, APC, NF1, NF2, VHL, WT1, p16) em neoplasias hereditárias e esporádicas",
+      "Papel do gene p53 e da proteína ATM na estabilidade genômica, pontos de checagem (checkpoints), reparo de DNA e apoptose"
      ],
      "e": true
     },
     {
-     "t": "Classes de Genes: Oncogenes e Genes Supressores Tumorais",
+     "t": "Marcadores Tumorais, Diagnóstico e Estadiamento",
      "top": [
-      "Proto-oncogenes e Oncogenes (mecanismos e exemplos: fatores de crescimento, receptores RET/Erb-A, transdutores RAS/ABL, fatores de transcrição MYC)",
-      "Genes Supressores Tumorais: conceitos e funções de Gatekeepers (RB1, TP53) e Caretakers (MSH2, MLH1)",
-      "Síndromes de predisposição hereditária ao câncer (Retinoblastoma/RB1, Síndrome de Li-Fraumeni/p53, PAF/APC, Neurofibromatose/NF1/NF2, VHL, Tumor de Wilms/WT1)"
+      "Marcadores tumorais morfológicos, bioquímicos e moleculares (DNA)",
+      "Indicações clínicas dos marcadores (rastreamento, diagnóstico diferencial, prognóstico, resposta terapêutica e seguimento)",
+      "Recomendações e rotinas de rastreamento/detecção precoce por tipo de neoplasia",
+      "Objetivos e utilidade médica do estadiamento oncológico"
      ],
      "e": true
-    },
-    {
-     "t": "Marcadores Tumorais e Diagnóstico Molecular",
-     "top": [
-      "Classificação dos marcadores tumorais (morfológicos, bioquímicos e moleculares/DNA)",
-      "Aplicações e indicações clínicas (rastreamento, diagnóstico diferencial, prognóstico, resposta terapêutica e seguimento)",
-      "Principais marcadores bioquímicos e correlação anatômica (PSA, CEA, CA-125, AFP, CA 19-9)"
-     ],
-     "e": false
-    },
-    {
-     "t": "Detecção Precoce, Diagnóstico e Estadiamento",
-     "top": [
-      "Recomendações e frequência de exames de rastreamento para tumores comuns (próstata, cólon/reto, mama, colo uterino, pulmão)",
-      "Etapas da investigação diagnóstica em oncologia (determinação de extensão, metástases e grau tumoral)",
-      "Objetivos do estadiamento clínico (planejamento terapêutico, prognóstico e avaliação de resultados)"
-     ],
-     "e": false
     }
    ]
   },
@@ -250,51 +232,40 @@
    ],
    "partes": [
     {
-     "t": "Origem Bacteriana e Conceito do CRISPR-Cas9",
+     "t": "Fundamentos e Maquinaria Molecular do CRISPR-Cas9",
      "top": [
-      "Definição de CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats)",
-      "Sistema de defesa imunológica antiviral em bactérias (Streptococcus pyogenes tipo II)",
-      "Estrutura do locus CRISPR: repetições palindrômicas (24-47 pb), spacers e genes Cas",
-      "Fases da imunização bacteriana: clivagem do DNA viral e inserção de novos spacers"
+      "Definição de CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) como sistema de defesa antiviral bacteriano",
+      "Características estruturais (tamanho das repetições de 24 a 47 pb) e origem da endonuclease Cas9 em Streptococcus pyogenes tipo II",
+      "Componentes do complexo funcional: endonuclease Cas9, RNA guia (gRNA / crRNA + tracrRNA) e reconhecimento da sequência PAM no DNA-alvo"
+     ],
+     "e": true
+    },
+    {
+     "t": "Mecanismos, Formas de Entrega e Gene-Drive",
+     "top": [
+      "Fases biológicas da imunidade bacteriana (imunização, imunidade e transcrição do pré-CRISPR RNA)",
+      "Estrutura do plasmídeo utilizado para engenharia genômica",
+      "Estratégias de entrega da terapia gênica: in vivo (vetores virais e não virais) versus ex vivo (edição de células somáticas/iPSCs, seleção, expansão e transplante)",
+      "Alteração genética populacional: herança por Gene-Drive versus herança mendeliana padrão"
+     ],
+     "e": true
+    },
+    {
+     "t": "Aplicações Clínicas: Imunodeficiências, Doenças Sanguíneas e Virais",
+     "top": [
+      "Abordagens em Imunodeficiências",
+      "Doenças sanguíneas e alvos da CRISPR/Cas9: β-Talassemia (gene da Hemoglobina Beta), Hemofilia A (Fator VIII), Anemia de Fanconi (FANCC) e Doença granulomatosa crônica (CYBB) por reparação HDR/iPSCs",
+      "Infecções virais e alvos da CRISPR/Cas9: HIV (ablação do gene CCR5 e destruição da região LTR), Hepatite B (destruição do cDNA intra-hepático), HPV (destruição das proteínas E6 e E7) e Epstein-Barr (silenciamento dos genes EBNA)"
      ],
      "e": false
     },
     {
-     "t": "Componentes Moleculares e Mecanismo de Clivagem",
+     "t": "Aplicações Clínicas: Oncogenética e Doenças Neurodegenerativas",
      "top": [
-      "Componentes do sistema: Endonuclease Cas9, crRNA e tracrRNA (fusão em gRNA/sgRNA)",
-      "Reconhecimento do alvo genômico e sequência PAM (Protospacer Adjacent Motif - NGG/NCC)",
-      "Clivagem da dupla fita de DNA e mecanismos de reparo celular (NHEJ e HDR com DNA doador)",
-      "Plasmídeos e vetores de expressão utilizados na edição genômica"
-     ],
-     "e": true
-    },
-    {
-     "t": "Estratégias de Entrega: In Vivo vs Ex Vivo",
-     "top": [
-      "Edição genômica in vivo: entrega direta via vetores virais e não virais no organismo",
-      "Edição genômica ex vivo: isolamento de células somáticas/iPSCs, correção por CRISPR-Cas9, seleção, expansão e retransplante"
-     ],
-     "e": true
-    },
-    {
-     "t": "Genética Populacional e Gene-Drive Inheritance",
-     "top": [
-      "Herança padrão mendeliana (50% de chance de transmissão do gene modificado)",
-      "Mecanismo de Gene Drive: clivagem do cromossomo parceiro e cópia da modificação",
-      "Propagação acelerada (~100% da prole) de alterações genéticas em populações"
+      "Oncogenética e alvos em neoplasias: Câncer de pulmão (repressão de EGFR e regulação de Ras), Câncer de próstata (repressão de NANOG/NANOGP8), Linfomas (correção de Trp53 e regulação de Myc) e Leucemia Mieloide Aguda (regulação de Mll3)",
+      "Doenças neurodegenerativas e alvos da CRISPR/Cas9: Síndrome do X frágil (deleção de tripletos CGG no gene FMR1), Parkinson (regulação dos genes PARK), Huntington (deleção de tripletos CAG no gene HTT) e Ataxia de Friedreich (deleção de tripletos GAA no gene FXN)"
      ],
      "e": false
-    },
-    {
-     "t": "Aplicações Clínicas e Terapêuticas em Doenças Humanas",
-     "top": [
-      "Imunodeficiências e Doenças Sanguíneas (β-Talassêmia, Hemofilia A, Anemia de Fanconi, Doença Granulomatosa Crônica)",
-      "Infecções Virais (HIV, Hepatite B, HPV, Epstein-Barr)",
-      "Neoplasias e Câncer (Cancro do Pulmão, Próstata, Linfomas, Leucemia Mieloide Aguda)",
-      "Doenças Neurodegenerativas (Síndrome do X Frágil, Parkinson, Huntington, Ataxia de Friedreich)"
-     ],
-     "e": true
     }
    ]
   },
@@ -307,47 +278,39 @@
    ],
    "partes": [
     {
-     "t": "Conceitos Fundamentais e Objetivos dos SIS",
+     "t": "Conceitos de SIS e Aplicações Epidemiológicas",
      "top": [
-      "Diferenças entre Dado, Informação e Indicador",
+      "Definições de Dado, Informação e Indicador de Saúde",
       "Conceito de Sistema de Informação em Saúde (SIS)",
-      "Finalidades dos SIS na Epidemiologia e Vigilância em Saúde"
+      "Aplicações e finalidades dos SIS na Epidemiologia"
      ],
      "e": false
     },
     {
-     "t": "Principais Sistemas de Informação em Saúde no Brasil",
+     "t": "Principais Sistemas de Informação e Fontes de Dados",
      "top": [
-      "Sistemas de Eventos Vitais e Epidemiológicos (SIM, SINASC, SINAN)",
-      "Sistemas Assistenciais, Vacinais e Estruturais (SIH/SUS, SIA/SUS, e-SUS APS, SISAB, SI-PNI, CNES)"
+      "Quadro dos principais SIS: SIM, SINASC, SINAN, SIH/SUS e SIA/SUS",
+      "Sistemas complementares: SI-PNI, e-SUS APS, CNES e SISAB",
+      "Fontes geradoras de dados em saúde"
      ],
      "e": true
     },
     {
-     "t": "Fontes de Dados, Notificação Compulsória e Declaração de Óbito",
+     "t": "Notificação Compulsória, Agravos e Fluxo da Informação",
      "top": [
-      "Fontes geradoras de dados de saúde",
-      "Notificação Compulsória: quem notifica e responsabilidades",
-      "Lista de agravos e regras de notificação imediata (24h)",
-      "Notificação de óbito e Declaração de Óbito (DO)"
+      "Ficha de notificação compulsória e responsabilidade dos profissionais e serviços",
+      "Notificação de óbito e regras de notificação imediata em até 24 horas",
+      "Lista atualizada de Agravos de Notificação Compulsória",
+      "Etapas do fluxo da informação em saúde (do evento à tomada de decisão)"
      ],
      "e": true
     },
     {
-     "t": "Fluxo da Informação em Saúde e Qualidade dos Dados",
+     "t": "Qualidade dos Dados, Limitações dos SIS e DATASUS",
      "top": [
-      "Etapas do fluxo da informação (do evento à tomada de decisão)",
-      "Atributos de qualidade: completude, consistência e cobertura",
-      "Atributos de qualidade: oportunidade, validade e confiabilidade"
-     ],
-     "e": true
-    },
-    {
-     "t": "Limitações dos SIS e Acesso às Informações (DATASUS)",
-     "top": [
-      "Subnotificação (diferença entre número registrado e real)",
-      "Outras limitações: duplicidade, erros de preenchimento, atrasos e diferenças de acesso",
-      "Acesso público aos dados: navegação e consulta no DATASUS/TABNET"
+      "Atributos de qualidade dos dados (completude, consistência, cobertura, oportunidade, validade e confiabilidade)",
+      "Limitações e problemas dos SIS (subnotificação, duplicidade, erros de preenchimento e atrasos)",
+      "Plataforma de acesso aos dados: DATASUS e TABNET"
      ],
      "e": false
     }
