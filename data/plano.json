@@ -172,7 +172,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "gen-farmaco",
@@ -267,7 +268,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "epi-sis",
@@ -314,7 +316,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "epi-causal",
@@ -375,13 +378,15 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "epi-valid",
    "materia": "epidemio",
    "nome": "Validade e Confiabilidade em Estudos Epidemiológicos",
-   "aviso": "Slide ainda não conseguido: quando chegar, as partes e as questões serão montadas a partir dele."
+   "aviso": "Slide ainda não conseguido: quando chegar, as partes e as questões serão montadas a partir dele.",
+   "formato": "medio"
   },
   {
    "id": "far-anticonv",
@@ -453,7 +458,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "far-infec",
@@ -511,7 +517,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "far-antidep",
@@ -572,7 +579,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "far-trs",
@@ -641,7 +649,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "far-contra",
@@ -696,7 +705,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-ciclo",
@@ -764,7 +774,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-vulvo",
@@ -822,7 +833,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-climat",
@@ -890,7 +902,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-utero",
@@ -966,7 +979,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-contra",
@@ -1030,7 +1044,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "pra-infert",
@@ -1093,7 +1108,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-drc",
@@ -1153,7 +1169,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-chagas",
@@ -1208,7 +1225,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-tb",
@@ -1269,7 +1287,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-esquisto",
@@ -1340,7 +1359,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-leish",
@@ -1398,7 +1418,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-hansen",
@@ -1458,31 +1479,36 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "top-escorp",
    "materia": "topicos",
    "nome": "Acidentes escorpiônicos",
-   "aula": "2026-11-10"
+   "aula": "2026-11-10",
+   "formato": "medio"
   },
   {
    "id": "top-ofid",
    "materia": "topicos",
    "nome": "Acidentes ofídicos",
-   "aula": "2026-11-17"
+   "aula": "2026-11-17",
+   "formato": "medio"
   },
   {
    "id": "top-tmc",
    "materia": "topicos",
    "nome": "Transtornos mentais comuns",
-   "aula": "2026-11-21"
+   "aula": "2026-11-21",
+   "formato": "medio"
   },
   {
    "id": "top-raiva",
    "materia": "topicos",
    "nome": "Raiva e tétano",
-   "aula": "2026-11-24"
+   "aula": "2026-11-24",
+   "formato": "medio"
   },
   {
    "id": "sm-humor",
@@ -1551,7 +1577,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "sm-person",
@@ -1620,7 +1647,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "sm-spa",
@@ -1691,7 +1719,8 @@
      ],
      "e": false
     }
-   ]
+   ],
+   "formato": "medio"
   },
   {
    "id": "sm-ansiedade",
@@ -1766,7 +1795,8 @@
      ],
      "e": true
     }
-   ]
+   ],
+   "formato": "medio"
   }
  ],
  "dias": [
