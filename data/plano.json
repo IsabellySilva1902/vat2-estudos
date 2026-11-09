@@ -1561,22 +1561,21 @@
   },
   {
    "data": "2026-11-08",
-   "estudar": [
-    "gen-onco"
-   ],
    "revisar": [
     "genetica"
-   ]
+   ],
+   "nota": "Oncogenética passou para 09/11 (Genética tem prioridade)."
   },
   {
    "data": "2026-11-09",
    "estudar": [
-    "gen-crispr",
-    "pra-ciclo"
+    "gen-onco",
+    "gen-crispr"
    ],
    "revisar": [
     "genetica"
-   ]
+   ],
+   "nota": "Dia de fechar Genética: Oncogenética e CRISPR. Fisiologia do ciclo menstrual foi para quarta (11/11)."
   },
   {
    "data": "2026-11-10",
@@ -1591,7 +1590,8 @@
   {
    "data": "2026-11-11",
    "estudar": [
-    "epi-causal"
+    "epi-causal",
+    "pra-ciclo"
    ],
    "revisar": [
     "genetica"
