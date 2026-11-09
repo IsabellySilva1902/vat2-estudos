@@ -1534,59 +1534,118 @@
   {
    "id": "sm-ansiedade",
    "materia": "saudemental",
-   "nome": "Ansiedade e TOC",
+   "nome": "Transtornos de ansiedade",
    "aula": "2026-11-06",
    "fontes": [
-    "Aula VAT2 · Transtornos de ansiedade",
+    "Aula VAT2 · Transtornos de ansiedade"
+   ],
+   "formato": "medio",
+   "partes": [
+    {
+     "t": "Conceitos Gerais e Transtorno de Ansiedade Generalizada (TAG)",
+     "top": [
+      "Diferenciação entre ansiedade adaptativa e ansiedade patológica",
+      "Panorama epidemiológico e classificação geral dos transtornos de ansiedade",
+      "TAG: conceito clínico, padrão de preocupação e queixas somáticas",
+      "TAG: critérios diagnósticos do DSM-5-TR e risco de suicídio",
+      "TAG: manejo terapêutico (TCC, ISRS, pregabalina, uso restrito de benzodiazepínicos e tempo de manutenção)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Transtorno de Pânico e Agorafobia",
+     "top": [
+      "Ataques de pânico: semiologia, curso autolimitado e sensação de morte iminente",
+      "Transtorno de Pânico: critérios diagnósticos (ataques recorrentes inesperados e ansiedade antecipatória)",
+      "Agorafobia: definição e as 5 situações temidas no DSM-5-TR",
+      "Raciocínio clínico: diagnóstico duplo independente (Pânico + Agorafobia)",
+      "Tratamento integrado de Pânico e Agorafobia: TCC, ISRS e manejo inicial com benzodiazepínicos"
+     ],
+     "e": true
+    },
+    {
+     "t": "Transtorno de Ansiedade Social (TAS) e Fobias Específicas",
+     "top": [
+      "TAS: medo de escrutínio/avaliação negativa versus timidez normativa",
+      "TAS: critérios do DSM-5-TR e o especificador 'apenas desempenho'",
+      "TAS: manifestações autonômicas (rubor), epidemiologia e diferenciais",
+      "Fobias Específicas: conceito, prevalência e os 5 subtipos diagnósticos",
+      "Fobia de sangue-injeção-lesão: a resposta vasovagal bifásica e síncope",
+      "Tratamento de Fobias Específicas: psicoterapia de exposição de primeira linha versus farmacoterapia"
+     ],
+     "e": false
+    },
+    {
+     "t": "Síntese Clínica, Diagnóstico Diferencial, Neurobiologia e ENAMED",
+     "top": [
+      "Quadro comparativo dos 5 transtornos: núcleos de ansiedade e escolhas de 1ª linha farmacológica",
+      "Diagnóstico diferencial com condições clínicas orgânicas (tireoide, feocromocitoma, cardiopatias, abstinência/intoxicação)",
+      "Mitos e erros diagnósticos frequentes na prática médica",
+      "Bases neurobiológicas: circuitos amígdala–córtex pré-frontal, eixo HHA, neurotransmissores e herdabilidade",
+      "Consolidação de raciocínio clínico e resolução de casos estilo ENAMED"
+     ],
+     "e": true
+    }
+   ]
+  },
+  {
+   "id": "sm-toc",
+   "materia": "saudemental",
+   "nome": "Transtorno obsessivo-compulsivo (TOC)",
+   "formato": "medio",
+   "fontes": [
     "Aula VAT2 · Transtorno obsessivo-compulsivo (TOC)"
    ],
    "partes": [
     {
-     "t": "Ansiedade: Conceitos, TAG, Pânico e Agorafobia",
+     "t": "Fundamentos Conceituais e Epidemiologia do TOC",
      "top": [
-      "Diferenciação entre ansiedade adaptativa e patológica",
-      "Bases neurobiológicas e circuitos neurais da ansiedade (amígdala, córtex pré-frontal)",
-      "Transtorno de Ansiedade Generalizada (TAG): preocupação crônica difusa, critérios DSM-5-TR e sintomas somáticos",
-      "Transtorno de Pânico: ataques súbitos e inesperados, critérios diagnósticos e alterações comportamentais",
-      "Agorafobia: as 5 situações fóbicas e o diagnóstico independente do Transtorno de Pânico no DSM-5-TR"
-     ],
-     "e": true
-    },
-    {
-     "t": "Ansiedade: TAS, Fobias Específicas e Tratamento",
-     "top": [
-      "Transtorno de Ansiedade Social (TAS): medo de escrutínio e o especificador 'apenas desempenho'",
-      "Fobia Específica: medo circunscrito e particularidades do tipo sangue-injeção-lesão",
-      "Quadro comparativo dos 5 transtornos de ansiedade e seus respectivos núcleos do medo",
-      "Manejo farmacológico e psicoterápico: regra do ISRS/IRSN de 1ª linha e a exceção da Fobia Específica (exposição)",
-      "Diagnóstico diferencial, mitos/pegadinhas clínicas e resolução de questões no estilo ENAMED"
-     ],
-     "e": true
-    },
-    {
-     "t": "TOC: Conceito, Critérios, Dimensões e Avaliação",
-     "top": [
-      "Definição de obsessões (pensamentos intrusivos) e compulsões (rituais/atos mentais de anulação)",
-      "Critérios diagnósticos DSM-5-TR: tempo consumido (>1h/dia), sofrimento e prejuízo funcional",
-      "As 5 dimensões de sintomas: contaminação/limpeza, agressão/dano, ordem/simetria, tabus e acumulação",
-      "Avaliação estruturada de gravidade pela escala Y-BOCS e determinação do nível de insight",
-      "Caso clínico C.A.: aplicação prática da avaliação, critérios de gravidade e caracterização dos rituais"
-     ],
-     "e": true
-    },
-    {
-     "t": "TOC: Comorbidades, Etiologia e Tratamento",
-     "top": [
-      "Investigação de comorbidades psiquiátricas (>90% dos casos: ansiedade, depressão, tiques e impulsos)",
-      "Fisiopatologia e circuitos neurais cortico-estriato-talâmicos envolvidos no TOC",
-      "Pilares do tratamento de 1ª linha: TCC com Exposição e Prevenção de Resposta (EPR) e ISRS em altas doses",
-      "Manejo da refratariedade/potencialização (clomipramina, antipsicóticos) e intervenção na acomodação familiar",
-      "Diagnóstico diferencial (ruminações depressivas vs. TOC, TPOC) e resolução de questões ENAMED"
+      "Conceito e fenomenologia das obsessões (pensamentos intrusivos, impulsos, imagens e egodistonia)",
+      "Conceito de compulsões (comportamentos observáveis e atos mentais repetitivos)",
+      "Distinção entre hábitos cotidianos ('manias') e transtorno mental (tempo consumido > 1h/dia, sofrimento e prejuízo)",
+      "Associação entre obsessões e compulsões (96% dos casos e compulsões mentais ocultas)",
+      "Epidemiologia, prevalência no Brasil (dados da Grande SP) e impacto do subdiagnóstico/atraso no tratamento"
      ],
      "e": false
+    },
+    {
+     "t": "Quadro Clínico, Dimensões Sintomáticas e Diagnóstico",
+     "top": [
+      "Dimensões clínicas de sintomas (contaminação/limpeza, agressão/dano, simetria/ordem/contagem, temas proibidos/tabus e acumulação)",
+      "Critérios diagnósticos formais segundo o DSM-5 e CID-11",
+      "Especificadores de insight/crítica (bom/razoável, pobre, ausente/delirante) e suas implicações",
+      "Especificador de história de tiques e relevância prognóstica",
+      "Instrumentos de avaliação estruturada: Escala Y-BOCS (faixas de pontuação, gravidade, critérios de resposta e remissão)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Neurobiologia, Comorbidades e Diagnóstico Diferencial",
+     "top": [
+      "Fisiopatologia e neurocircuitos (circuito córtico-estriato-tálamo-cortical e redes de conectividade funcional)",
+      "Bases neuroquímicas e genéticas (transportadores de serotonina e dopamina)",
+      "Padrão de comorbidades psiquiátricas (transtornos de ansiedade, depressão/humor, tiques e controle de impulsos)",
+      "Diagnóstico diferencial com transtorno depressivo maior (ruminações congruentes com o humor vs. obsessões)",
+      "Diagnóstico diferencial com transtorno de ansiedade generalizada (TAG), psicoses e transtornos de tique",
+      "Transtornos do espectro obsessivo-compulsivo (tricotilomania e transtorno de escoriação)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Tratamento Multimodal, Manejo da Refratariedade e Prática Clínica",
+     "top": [
+      "Princípios gerais, psicoeducação do paciente e abordagem da acomodação familiar",
+      "Psicoterapia de primeira linha: TCC com Exposição e Prevenção de Resposta (TCC-EPR)",
+      "Farmacoterapia de primeira linha: uso de ISRSs em doses elevadas e equivalência terapêutica",
+      "Algoritmo para resposta parcial ou refratariedade (troca de ISRS, potencialização com clomipramina e antipsicóticos)",
+      "Neuromodulação não invasiva (EMT sobre a área motora suplementar) e invasiva (DBS e cirurgias ablativas com exigência do CRM)",
+      "Armadilhas comuns na condução terapêutica",
+      "Análise do caso clínico de C.A. (gravidade, comorbidades, conduta sequencial e tempo de manutenção)",
+      "Consolidação prática com questões modelo ENAMED"
+     ],
+     "e": true
     }
-   ],
-   "formato": "medio"
+   ]
   }
  ],
  "dias": [
@@ -1805,7 +1864,8 @@
   {
    "data": "2026-11-29",
    "estudar": [
-    "sm-humor"
+    "sm-humor",
+    "sm-toc"
    ],
    "revisar": [
     "topicos"
