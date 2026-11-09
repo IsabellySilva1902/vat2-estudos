@@ -375,8 +375,55 @@
    "id": "epi-valid",
    "materia": "epidemio",
    "nome": "Validade e Confiabilidade em Estudos Epidemiológicos",
-   "aviso": "Slide ainda não conseguido: quando chegar, as partes e as questões serão montadas a partir dele.",
-   "formato": "medio"
+   "formato": "medio",
+   "fontes": [
+    "Aula VAT2 · Validade e confiabilidade"
+   ],
+   "partes": [
+    {
+     "t": "Validade dos Estudos e Conceito de Precisão",
+     "top": [
+      "Definição de validade em estudos epidemiológicos",
+      "Validade interna vs. Validade externa",
+      "Validade de constructo e validade de critério (padrão-ouro)",
+      "Conceito de precisão (consistência e reprodutibilidade)",
+      "Diferenciação entre erro sistemático (viés) e erro aleatório (imprecisão)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Vieses Epidemiológicos (Seleção, Informação e Aferição)",
+     "top": [
+      "Conceito de viés e distorções nas estimativas de ocorrência",
+      "Viés de seleção (amostra não representativa, perdas de seguimento e viés de Berkson)",
+      "Viés de informação (viés de recordação e diferenças no observador)",
+      "Viés de aferição/mensuração (equipamentos descalibrados e procedimentos incorretos)",
+      "Análise de situações e cenários práticos dos slides"
+     ],
+     "e": true
+    },
+    {
+     "t": "Confundimento, Modificação de Efeito e Mediação",
+     "top": [
+      "Fatores de confundimento (definição, relação causal e conduta por estratificação/ajuste)",
+      "Modificadores de efeito (diferença do efeito entre grupos e apresentação separada dos dados)",
+      "Fatores mediadores (variáveis no caminho causal, efeito direto vs. efeito total)",
+      "Diferenciação prática entre confundimento, modificação de efeito e mediação"
+     ],
+     "e": true
+    },
+    {
+     "t": "Confiabilidade e Acurácia (Sensibilidade e Especificidade)",
+     "top": [
+      "Conceito e 4 tipos de confiabilidade (teste-reteste, intraobservador, interobservador e consistência interna)",
+      "Métricas de confiabilidade (Coeficiente Kappa, ICC e Alfa de Cronbach)",
+      "Acurácia diagnóstica: proximidade do valor verdadeiro e alvo precisão vs. acurácia",
+      "Sensibilidade (identificar doentes) e Especificidade (identificar não doentes)",
+      "Fórmulas de cálculo de acurácia, tabela de classificação percentual e Curva ROC"
+     ],
+     "e": true
+    }
+   ]
   },
   {
    "id": "far-anticonv",
