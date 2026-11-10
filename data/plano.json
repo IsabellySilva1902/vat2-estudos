@@ -1685,13 +1685,11 @@
   },
   {
    "data": "2026-11-10",
-   "estudar": [
-    "epi-sis",
-    "pra-climat"
-   ],
+   "estudar": [],
    "revisar": [
     "genetica"
-   ]
+   ],
+   "nota": "Dia de terminar Genética: CRISPR e a parte 4 de Oncogenética. Sistemas de Informação foi para quinta (12/11) e Climatério para sábado (14/11)."
   },
   {
    "data": "2026-11-11",
@@ -1706,6 +1704,7 @@
   {
    "data": "2026-11-12",
    "estudar": [
+    "epi-sis",
     "epi-valid"
    ],
    "revisar": [
@@ -1723,7 +1722,8 @@
   {
    "data": "2026-11-14",
    "estudar": [
-    "far-anticonv"
+    "far-anticonv",
+    "pra-climat"
    ],
    "revisar": [
     "genetica"
