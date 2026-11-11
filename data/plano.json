@@ -1346,7 +1346,60 @@
    "materia": "topicos",
    "nome": "Acidentes escorpiônicos",
    "aula": "2026-11-10",
-   "formato": "medio"
+   "formato": "medio",
+   "fontes": [
+    "Aula VAT2 · Acidentes escorpiônicos (texto dos slides)",
+    "Aula VAT2 · Acidentes escorpiônicos"
+   ],
+   "partes": [
+    {
+     "t": "Determinantes, Fisiopatologia e Espécies de Importância Médica",
+     "top": [
+      "Determinantes sociais, vulnerabilidade socioambiental e convergência crítica",
+      "Resposta sistêmica: descentralização de estoques de soro e tempo porta-agulha",
+      "Agentes etiológicos: escorpionismo extra-amazônico vs. amazônico e alvos clínicos",
+      "Fisiopatologia: tempestade disautonômica (adrenérgica/colinérgica) vs. ação no SNC",
+      "Biologia do ataque: nível de ameaça e toxicidade do veneno (leitoso vs. claro)",
+      "Espécies de importância médica: Tityus serrulatus (partenogênese), T. stigmurus, T. bahiensis e T. obscurus"
+     ],
+     "e": false
+    },
+    {
+     "t": "Fatores Prognósticos, Estratificação de Risco e Manifestações Graves",
+     "top": [
+      "Fatores prognósticos e grupos de risco: tempo de atendimento, comorbidades/idosos, localização e pediatria (carga de veneno x superfície corpórea)",
+      "Classificação clínica de risco: Leve (Verde), Moderado (Amarelo) e Grave (Vermelho)",
+      "Sinal de gravidade extrema (Red Flag): vômitos incoercíveis / múltiplos episódios",
+      "Manifestações clínicas de gravidade: choque cardiogênico, edema agudo de pulmão (EAP) e oscilações pressóricas",
+      "Princípios de conduta na Atenção Primária, estabilização e transporte"
+     ],
+     "e": true
+    },
+    {
+     "t": "Fluxograma de Atendimento, Escada Analgésica e Soroterapia",
+     "top": [
+      "Fluxograma de conduta: tempos de observação (4h, 6 a 12h, 24h) e apoio do CIATox",
+      "Escada analgésica: dipirona VO/IV e infiltração local de lidocaína 2% sem vasoconstritor",
+      "Manejo farmacológico auxiliar: opioides fracos, antieméticos e diazepam para manifestações neuromusculares",
+      "Regra de Ouro da soroterapia: dose baseada exclusivamente na gravidade clínica (nunca peso ou idade)",
+      "Prescrição e dosagem de SAEsc e SAA: 3 ampolas no moderado e 6 ampolas no grave",
+      "Diretrizes de administração do soro: vias (IV/IO), diluições e tempos de infusão"
+     ],
+     "e": true
+    },
+    {
+     "t": "Diagnóstico Diferencial, Práticas Não Recomendadas e Questões de Fixação",
+     "top": [
+      "Diagnóstico diferencial: escorpionismo (Tityus) vs. araneísmo (Phoneutria / armadeira)",
+      "Conduta na dúvida diagnóstica ou desabastecimento: uso do soro antiaracnídico (SAA) polivalente",
+      "Práticas não recomendadas: contraindicação de antibioticoterapia profilática",
+      "Condutas sem evidência: ineficácia de corticoides e anti-histamínicos pré-soro na prevenção de anafilaxia",
+      "Ausência de evidências para dexametasona no EAP e posologia estrita do PCDT Brasil",
+      "Resolução comentada de questões de prova e concursos (ENAMED, Revalida, ENARE e SUS-SP)"
+     ],
+     "e": false
+    }
+   ]
   },
   {
    "id": "top-ofid",
