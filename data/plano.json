@@ -1674,6 +1674,20 @@
   },
   {
    "data": "2026-11-09",
+   "revisar": [
+    "genetica"
+   ],
+   "nota": "Oncogenética (partes 1–3) estudada. O que faltou de Genética foi para 11/11."
+  },
+  {
+   "data": "2026-11-10",
+   "revisar": [
+    "genetica"
+   ],
+   "nota": "Dia de revisar Genética. Oncogenética (parte 4) e CRISPR foram para quarta (11/11)."
+  },
+  {
+   "data": "2026-11-11",
    "estudar": [
     "gen-onco",
     "gen-crispr"
@@ -1681,35 +1695,18 @@
    "revisar": [
     "genetica"
    ],
-   "nota": "Dia de fechar Genética: Oncogenética e CRISPR. Fisiologia do ciclo menstrual foi para quarta (11/11)."
+   "nota": "Dia só de Genética: parte 4 de Oncogenética e CRISPR. Causalidade e Ciclo menstrual foram para quinta (12/11)."
   },
   {
-   "data": "2026-11-10",
-   "estudar": [],
-   "revisar": [
-    "genetica"
-   ],
-   "nota": "Dia de terminar Genética: CRISPR e a parte 4 de Oncogenética. Sistemas de Informação foi para quinta (12/11) e Climatério para sábado (14/11)."
-  },
-  {
-   "data": "2026-11-11",
+   "data": "2026-11-12",
    "estudar": [
     "epi-causal",
     "pra-ciclo"
    ],
    "revisar": [
     "genetica"
-   ]
-  },
-  {
-   "data": "2026-11-12",
-   "estudar": [
-    "epi-sis",
-    "epi-valid"
    ],
-   "revisar": [
-    "genetica"
-   ]
+   "nota": "Sistemas de Informação foi para sábado (14/11) e Validade para quarta (18/11)."
   },
   {
    "data": "2026-11-13",
@@ -1722,12 +1719,13 @@
   {
    "data": "2026-11-14",
    "estudar": [
-    "far-anticonv",
-    "pra-climat"
+    "epi-sis",
+    "far-anticonv"
    ],
    "revisar": [
     "genetica"
-   ]
+   ],
+   "nota": "Climatério foi para domingo (22/11)."
   },
   {
    "data": "2026-11-15",
@@ -1755,11 +1753,12 @@
    "data": "2026-11-18",
    "estudar": [
     "far-antidep",
-    "top-drc"
+    "epi-valid"
    ],
    "revisar": [
     "epidemio"
-   ]
+   ],
+   "nota": "Doença renal crônica foi para quarta (25/11), junto com Hanseníase."
   },
   {
    "data": "2026-11-19",
@@ -1799,18 +1798,21 @@
     "farmaco"
    ],
    "estudar": [
-    "pra-utero"
+    "pra-utero",
+    "pra-climat"
    ]
   },
   {
    "data": "2026-11-23",
    "estudar": [
     "pra-infert",
-    "top-esquisto"
+    "top-esquisto",
+    "top-leish"
    ],
    "revisar": [
     "farmaco"
-   ]
+   ],
+   "nota": "Esquistossomose e Leishmanioses são aulas curtas de Tópicos: dá para estudar as duas juntas. Comece por Infertilidade (prova mais próxima)."
   },
   {
    "data": "2026-11-24",
@@ -1826,9 +1828,10 @@
     "farmaco"
    ],
    "estudar": [
-    "top-leish",
-    "top-hansen"
-   ]
+    "top-hansen",
+    "top-drc"
+   ],
+   "nota": "Hanseníase e Doença renal crônica são aulas curtas de Tópicos: dá para estudar as duas juntas."
   },
   {
    "data": "2026-11-26",
