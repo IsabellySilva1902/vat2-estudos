@@ -192,7 +192,8 @@ async function banco(materia) {
     // as questões moram no repositório vat2-simulados (fonte única, compartilhada com a turma)
     const base = local() ? '/vat2-simulados/data/' : (PLANO.questoes || 'data/questoes/');
     const r = await fetch(base + materia + '.json', { cache: 'no-cache' });
-    BANCOS[materia] = r.ok ? await r.json() : null;
+    // listas de aula (q.lista) ficam só no simulado completo, separadas dos assuntos da plataforma
+    BANCOS[materia] = r.ok ? (await r.json()).filter(q => !q.lista) : null;
   } catch (e) { BANCOS[materia] = null; }
   return BANCOS[materia];
 }
