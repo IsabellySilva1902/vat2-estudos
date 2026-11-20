@@ -1136,7 +1136,8 @@
      "e": true
     }
    ],
-   "formato": "medio"
+   "formato": "medio",
+   "fora": true
   },
   {
    "id": "top-tb",
@@ -1243,7 +1244,8 @@
      "e": true
     }
    ],
-   "formato": "medio"
+   "formato": "medio",
+   "fora": true
   },
   {
    "id": "top-leish",
@@ -1292,7 +1294,8 @@
      "e": true
     }
    ],
-   "formato": "medio"
+   "formato": "medio",
+   "fora": true
   },
   {
    "id": "top-hansen",
@@ -1406,14 +1409,60 @@
    "materia": "topicos",
    "nome": "Acidentes ofídicos",
    "aula": "2026-11-17",
-   "formato": "medio"
+   "formato": "medio",
+   "fontes": [
+    "Aula VAT2 · Acidentes ofídicos"
+   ],
+   "partes": [
+    {
+     "t": "Epidemiologia, Vulnerabilidades e Identificação Morfológica das Serpentes",
+     "top": [
+      "O acidente ofídico como Doença Tropical Negligenciada (dimensões ocupacional, ambiental, étnico-racial, geográfica e vulnerabilidade sistêmica)",
+      "Morfologia e diferenciação dos gêneros peçonhentos: Jararaca (Bothrops), Cascavel (Crotalus), Surucucu (Lachesis) e Coral-verdadeira (Micrurus)",
+      "Critérios de identificação anatômica (fosseta loreal, cauda com escamas eriçadas, guizo/chocalho e padrões de anéis coloridos)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Síndromes Clínicas, Fisiopatologia e Soroterapia Específica por Gênero",
+     "top": [
+      "Acidente Botrópico (Bothrops): ações proteolítica, coagulante e hemorrágica; manifestações locais, complicações e dosagens dos soros SABR, SABL ou SABC por estratificação de gravidade (leve, moderado e grave)",
+      "Acidente Laquético (Lachesis): quadro local exuberante, hemorragias, manifestações vagais sistêmicas características e dosagem com soro SABL",
+      "Acidente Crotálico (Crotalus): ações neurotóxica e miotóxica, manifestações locais discretas, rabdomiólise com mioglobinúria/urina escura, risco de IRA e dosagens com soro SAC ou SABC",
+      "Acidente Elapídico (Micrurus): neurotoxicidade rápida, bloqueio da acetilcolina, risco de insuficiência respiratória/apneia precoce, coagulação preservada e dosagem com soro SAELA"
+     ],
+     "e": true
+    },
+    {
+     "t": "Diagnóstico Diferencial, Regra de Ouro e Algoritmo Clínico para Serpente Não Identificada",
+     "top": [
+      "Matriz comparativa de diagnóstico diferencial: dor e edema local, tempo de coagulação (TC/TP), fácies miastênica, mioglobinúria e manifestações vagais",
+      "Regra de ouro do tempo de coagulação na exclusão etiológica",
+      "Algoritmo decisório baseado em síndromes clínicas na ausência do espécime agressor",
+      "Diagnóstico diferencial com serpentes de não importância médica (Philodryas, Xenodon e Helicops)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Manejo Baseado em Evidências, Suporte Avançado, Monitoramento Temporal e Casos ENAMED",
+     "top": [
+      "Condutas validadas na Atenção Primária: higienização, repouso/elevação de membro, acesso venoso e esquema profilático antitetânico",
+      "Mitos e condutas expressamente contraindicadas: torniquetes/garrotes, incisões/sucção, antibioticoterapia profilática e uso de anti-histamínicos como pré-terapia",
+      "Suporte de vida e manejo sintomático: analgesia escalonada com contraindicação absoluta a AINEs (risco sinérgico de IRA), hidratação vigorosa e manejo respiratório (incluindo neostigmina + atropina)",
+      "Cronograma de monitoramento clínico e laboratorial (admissão T0, 6 horas, ponto de decisão e retratamento em 24 horas, vigilância estendida de 48 a 72 horas)",
+      "Etapas da Jornada do Cuidado Integral e resolução guiada de casos clínicos estilo ENAMED/Revalida"
+     ],
+     "e": true
+    }
+   ]
   },
   {
    "id": "top-tmc",
    "materia": "topicos",
    "nome": "Transtornos mentais comuns",
    "aula": "2026-11-21",
-   "formato": "medio"
+   "formato": "medio",
+   "fora": true
   },
   {
    "id": "top-raiva",
@@ -1816,8 +1865,7 @@
   {
    "data": "2026-11-19",
    "estudar": [
-    "far-trs",
-    "top-chagas"
+    "far-trs"
    ],
    "revisar": [
     "farmaco"
@@ -1858,14 +1906,11 @@
   {
    "data": "2026-11-23",
    "estudar": [
-    "pra-infert",
-    "top-esquisto",
-    "top-leish"
+    "pra-infert"
    ],
    "revisar": [
     "farmaco"
-   ],
-   "nota": "Esquistossomose e Leishmanioses são aulas curtas de Tópicos: dá para estudar as duas juntas. Comece por Infertilidade (prova mais próxima)."
+   ]
   },
   {
    "data": "2026-11-24",
@@ -1908,7 +1953,6 @@
   {
    "data": "2026-11-28",
    "estudar": [
-    "top-tmc",
     "top-raiva",
     "sm-ansiedade"
    ],

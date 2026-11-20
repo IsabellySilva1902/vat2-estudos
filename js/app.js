@@ -1019,6 +1019,8 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 (async function iniciar() {
   carregar();
   PLANO = await (await fetch('data/plano.json', { cache: 'no-cache' })).json();
+  // assuntos marcados "fora" não caem na prova: ficam no plano.json (o simulado usa a ordem para manter os ids), mas somem da plataforma
+  PLANO.assuntos = PLANO.assuntos.filter(a => !a.fora);
   PLANO.materias.forEach(m => { MAT[m.id] = m; });
   PLANO.assuntos.forEach(a => { ASS[a.id] = a; });
   try { PARTEQ = await (await fetch('data/partes-questoes.json', { cache: 'no-cache' })).json(); } catch (e) { PARTEQ = {}; }
