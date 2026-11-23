@@ -426,6 +426,59 @@
    ]
   },
   {
+   "id": "epi-vigil",
+   "materia": "epidemio",
+   "nome": "Vigilância Epidemiológica e Diagramas de Controle",
+   "formato": "medio",
+   "fontes": [
+    "Aula VAT2 · Vigilância epidemiológica e diagramas de controle"
+   ],
+   "partes": [
+    {
+     "t": "Fundamentos, Gestão e Equipe de Vigilância",
+     "top": [
+      "Conceito e objetivos da vigilância epidemiológica",
+      "Ciclo da vigilância: conhecimento, detecção, prevenção e ações",
+      "Vigilância como instrumento de planejamento e gestão em saúde (diagnóstico situacional, organização dos serviços, recursos, monitoramento e avaliação)",
+      "Composição multiprofissional da equipe e atribuições de cada categoria"
+     ],
+     "e": false
+    },
+    {
+     "t": "Sistemas de Informação, Investigação de Surto e Boletins",
+     "top": [
+      "Importância e funções dos Sistemas de Informação em Saúde (SIS)",
+      "Etapas e funcionamento prático frente a surtos (identificação na UBS, notificação, investigação de campo, análise comparativa, intervenção e monitoramento)",
+      "Boletins epidemiológicos: definição, estrutura técnica e divulgação à população"
+     ],
+     "e": true
+    },
+    {
+     "t": "Diagramas de Controle e Dinâmica Temporal",
+     "top": [
+      "Conceito, aplicação e estrutura gráfica do diagrama de controle",
+      "Parâmetros e limites: Média (linha central), Limite Superior de Controle (LSC) e Limite Inferior (LIC)",
+      "Definição de comportamento endêmico e canal endêmico",
+      "Comparação entre incidência esperada e incidência observada",
+      "Diferenciação entre padrão sazonal e variações atípicas (sinal de alerta para surtos/epidemias)"
+     ],
+     "e": true
+    },
+    {
+     "t": "Transições Populacionais, Indicadores e Tomada de Decisão",
+     "top": [
+      "Transição demográfica: envelhecimento populacional e dados do Censo 2022",
+      "Transição epidemiológica: sobreposição entre doenças crônicas, transmissíveis e causas externas",
+      "Transição nutricional: dupla carga de má nutrição (desnutrição, obesidade e ambiente alimentar)",
+      "Indicadores sociais e demográficos: fórmulas de índice de envelhecimento, razão de dependência e densidade demográfica",
+      "Indicadores de saúde: incidência, prevalência, mortalidade, letalidade, cobertura e utilização",
+      "Integração final: vigilância + indicadores + tomada de decisão"
+     ],
+     "e": true
+    }
+   ]
+  },
+  {
    "id": "far-anticonv",
    "materia": "farmaco",
    "nome": "Anticonvulsivantes (epilepsia)",
@@ -1917,7 +1970,11 @@
    "vespera": [
     "epidemio",
     "farmaco"
-   ]
+   ],
+   "estudar": [
+    "epi-vigil"
+   ],
+   "nota": "Vigilância epidemiológica entrou na prova de Epidemio: estudar hoje, antes da revisão."
   },
   {
    "data": "2026-11-25",
