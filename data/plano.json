@@ -1522,7 +1522,64 @@
    "materia": "topicos",
    "nome": "Raiva e tétano",
    "aula": "2026-11-24",
-   "formato": "medio"
+   "formato": "medio",
+   "fontes": [
+    "Aula VAT2 · Acidentes tetânico e rábico"
+   ],
+   "partes": [
+    {
+     "t": "Ecologia das Vulnerabilidades, Patogenia e Clínica do Tétano",
+     "top": [
+      "Dimensão estrutural e ecologia das vulnerabilidades (tétano acidental, neonatal e raiva humana)",
+      "Etiologia do tétano (Clostridium tetani) e dinâmica patogênica",
+      "Gatilho de anaerobiose (tecidos desvitalizados, corpos estranhos e isquemia)",
+      "Mecanismo da tetanospasmina e ausência de imunidade pós-infecção",
+      "Quadro clínico do tétano acidental (trismo, riso sardônico, opistótono, espasmos e lucidez preservada)",
+      "Red flags do tétano neonatal (início entre 2 e 28 dias, choro constante, recusa alimentar e dificuldade de sucção)",
+      "Paradigma diagnóstico (diagnóstico 100% clínico e não retardamento de conduta por exames)"
+     ],
+     "e": false
+    },
+    {
+     "t": "Classificação de Ferimentos e Profilaxia Pós-Exposição do Tétano",
+     "top": [
+      "Classificação de risco dos ferimentos (baixo risco vs. alto risco)",
+      "Critérios para alto risco (sujidade com terra/fezes, necrose, feridas puntiformes, mordeduras e politraumatismos)",
+      "Atenção especial às queimaduras (1º grau como risco mínimo; 2º e 3º graus como alto risco)",
+      "Algoritmo decisório de profilaxia pós-exposição antitetânica segundo histórico vacinal e tempo da última dose",
+      "Indicações de vacina isolada, reforço ou associação com imunização passiva (SAT ou IGHAT)",
+      "Manejo específico em pacientes imunodeprimidos, idosos e desnutridos graves com ferimentos de alto risco"
+     ],
+     "e": true
+    },
+    {
+     "t": "Raiva Humana: Transmissão, Classificação do Acidente e Algoritmo Pós-Exposição",
+     "top": [
+      "Etiologia da raiva (Lyssavirus), letalidade de ~100% e quadro de encefalite rábica (hidrofobia e aerofobia)",
+      "Dinâmica de transmissão: ciclo urbano (cães e gatos) vs. ciclo silvestre (morcegos, raposas, saguis)",
+      "Avaliação do tipo de exposição (acidente leve vs. acidente grave)",
+      "Regra de ouro epidemiológica para mamíferos silvestres e morcegos (sempre considerado acidente grave)",
+      "Algoritmo de profilaxia pós-exposição: Cenário 1 (cão/gato sadio passível de observação por 10 dias)",
+      "Algoritmo de profilaxia pós-exposição: Cenário 2 (cão/gato suspeito, morto ou desaparecido - leve vs. grave)",
+      "Algoritmo de profilaxia pós-exposição: Cenário 3 (animais silvestres e morcegos - vacina imediata e soro)",
+      "Esquema de vacina antirrábica (dias 0, 3, 7 e 14) e conduta na reexposição"
+     ],
+     "e": true
+    },
+    {
+     "t": "Imunobiológicos, Pré-Exposição, Cuidados Locais e Atenção Primária",
+     "top": [
+      "Escolha imunobiológica: soros heterólogos equinos (SAT/SAR) vs. imunoglobulinas homólogas humanas (IGHAT/IGHAR)",
+      "Indicações estritas para uso de imunoglobulina humana (imunossuprimidos, hipersensibilidade prévia, prematuros e crianças)",
+      "Profilaxia pré-exposição da raiva para grupos ocupacionais de risco (esquema de 2 doses e controle sorológico)",
+      "Profilaxia universal e pré-exposição do tétano (esquema básico infantil, reforço a cada 10 anos e dTpa na gestante)",
+      "Cuidados locais na APS: lavagem exaustiva da lesão e desbridamento cirúrgico",
+      "Erros comuns e contraindicações locais: evitar suturas primárias herméticas e papel dos antimicrobianos",
+      "Síntese diagnóstica (guia de bolso) e notificação compulsória com emissão de CAT em acidentes de trabalho"
+     ],
+     "e": false
+    }
+   ]
   },
   {
    "id": "sm-humor",
@@ -2001,7 +2058,7 @@
     "top-ofid",
     "top-raiva"
    ],
-   "nota": "A prova de Tópicos passou para amanhã: os prompts de Escorpiônicos, Ofídicos e Raiva e tétano estão liberados hoje. Raiva e tétano ainda não tem slide no notebook."
+   "nota": "A prova de Tópicos passou para amanhã: os prompts de Escorpiônicos, Ofídicos e Raiva e tétano estão liberados hoje."
   },
   {
    "data": "2026-11-27",
