@@ -41,7 +41,7 @@
    "curto": "Práticas",
    "emoji": "🩷",
    "cor": "#B0457A",
-   "prova": "2026-11-27",
+   "prova": "2026-11-30",
    "notebook": "https://notebook.google.com/notebook/21cccbac-a72f-4778-93de-ff16ef080db3"
   },
   {
@@ -51,7 +51,7 @@
    "curto": "Tópicos",
    "emoji": "🩺",
    "cor": "#2F7D5B",
-   "prova": "2026-12-01",
+   "prova": "2026-11-27",
    "notebook": "https://notebook.google.com/notebook/d2dd98b6-4883-4102-a4f4-6a49e53420fa"
   },
   {
@@ -1991,57 +1991,59 @@
   {
    "data": "2026-11-26",
    "simulado": [
-    "praticas"
+    "topicos"
    ],
    "vespera": [
-    "praticas"
-   ]
+    "topicos"
+   ],
+   "estudar": [
+    "top-escorp",
+    "top-ofid",
+    "top-raiva"
+   ],
+   "nota": "A prova de Tópicos passou para amanhã: os prompts de Escorpiônicos, Ofídicos e Raiva e tétano estão liberados hoje. Raiva e tétano ainda não tem slide no notebook."
   },
   {
    "data": "2026-11-27",
    "provas": [
-    "praticas"
+    "topicos"
    ],
    "estudar": [
-    "top-escorp",
-    "top-ofid"
+    "sm-ansiedade"
+   ],
+   "revisar": [
+    "praticas"
    ]
   },
   {
    "data": "2026-11-28",
    "estudar": [
-    "top-raiva",
-    "sm-ansiedade"
+    "sm-humor"
    ],
-   "nota": "Dia com mais de um assunto: comece pelo de prova mais próxima. O que não der, marque as partes feitas e clique em \"Parar por hoje\".",
    "revisar": [
-    "topicos"
+    "praticas"
    ]
   },
   {
    "data": "2026-11-29",
-   "estudar": [
-    "sm-humor",
-    "sm-toc"
+   "simulado": [
+    "praticas"
    ],
-   "revisar": [
-    "topicos"
+   "vespera": [
+    "praticas"
    ]
   },
   {
    "data": "2026-11-30",
-   "simulado": [
-    "topicos"
+   "provas": [
+    "praticas"
    ],
-   "vespera": [
-    "topicos"
+   "estudar": [
+    "sm-toc"
    ]
   },
   {
    "data": "2026-12-01",
-   "provas": [
-    "topicos"
-   ],
    "estudar": [
     "sm-person"
    ]
